@@ -47,7 +47,7 @@ const BLOG = {
   telegramChannelName: 'follow_prince_channel', // The name of your Telegram channel
   craftConfigShareUrl: 'https://follow-prince.craft.me/Y5LSHEHieO7inL', // The link to share your craft config
   analytics: {
-    provider: '', // Currently we support Google Analytics, Ackee, Umami and Cloudflare Insights, please fill with 'ga' or 'ackee' or 'umami' or 'cf', leave it empty to disable it.
+    provider: 'ga', // Currently we support Google Analytics, Ackee, Umami and Cloudflare Insights, please fill with 'ga' or 'ackee' or 'umami' or 'cf', leave it empty to disable it.
     ackeeConfig: {
       tracker: '', // e.g 'https://ackee.example.com/tracker.js'
       dataAckeeServer: '', // e.g https://ackee.example.com , don't end with a slash
