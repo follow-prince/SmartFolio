@@ -4,7 +4,6 @@ import BLOG from '@/blog.config'
 const Social = () => {
   return (
     <div className='flex gap-4'>
-
       <Link
         href={`${BLOG.socialLink.telegram}`}
         scroll={false}
@@ -26,22 +25,22 @@ const Social = () => {
       </Link>
 
       <Link
-        href={`${BLOG.socialLink.twitter}`}
+        href={`${BLOG.socialLink.linkedin}`}
         scroll={false}
         target='_blank'
-        aria-label='Twitter'
+        aria-label='Linkedin'
         className='text-gray-400 hover:text-gray-500 active:text-gray-600 transition duration-100'
       >
         <svg
           className='w-5 h-5'
           width='24'
           height='24'
-          viewBox='0 0 24 24'
+          viewBox='0 0 448 512'
           fill='currentColor'
           xmlns='http://www.w3.org/2000/svg'
         >
           <path fill='none' d='M0 0h24v24H0z' />
-          <path d='M15.3 5.55a2.9 2.9 0 0 0-2.9 2.847l-.028 1.575a.6.6 0 0 1-.68.583l-1.561-.212c-2.054-.28-4.022-1.226-5.91-2.799-.598 3.31.57 5.603 3.383 7.372l1.747 1.098a.6.6 0 0 1 .034.993L7.793 18.17c.947.059 1.846.017 2.592-.131 4.718-.942 7.855-4.492 7.855-10.348 0-.478-1.012-2.141-2.94-2.141zm-4.9 2.81a4.9 4.9 0 0 1 8.385-3.355c.711-.005 1.316.175 2.669-.645-.335 1.64-.5 2.352-1.214 3.331 0 7.642-4.697 11.358-9.463 12.309-3.268.652-8.02-.419-9.382-1.841.694-.054 3.514-.357 5.144-1.55C5.16 15.7-.329 12.47 3.278 3.786c1.693 1.977 3.41 3.323 5.15 4.037 1.158.475 1.442.465 1.973.538z' />
+          <path d='M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z' />
         </svg>
       </Link>
 
@@ -65,6 +64,44 @@ const Social = () => {
         </svg>
       </Link>
 
+      <Link
+        href={`${BLOG.socialLink.gmail}`}
+        scroll={false}
+        target='_blank'
+        aria-label='EMail'
+        className='text-gray-400 hover:text-gray-500 active:text-gray-600 transition duration-100'
+      >
+        <svg
+          className='w-5 h-5'
+          width='24'
+          height='24'
+          viewBox='0 0 512 512'
+          fill='currentColor'
+          xmlns='http://www.w3.org/2000/svg'
+        >
+          <path fill='none' d='M0 0h24v24H0z' />
+          <path d='M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z' />{' '}
+        </svg>
+      </Link>
+      <Link
+        href={`${BLOG.socialLink.leetcode}`}
+        scroll={false}
+        target='_blank'
+        aria-label='LeetCode'
+        className='text-gray-400 hover:text-gray-500 active:text-gray-600 transition duration-100'
+      >
+        <svg
+          className='w-5 h-5'
+          width='24'
+          height='24'
+          viewBox='0 0 640 512'
+          fill='currentColor'
+          xmlns='http://www.w3.org/2000/svg'
+        >
+          <path fill='none' d='M0 0h24v24H0z' />
+          <path d='M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z' />
+        </svg>
+      </Link>
     </div>
   )
 }

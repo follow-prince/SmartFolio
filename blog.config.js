@@ -4,10 +4,10 @@ const BLOG = {
   email: 'contact@elavarasan.me',
   link: 'https://elavarasan.me',
   newsletter: 'Prince Weekly',
-  description: 'A static blog build on top of Notion and Next.js',
+  description: 'A blog about web development, programming, and digital art.',
   lang: 'en-US', // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES']
   timezone: 'Asia/Calcutta', // See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for all options.
-  appearance: 'auto', // ['light', 'dark', 'auto'],
+  appearance: 'light', // ['light', 'dark', 'auto'],
   font: 'sans-serif', // ['sans-serif', 'serif']
   lightBackground: '#F6F8FA', // use hex value, don't forget '#' e.g #fffefc
   darkBackground: '#212936', // use hex value, don't forget '#'
@@ -29,9 +29,11 @@ const BLOG = {
   ogImageGenerateHost: 'og-zl.vercel.app', // The link to generate OG image, don't end with a slash
   defaultCover: '/cover.jpg',
   socialLink: {
-    twitter: 'https://twitter.com/elavarasan_me',
+    linkedin: 'https://linkedin.com/in/elavarasa003',
     github: 'https://github.com/follow-prince',
-    telegram: 'https://t.me/follow_prince'
+    telegram: 'https://t.me/follow_prince',
+    gmail: 'mailto:elavarasa.003@gmail.com',
+    leetcode: 'https://leetcode.com/iam-prince/',
   },
   seo: {
     keywords: ['Elavarasan', 'Prince', 'Blog', 'Developer', 'Portfolio', 'Workfolio', 'Next.js', 'Notion', 'Vercel', 'Tailwind CSS', 'SEO', 'Web Development', 'Frontend', 'Backend', 'Fullstack', 'React', 'Node.js', 'JavaScript', 'TypeScript', 'HTML', 'CSS', 'SASS', 'SCSS', 'Markdown', 'API', 'GraphQL', 'REST', 'Database', 'MongoDB', 'PostgreSQL', 'MySQL', 'Firebase', 'Supabase', 'Serverless', 'Cloud', 'AWS', 'GCP', 'Azure', 'Netlify', 'Heroku', 'DigitalOcean', 'Vercel', 'GitHub', 'GitLab', 'Bitbucket', 'JAMstack', 'PWA', 'SPA', 'SSR', 'CSR', 'SEO', 'Sitemap', 'RSS', 'Web Vitals', 'Lighthouse', 'Performance', 'Accessibility', 'Best Practices', 'SEO', 'PWA', 'Web Development', 'Frontend', 'Backend', 'Fullstack', 'React', 'Node.js', 'JavaScript', 'TypeScript', 'HTML', 'CSS', 'SASS', 'SCSS', 'Markdown', 'API', 'GraphQL', 'REST', 'Database', 'MongoDB', 'PostgreSQL', 'MySQL', 'Firebase', 'Supabase', 'Serverless', 'Cloud', 'AWS', 'GCP', 'Azure', 'Netlify', 'Heroku', 'DigitalOcean', 'Vercel', 'GitHub', 'GitLab', 'Bitbucket', 'JAMstack', 'PWA', 'SPA', 'SSR', 'CSR', 'SEO', 'Sitemap', 'RSS', 'Web Vitals', 'Lighthouse', 'Performance', 'Accessibility', 'Best Practices', 'SEO', 'PWA', 'Web Development', 'Frontend', 'Backend', 'Fullstack', 'React', 'Node.js', 'JavaScript', 'TypeScript', 'HTML', 'CSS', 'SASS', 'SCSS', 'Markdown', 'API', 'GraphQL', 'REST', 'Database', 'MongoDB', 'PostgreSQL', 'MySQL', 'Firebase', 'Supabase', 'Serverless', 'Cloud', 'AWS', 'GCP', 'Azure', 'Netlify', 'Heroku', 'DigitalOcean', 'Vercel', 'GitHub', 'GitLab', 'Bitbucket', 'JAMstack', 'PWA', 'SPA', 'SSR', 'CSR', 'SEO'],
@@ -67,13 +69,13 @@ const BLOG = {
   },
   comment: {
     // support provider: utterances, supacomments
-    provider: 'supacomments', // leave it empty if you don't need any comment plugin
+    provider: 'utterances', // leave it empty if you don't need any comment plugin
     supaCommentsConfig: {
       supabaseUrl: 'https://wyoojspfzyvsotutatbi.supabase.co', // The url of your Supabase instance
       supabaseAnonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Ind5b29qc3Bmenl2c290dXRhdGJpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTIzNzg3MjksImV4cCI6MjAyNzk1NDcyOX0.CQzwlfKMAgmUC3PtEbhzziwB01Cpstwevz2iKe-WAjE'
     },
     utterancesConfig: {
-      repo: ''
+      repo: 'follow-prince/follow-prince'
     }
   },
   isProd: process.env.VERCEL_ENV === 'production' // distinguish between development and production environment (ref: https://vercel.com/docs/environment-variables#system-environment-variables)
