@@ -27,16 +27,16 @@ const Hero = ({ blockMap }) => {
 
   return (
     <>
-      <div className='container mx-auto flex px-5 py-2 mb-2y md:flex-row flex-col items-center'>
-        <div className='flex flex-col md:w-3/5 md:items-start mb-2 md:mb-0 text-left'>
+      <div className='container mx-auto flex px-5 py-2 mb-2 md:flex-row flex-col items-center'>
+        <div className='flex flex-col md:w-3/5 md:items-start mb-5 md:mb-10 text-left'>
           <NotionRenderer
-            className='md:ml-0'
+            className='md:ml-8'
             blockMap={blockMap}
             frontMatter={{}}
             subPageTitle={null}
           />
           <Social />
-          <div className='flex flex-col sm:flex-row sm:justify-center gap-4 mt-3'>
+          <div className='flex flex-row sm:flex-row sm:justify-center gap-4 mt-5'>
             <Link passHref href='/contact' scroll={false}>
               <button className='w-full bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 inline-flex py-3 px-5 rounded-lg items-center'>
                 <MailIcon className='inline-block text-gray-600 dark:text-day h-7 w-7 mt-1' />
@@ -79,7 +79,7 @@ const Hero = ({ blockMap }) => {
             )}
           </div>
         </div>
-        <div className='w-4/5'>
+        <div className=' mb-5 mx-10 mt-3 content-center '>
           <Avatar className='text-gray-600 dark:text-gray-300' />
         </div>
       </div>
