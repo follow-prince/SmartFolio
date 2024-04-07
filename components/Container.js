@@ -22,7 +22,7 @@ const Container = ({ children, fullWidth, ...customMeta }) => {
         }`}
       >
            <Analytics />
-           <SpeedInsights/>
+           <SpeedInsights />
         {children}
       </main>
     </>

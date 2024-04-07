@@ -3,7 +3,7 @@ import Link from 'next/link'
 import ImageFallback from './Common/ImageFallback.js'
 
 const NotePost = ({ note }) => {
-  const craftSlug = note.url.slice(23)
+  const craftSlug = note.url.slice(31)
   return (
     <Link
       passHref
