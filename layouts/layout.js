@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
 import { getPageTitle } from 'notion-utils'
 import { motion } from 'framer-motion'
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 import Container from '@/components/Container'
 import Content from '@/components/Post/Content'
@@ -19,6 +21,7 @@ const Layout = ({ blockMap, frontMatter, fullWidth = false, subPage = false }) =
   }, [frontMatter, pageTitle, subPage])
 
   return (
+    
     <Container
       title={`${frontMatter.title}${frontMatter.title === pageTitle ? '' : ' | ' + pageTitle}`}
       description={frontMatter.summary}
@@ -26,6 +29,8 @@ const Layout = ({ blockMap, frontMatter, fullWidth = false, subPage = false }) =
       type='article'
       fullWidth={fullWidth}
     >
+  <Analytics />
+    <SpeedInsights />
       <motion.div className='flex flex-row'>
         <Content
           frontMatter={frontMatter}
