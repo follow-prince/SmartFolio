@@ -15,6 +15,9 @@ const BLOG = {
   since: 2024, // If leave this empty, current year will be used.
   postsPerPage: 10,
   sortByDate: true,
+  smtp_host : 'smtp.hostinger.com', // SMTP Hosting URL 
+  smtp_user : '1@princey.tech', // SMTP EMAIL
+  smtp_passwd : process.env.SMTP_PASSWD,
   pagesShow: {
     newsletter: true,
     notes: true,
