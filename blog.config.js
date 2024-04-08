@@ -2,7 +2,7 @@ const BLOG = {
   title: 'PR!NC€ - Workfolio',
   author: 'Developed by Elavarasan',
   email: 'contact@elavarasan.me',
-  link: 'https://www.elavarasan.me',
+  link: 'https://elavarasan.me',
   newsletter: 'Prince Weekly',
   description: 'A blog about web development, programming, and digital art.',
   lang: 'en-US', // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES']
