@@ -45,11 +45,11 @@ html::-webkit-scrollbar-thumb {
 /* ============================ */
 
 .portfolio-img{
-  border-radius: 10px;
-  width: 200px;
+  border-radius: 15px;
+  width: 180px;
 }
 .portfolio-img1{
-  border-radius: 20px;
+  border-radius: 15px;
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -58,8 +58,8 @@ html::-webkit-scrollbar-thumb {
 }
 .myCard {
   background-color: transparent;
-  width: 180px;
-  height: 270px;
+  width: 181.8px;
+  height: 271.8px;
   perspective: 1000px;
 }
 
