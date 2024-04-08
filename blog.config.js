@@ -35,7 +35,7 @@ const BLOG = {
     linkedin: 'https://linkedin.com/in/elavarasa003',
     github: 'https://github.com/follow-prince',
     telegram: 'https://t.me/follow_prince',
-    gmail: 'mailto:elavarasa.003@gmail.com',
+    gmail: 'mailto:contact@elavarasan.me',
     leetcode: 'https://leetcode.com/iam-prince/',
   },
   seo: {
