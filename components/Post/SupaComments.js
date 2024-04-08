@@ -23,7 +23,7 @@ const SupaComments = () => {
       <div
         id='comments'
        // data-url='localhost:3000'
-       data-url={(BLOG.link && BLOG.link.length > 0) ? 'localhost:3000' : (BLOG.link ? BLOG.link.split('/').slice(2).join('/') : '')}
+       data-url={(BLOG.link && BLOG.link.length > 0) ? new URL(BLOG.link).hostname : 'localhost:3000'}
        supabase-url={BLOG.comment.supaCommentsConfig.supabaseUrl}
         anon-key={BLOG.comment.supaCommentsConfig.supabaseAnonKey}
       ></div>
