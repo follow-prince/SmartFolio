@@ -3,6 +3,7 @@ import BLOG from '@/blog.config'
 import { lang } from '@/lib/lang'
 import { useRouter } from 'next/router'
 import {
+  NewspaperIcon,
   UserIcon,
   UsersIcon,
   BookOpenIcon,
@@ -30,9 +31,9 @@ const Footer = ({ fullWidth }) => {
   const links = [
     {
       id: 0,
-      name: t.NAV.ABOUT,
-      to: BLOG.path || '/about',
-      icon: <UserIcon className='inline-block mb-1 h-5 w-5' />,
+      name: t.NAV.NEWSLETTER,
+      to: BLOG.path || '/newsletter',
+      icon: <NewspaperIcon className='inline-block mb-1 h-5 w-5' />,
       show: true
     },
     {
