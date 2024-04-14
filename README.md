@@ -64,6 +64,13 @@ pnpm build
 pnpm start
 ```
 
+
+## Contributors
+
+<a href="https://github.com/follow-prince/SmartFolio/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=follow-prince/SmartFolio" />
+</a>
+
 ## Contributing
 
 We welcome contributions from everyone! Whether you're a developer, designer, or just an enthusiastic user, there are many ways you can contribute to SmartFolio. Check out our [contributing guidelines](CONTRIBUTING.md) to get started.
