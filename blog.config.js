@@ -1,13 +1,13 @@
 const BLOG = {
   title: 'PR!NC€ - Workfolio',
-  author: 'Developed by Elavarasan',
+  author: 'Created by Elavarasan',
   email: 'contact@elavarasan.me',
   link: 'https://elavarasan.me',
   newsletter: 'Prince Weekly',
   description: 'A blog about web development, programming, and digital art.',
   lang: 'en-US', // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES']
   timezone: 'Asia/Calcutta', // See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for all options.
-  appearance: 'auto', // ['light', 'dark', 'auto'],
+  appearance: 'dark', // ['light', 'dark', 'auto'],
   font: 'sans-serif', // ['sans-serif', 'serif']
   lightBackground: '#F6F8FA', // use hex value, don't forget '#' e.g #fffefc
   darkBackground: '#212936', // use hex value, don't forget '#'
