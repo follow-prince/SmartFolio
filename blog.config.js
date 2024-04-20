@@ -1,10 +1,10 @@
 const BLOG = {
   title: 'PR!NC€ - Workfolio',
-  author: 'Created by Elavarasan',
+  author: 'Created by Prince',
   email: 'contact@elavarasan.me',
   link: 'https://elavarasan.me',
   newsletter: 'Prince Weekly',
-  description: 'A blog about web development, programming, and digital art.',
+  description: "a software developer, Proficient in Core Java, oops concepts and ReactJs, he excel in front-end, app, and web development.",
   lang: 'en-US', // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES']
   timezone: 'Asia/Calcutta', // See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for all options.
   appearance: 'dark', // ['light', 'dark', 'auto'],
@@ -40,7 +40,7 @@ const BLOG = {
   },
   seo: {
     keywords: ['Elavarasan', 'Prince', 'Blog', 'Developer', 'Portfolio', 'Workfolio', 'Next.js', 'Notion', 'Vercel', 'Tailwind CSS', 'SEO', 'Web Development', 'Frontend', 'Backend', 'Fullstack', 'React', 'Node.js', 'JavaScript', 'TypeScript', 'HTML', 'CSS', 'SASS', 'SCSS', 'Markdown', 'API', 'GraphQL', 'REST', 'Database', 'MongoDB', 'PostgreSQL', 'MySQL', 'Firebase', 'Supabase', 'Serverless', 'Cloud', 'AWS', 'GCP', 'Azure', 'Netlify', 'Heroku', 'DigitalOcean', 'Vercel', 'GitHub', 'GitLab', 'Bitbucket', 'JAMstack', 'PWA', 'SPA', 'SSR', 'CSR', 'SEO', 'Sitemap', 'RSS', 'Web Vitals', 'Lighthouse', 'Performance', 'Accessibility', 'Best Practices', 'SEO', 'PWA', 'Web Development', 'Frontend', 'Backend', 'Fullstack', 'React', 'Node.js', 'JavaScript', 'TypeScript', 'HTML', 'CSS', 'SASS', 'SCSS', 'Markdown', 'API', 'GraphQL', 'REST', 'Database', 'MongoDB', 'PostgreSQL', 'MySQL', 'Firebase', 'Supabase', 'Serverless', 'Cloud', 'AWS', 'GCP', 'Azure', 'Netlify', 'Heroku', 'DigitalOcean', 'Vercel', 'GitHub', 'GitLab', 'Bitbucket', 'JAMstack', 'PWA', 'SPA', 'SSR', 'CSR', 'SEO', 'Sitemap', 'RSS', 'Web Vitals', 'Lighthouse', 'Performance', 'Accessibility', 'Best Practices', 'SEO', 'PWA', 'Web Development', 'Frontend', 'Backend', 'Fullstack', 'React', 'Node.js', 'JavaScript', 'TypeScript', 'HTML', 'CSS', 'SASS', 'SCSS', 'Markdown', 'API', 'GraphQL', 'REST', 'Database', 'MongoDB', 'PostgreSQL', 'MySQL', 'Firebase', 'Supabase', 'Serverless', 'Cloud', 'AWS', 'GCP', 'Azure', 'Netlify', 'Heroku', 'DigitalOcean', 'Vercel', 'GitHub', 'GitLab', 'Bitbucket', 'JAMstack', 'PWA', 'SPA', 'SSR', 'CSR', 'SEO'],
-    googleSiteVerification: '' // Remove the value or replace it with your own google site verification code
+    googleSiteVerification: 'google-site-verification=EMIqoLIjyhFujWU1AYJmIpdu0W1jQ-ryzaXJY2mSFhk' // Remove the value or replace it with your own google site verification code
   },
   notionPageId: process.env.NOTION_PAGE_ID, // DO NOT CHANGE THIS! Edit .env file!
   notionSpacesId: process.env.NOTION_SPACES_ID, // DO NOT CHANGE THIS! Edit .env file!
