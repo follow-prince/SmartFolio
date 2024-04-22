@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@calcom/embed-react':
+    specifier: ^1.4.0
+    version: 1.4.0(react-dom@18.2.0)(react@18.2.0)
   '@vercel/analytics':
     specifier: ^1.2.2
     version: 1.2.2(next@13.3.0)(react@18.2.0)
@@ -111,6 +114,28 @@ packages:
     engines: {node: '>=6.9.0'}
     dependencies:
       regenerator-runtime: 0.13.11
+
+  /@calcom/embed-core@1.4.0:
+    resolution: {integrity: sha512-2UKrUZkyyS0JxSj0uMNKk5JZ7wmdGNw4ki2K8pW71LnNxe52d7r//jtsRvJ2tJuQdrh+XRdbFy35SrmEjCFrAw==}
+    dev: false
+
+  /@calcom/embed-react@1.4.0(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-ZHiTYbNk3GVUAUaGClS/GcYSoaHMRtx0OvzjpXDMCo8Up+v9cj4V8b3zb3vmAaJQsYpheVCwdmaZiB20L/WxHA==}
+    peerDependencies:
+      react: ^18.2.0
+      react-dom: ^18.2.0
+    dependencies:
+      '@calcom/embed-core': 1.4.0
+      '@calcom/embed-snippet': 1.2.0
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: false
+
+  /@calcom/embed-snippet@1.2.0:
+    resolution: {integrity: sha512-GbqxIkhKDdVafyEovz95HvMONIxcyF3CSFIadOpKtKXnRPkro95V8vIIJWqRVm+eYpCYOCSjXPt31iMpFiA/6A==}
+    dependencies:
+      '@calcom/embed-core': 1.4.0
+    dev: false
 
   /@corex/deepmerge@4.0.37:
     resolution: {integrity: sha512-PX90bEnrLdxd5e6rSFWsghExMuSw0Uov3fWJuuaoFuUQIS/446diu/4seExK5b+43L+SOBbd2uBGwYUkG1JfCw==}

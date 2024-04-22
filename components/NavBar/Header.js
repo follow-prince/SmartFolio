@@ -16,6 +16,7 @@ import ThemeSwitcher from './ThemeSwitcher.js'
 import LangSwitcher from './LangSwitcher.js'
 import Logo from '@/components/Common/Logo'
 import { motion } from 'framer-motion'
+import CalCall from '../CalCall.js'
 
 const NavBar = () => {
   const router = useRouter()
@@ -99,8 +100,10 @@ const NavBar = () => {
       </ul>
 
       <div className='nav-func-btn block'>
+      <CalCall />
         <ThemeSwitcher />
         <LangSwitcher />
+      
       </div>
 
       {/* Mobile Phone Menu */}
