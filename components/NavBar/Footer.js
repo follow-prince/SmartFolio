@@ -5,6 +5,7 @@ import { useRouter } from 'next/router'
 import {
   NewspaperIcon,
   UserIcon,
+  PhotographIcon,
   UsersIcon,
   BookOpenIcon,
   MailIcon
@@ -38,10 +39,10 @@ const Footer = ({ fullWidth }) => {
     },
     {
       id: 1,
-      name: t.NAV.FRINEDS,
-      to: '/friends',
-      icon: <UsersIcon className='inline-block mb-1 h-5 w-5' />,
-      show: BLOG.pagesShow.friends
+      name: t.NAV.GALLERY,
+      to: '/gallery',
+      icon: <PhotographIcon className='inline-block mb-1 h-5 w-5' />,
+      show: BLOG.pagesShow.gallery  
     },
     {
       id: 2,
