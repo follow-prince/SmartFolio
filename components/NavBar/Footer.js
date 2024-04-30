@@ -4,9 +4,7 @@ import { lang } from '@/lib/lang'
 import { useRouter } from 'next/router'
 import {
   NewspaperIcon,
-  UserIcon,
   PhotographIcon,
-  UsersIcon,
   BookOpenIcon,
   MailIcon
 } from '@heroicons/react/outline'

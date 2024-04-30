@@ -44,7 +44,7 @@ const NavBar = () => {
       name: t.NAV.ABOUT,
       to: '/about',
       icon: <UserIcon className='inline-block mb-1 h-5 w-5' />,
-      show: BLOG.pagesShow.friends
+      show: BLOG.pagesShow.about
     },
     // {
     //   id: 1,

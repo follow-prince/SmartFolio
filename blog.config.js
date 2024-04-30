@@ -19,7 +19,7 @@ const BLOG = {
   smtp_user : '1@princey.tech', // SMTP EMAIL
   smtp_passwd : process.env.SMTP_PASSWD,
   pagesShow: {
-    newsletter: true,
+    about: true,
     notes: true,
     projects: true,
     contact: true,
