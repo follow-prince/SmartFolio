@@ -1,45 +1,45 @@
-import { useState } from 'react';
-import { lang } from '@/lib/lang';
-import { useRouter } from 'next/router';
+import { useState } from 'react'
+import { lang } from '@/lib/lang'
+import { useRouter } from 'next/router'
 
 function ContactForm() {
-  const [showResult, setShowResult] = useState(false);
-  const [submitting, setSubmitting] = useState(false);
-  const { locale } = useRouter();
-  const t = lang[locale];
+  const [showResult, setShowResult] = useState(false)
+  const [submitting, setSubmitting] = useState(false)
+  const { locale } = useRouter()
+  const t = lang[locale]
 
   const sentMessage = async (event) => {
-    event.preventDefault();
-    setSubmitting(true);
+    event.preventDefault()
+    setSubmitting(true)
 
-    const apiUrl = '/api/sendEmail'; // Backend API endpoint for sending emails
+    const apiUrl = '/api/sendEmail' // Backend API endpoint for sending emails
     const formData = {
       name: event.target.name.value,
       email: event.target.email.value,
-      message: event.target.message.value,
-    };
+      message: event.target.message.value
+    }
 
     try {
       const res = await fetch(apiUrl, {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'application/json'
         },
-        body: JSON.stringify(formData),
-      });
+        body: JSON.stringify(formData)
+      })
 
       if (res.ok) {
-        setSubmitting(false);
-        setShowResult(true);
+        setSubmitting(false)
+        setShowResult(true)
       } else {
-        throw new Error('Failed to send email');
+        throw new Error('Failed to send email')
       }
     } catch (error) {
-      console.error('Error sending email:', error);
-      alert(t.CONTACT.FAILED_MESSAGE);
-      setSubmitting(false);
+      console.error('Error sending email:', error)
+      alert(t.CONTACT.FAILED_MESSAGE)
+      setSubmitting(false)
     }
-  };
+  }
 
   return (
     <>
@@ -47,6 +47,16 @@ function ContactForm() {
         <div>
           <p className='max-w-screen-md font-bold md:text-lg text-center mx-auto'>
             {t.CONTACT.SUCCESS_MESSAGE}
+            <div className='flex justify-center py-8'>
+              <img
+                src='https://raw.githubusercontent.com/Tarikul-Islam-Anik/Telegram-Animated-Emojis/main/Objects/Incoming%20Envelope.webp'
+                alt='Send Image '
+                width={250}
+                height={250}
+                placeholder='blur'
+                blurDataURL='data:image/webp;base64,UklGRigAAABXRUJQVlA4WAoAAAAQAAAAKwAAASwAAwAAQUxQSDIAAAARL0Dkkkj0PxE8GSH3A//2Q=='
+              />
+            </div>
           </p>
         </div>
       ) : (
@@ -122,7 +132,7 @@ function ContactForm() {
         </form>
       )}
     </>
-  );
+  )
 }
 
-export default ContactForm;
+export default ContactForm

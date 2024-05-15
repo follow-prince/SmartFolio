@@ -20,8 +20,8 @@ const handler = async (req, res) => {
 
       // Send mail with defined transport object
       const info = await transporter.sendMail({
-        from: `"Your Name" <1@princey.tech>`, // sender address
-        to: 'elavarasa.003@gmail.com', // list of receivers
+        from: `"From Contact Form" <1@princey.tech>`, // sender address
+        to: 'contact@elavarasan.me', // list of receivers
         subject: 'New Message from Contact Form', // Subject line
         html: `
           <p>Name: ${name}</p>
