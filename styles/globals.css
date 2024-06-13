@@ -3,7 +3,6 @@
 @tailwind utilities;
 @import './prism.css';
 
-
 html {
   --scrollbarBG: #ffffff00;
   --thumbBG: #b8b8b8;
@@ -28,11 +27,10 @@ html::-webkit-scrollbar-thumb {
   background: rgba(45, 170, 219, 0.3);
 }
 
-.home-page-title{
+.home-page-title {
   font-weight: 600;
   font-size: 25px;
-  font-family: "Homemade Apple", cursive;
-
+  font-family: 'Homemade Apple', cursive;
 }
 .sticky-nav {
   position: sticky;
@@ -44,17 +42,16 @@ html::-webkit-scrollbar-thumb {
 }
 /* ============================ */
 
-.portfolio-img{
+.portfolio-img {
   border-radius: 15px;
   width: 180px;
 }
-.portfolio-img1{
+.portfolio-img1 {
   border-radius: 15px;
   width: 100%;
   height: 100%;
   overflow: hidden;
   display: flex;
-  
 }
 .myCard {
   background-color: transparent;
@@ -119,7 +116,7 @@ html::-webkit-scrollbar-thumb {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  content: "";
+  content: '';
   width: 110%;
   height: 110%;
   position: absolute;
@@ -142,11 +139,6 @@ html::-webkit-scrollbar-thumb {
     opacity: 0.3;
   }
 }
-
-
-
-
-
 
 /* ====================== */
 .remove-sticky {
