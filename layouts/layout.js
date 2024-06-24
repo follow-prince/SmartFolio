@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react'
 import { getPageTitle } from 'notion-utils'
 import { motion } from 'framer-motion'
 import { Analytics } from '@vercel/analytics/react'
-import { SpeedInsights } from '@vercel/speed-insights/next'
 import Container from '@/components/Container'
 import Content from '@/components/Post/Content'
 import Aside from '@/components/Post/Aside'
@@ -35,7 +34,6 @@ const Layout = ({
       fullWidth={fullWidth}
     >
       <Analytics />
-      <SpeedInsights />
 
       <motion.div className='flex flex-row'>
         <Content
