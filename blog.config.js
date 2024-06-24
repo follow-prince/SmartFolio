@@ -7,7 +7,7 @@ const BLOG = {
   description: "a software developer, Proficient in Core Java, oops concepts and ReactJs, he excel in front-end, app, and web development.",
   lang: 'en-US', // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES']
   timezone: 'Asia/Calcutta', // See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for all options.
-  appearance: 'auto', // ['light', 'dark', 'auto'],
+  appearance: 'dark', // ['light', 'dark', 'auto'],
   font: 'sans-serif', // ['sans-serif', 'serif']
   lightBackground: '#F6F8FA', // use hex value, don't forget '#' e.g #fffefc
   darkBackground: '#212936', // use hex value, don't forget '#'
@@ -45,7 +45,7 @@ const BLOG = {
   notionPageId: process.env.NOTION_PAGE_ID, // DO NOT CHANGE THIS! Edit .env file!
   notionSpacesId: process.env.NOTION_SPACES_ID, // DO NOT CHANGE THIS! Edit .env file!
   notionAccessToken: process.env.NOTION_ACCESS_TOKEN, // Useful if you prefer not to make your database public
-  notionDomain: process.env.NOTION_DOMAIN_LINK,
+  notionDomain: 'follow-prince.notion.site',
   telegramToken: process.env.TELEGRAM_TOKEN, // The token of your Telegram bot
   telegramChatId: '7069540511', // The chat id of your Telegram bot
   telegramChannelUrl: 'https://t.me/follow_prince_channel', // The link of your Telegram channel
@@ -74,8 +74,8 @@ const BLOG = {
     // support provider: utterances, supacomments
     provider: 'supacomments', // leave it empty if you don't need any comment plugin
     supaCommentsConfig: {
-      supabaseUrl: process.env.SUPABASE_URL_LINK, // The url of your Supabase instance
-      supabaseAnonKey: process.env.SUPABASE_ANON_KEY
+      supabaseUrl: 'https://wyoojspfzyvsotutatbi.supabase.co', // The url of your Supabase instance
+      supabaseAnonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Ind5b29qc3Bmenl2c290dXRhdGJpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTIzNzg3MjksImV4cCI6MjAyNzk1NDcyOX0.CQzwlfKMAgmUC3PtEbhzziwB01Cpstwevz2iKe-WAjE'
     },
     utterancesConfig: {
       repo: 'follow-prince/follow-prince'
