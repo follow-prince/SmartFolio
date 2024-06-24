@@ -11,10 +11,7 @@
 ![Website Status](https://img.shields.io/website?down_message=Down%20%26%20Offline&label=Website%20Status&up_message=Up%20%26%20Online&url=https%3A%2F%2Felavarasan.me)
 
 SmartFolio is like your personal dynamic diary, but on the web! It's a simple yet powerful way to share your thoughts, ideas, and creations with the world. What makes SmartFolio unique is its ability to update in real-time, syncing changes seamlessly to Notion pages without the hassle of rebuilding the entire site.
-## GIF
-<div style="text-align:center;">
-    <img src="https://princey.tech/assets/videos/mobile.gif" width="250px" style="border-radius: 40px;" />
-</div>
+
 
 ## Check It Out
 
@@ -80,6 +77,12 @@ pnpm start
 ## Contributing
 
 We welcome contributions from everyone! Whether you're a developer, designer, or just an enthusiastic user, there are many ways you can contribute to SmartFolio. Check out our [contributing guidelines](CONTRIBUTING.md) to get started.
+
+## Reference & License
+
+- [Notion-X](https://github.com/NotionX/react-notion-x)
+- [Nobelium](https://github.com/craigary/nobelium)
+- [NotionNext](https://github.com/tangly1024/NotionNext)
 
 ## License
 
