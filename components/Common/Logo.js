@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 // https://react-svgr.com/playground/
 import * as React from 'react'
 
