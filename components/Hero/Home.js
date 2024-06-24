@@ -27,8 +27,8 @@ const Hero = ({ blockMap }) => {
 
   return (
     <>
-      <div className='container mx-auto flex px-5 py-2 mb-2 md:flex-row flex-col items-center'>
-        <div className='flex flex-col md:w-3/5 md:items-start mb-5 md:mb-10 text-left'>
+      <div className='container flex flex-col items-center px-5 py-2 mx-auto mb-2 md:flex-row'>
+        <div className='flex flex-col mb-5 text-left md:w-3/5 md:items-start md:mb-10'>
           <NotionRenderer
             className='md:ml-8'
             blockMap={blockMap}
@@ -36,12 +36,12 @@ const Hero = ({ blockMap }) => {
             subPageTitle={null}
           />
           <Social />
-          <div className='flex flex-row sm:flex-row sm:justify-center gap-4 mt-5'>
+          <div className='flex flex-row gap-4 mt-5 sm:flex-row sm:justify-center'>
             <Link passHref href='/contact' scroll={false}>
-              <button className='w-full bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 inline-flex py-3 px-5 rounded-lg items-center'>
-                <MailIcon className='inline-block text-gray-600 dark:text-day h-7 w-7 mt-1' />
-                <span className='ml-4 flex items-start flex-col leading-none'>
-                  <span className='text-xs text-gray-600 dark:text-day mb-1'>
+              <button className='inline-flex items-center w-full px-5 py-3 bg-gray-100 rounded-lg dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600'>
+                <MailIcon className='inline-block mt-1 text-gray-600 dark:text-day h-7 w-7' />
+                <span className='flex flex-col items-start ml-4 leading-none'>
+                  <span className='mb-1 text-xs text-gray-600 dark:text-day'>
                     {t.HERO.HOME.CONTACT_BUTTON_DES}
                   </span>
                   <span className='font-medium'>{t.HERO.HOME.CONTACT_BUTTON}</span>
@@ -51,11 +51,11 @@ const Hero = ({ blockMap }) => {
             {showCopied ? (
               <button
                 disabled
-                className='bg-gray-200 dark:bg-gray-600 inline-flex py-3 px-5 rounded-lg items-center'
+                className='inline-flex items-center px-5 py-3 bg-gray-200 rounded-lg dark:bg-gray-600'
               >
                 <ClipboardCheckIcon className='inline-block text-gray-600 dark:text-day h-7 w-7' />
-                <span className='ml-4 flex items-start flex-col leading-none'>
-                  <span className='text-sm text-gray-600 dark:text-day mb-1'>
+                <span className='flex flex-col items-start ml-4 leading-none'>
+                  <span className='mb-1 text-sm text-gray-600 dark:text-day'>
                     {t.HERO.RSS_BUTTON_DES_COPIED}
                   </span>
                   <span className='font-medium'>
@@ -66,11 +66,11 @@ const Hero = ({ blockMap }) => {
             ) : (
               <button
                 onClick={() => clickCopy()}
-                className='bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 inline-flex py-3 px-5 rounded-lg items-center'
+                className='inline-flex items-center px-5 py-3 bg-gray-100 rounded-lg dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600'
               >
-                <RssIcon className='inline-block text-gray-600 dark:text-day h-5 w-7' />
-                <span className='ml-4 flex items-start flex-col leading-none'>
-                  <span className='text-xs text-gray-600 dark:text-day mb-1'>
+                <RssIcon className='inline-block h-5 text-gray-600 dark:text-day w-7' />
+                <span className='flex flex-col items-start ml-4 leading-none'>
+                  <span className='mb-1 text-xs text-gray-600 dark:text-day'>
                     {t.HERO.RSS_BUTTON_DES}
                   </span>
                   <span className='font-medium'>{t.HERO.HOME.RSS_BUTTON}</span>
@@ -79,7 +79,7 @@ const Hero = ({ blockMap }) => {
             )}
           </div>
         </div>
-        <div className=' mb-5 mx-10 mt-3 content-center '>
+        <div className='content-center mx-10 mt-3 mb-5 '>
           <Avatar className='text-gray-600 dark:text-gray-300' />
         </div>
       </div>
