@@ -5,10 +5,10 @@ const BLOG = {
   link: 'https://elavarasan.me',
   newsletter: 'Prince Weekly',
   description: "a software developer, Proficient in Core Java, oops concepts and ReactJs, he excel in front-end, app, and web development.",
-  lang: 'en-US', // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES']
-  timezone: 'Asia/Calcutta', // See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for all options.
-  appearance: 'dark', // ['light', 'dark', 'auto'],
-  font: 'sans-serif', // ['sans-serif', 'serif']
+  lang: 'en-US', 
+  timezone: 'Asia/Calcutta', 
+  appearance: 'dark', 
+  font: 'sans-serif', 
   lightBackground: '#F6F8FA', // use hex value, don't forget '#' e.g #fffefc
   darkBackground: '#212936', // use hex value, don't forget '#'
   path: '', // leave this empty unless you want to deploy  in a folder
@@ -28,8 +28,8 @@ const BLOG = {
   },
   showWeChatPay: true,
   previewImagesEnabled: true,
-  autoCollapsedNavBar: false, // The automatically collapsed navigation bar
-  ogImageGenerateHost: 'og-zl.vercel.app', // The link to generate OG image, don't end with a slash
+  autoCollapsedNavBar: false, 
+  ogImageGenerateHost: process.env.COVER_LINK, 
   defaultCover: '/cover.jpg',
   socialLink: {
     linkedin: 'https://linkedin.com/in/elavarasa003',
