@@ -68,11 +68,7 @@ pnpm start
 ```
 
 
-## Contributors
 
-<a href="https://github.com/follow-prince/SmartFolio/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=follow-prince/SmartFolio" />
-</a>
 
 ## Contributing
 
