@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { lang } from '@/lib/lang'
 import { useRouter } from 'next/router'
+import Image from 'next/image'
 
 function ContactForm() {
   const [showResult, setShowResult] = useState(false)
@@ -48,7 +49,7 @@ function ContactForm() {
           <p className='max-w-screen-md mx-auto font-bold text-center md:text-lg'>
             {t.CONTACT.SUCCESS_MESSAGE}
             <div className='flex justify-center py-8'>
-              <img
+              <Image
                 src='https://raw.githubusercontent.com/Tarikul-Islam-Anik/Telegram-Animated-Emojis/main/Objects/Incoming%20Envelope.webp'
                 alt='Send Image '
                 width={250}

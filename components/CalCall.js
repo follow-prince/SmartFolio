@@ -22,8 +22,9 @@ export default function CalCall() {
   return (
     <button className='p-2 rounded-lg cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700 dark:text-gray-100'>
       <Image
-      width={20}
-      height={20}
+        alt='Meeting Book'
+        width={20}
+        height={20}
         data-cal-namespace=''
         data-cal-link='elavarasan/15min'
         data-cal-config='{"layout":"month_view"}'

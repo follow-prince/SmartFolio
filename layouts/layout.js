@@ -8,6 +8,7 @@ import Content from '@/components/Post/Content'
 import Aside from '@/components/Post/Aside'
 import Comments from '@/components/Post/Comments'
 import PostFooter from '@/components/Post/PostFooter'
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const Layout = ({
   blockMap,
@@ -35,6 +36,7 @@ const Layout = ({
       fullWidth={fullWidth}
     >
       <Analytics />
+      <SpeedInsights />
       <motion.div className='flex flex-row'>
         <Content
           frontMatter={frontMatter}
