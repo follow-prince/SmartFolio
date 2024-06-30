@@ -9,6 +9,8 @@ html {
   overflow-y: scroll;
   overflow-x: auto;
 }
+
+
 html::-webkit-scrollbar {
   width: 5px;
 }
@@ -140,6 +142,11 @@ html::-webkit-scrollbar-thumb {
   }
 }
 
+
+
+
+
+
 /* ====================== */
 .remove-sticky {
   position: unset;
@@ -191,7 +198,7 @@ nav {
   }
   .sticky-nav-full .header-name {
     opacity: 1;
-    @apply dark:text-gray-300 text-gray-600;
+    @apply text-gray-600 dark:text-gray-300;
   }
 }
 
