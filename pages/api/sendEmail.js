@@ -44,7 +44,7 @@ const handler = async (req, res) => {
         </tr>
       </table>
       <p style="margin-top: 20px;">Regards,</p>
-      <p style="margin-top: 5px;">Contact Form System</p>
+      <p style="margin-top: 5px;">${name}</p>
     </div>
 
         ` // HTML body
