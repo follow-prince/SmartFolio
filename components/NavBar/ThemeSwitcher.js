@@ -13,7 +13,7 @@ const ThemeSwitcher = () => {
     <>
       <button
         title={`Toggle theme - current ${theme}`}
-        aria-label='ThemeSwitcher'
+        // aria-label='ThemeSwitcher'
         onClick={() =>
           setTheme(
             theme === 'system' ? 'dark' :  theme === 'light' ? 'dark' :'light' 
