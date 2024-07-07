@@ -18,7 +18,8 @@ const Container = ({ children, fullWidth, ...customMeta }) => {
         }`}
       >
         <div className='hidden md:block'>
-          <CursorComponent />
+          {/* not Need */}
+          {/* <CursorComponent /> */}
         </div>
 
         {children}

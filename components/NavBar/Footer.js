@@ -32,28 +32,28 @@ const Footer = ({ fullWidth }) => {
       id: 0,
       name: t.NAV.NEWSLETTER,
       to: BLOG.path || '/newsletter',
-      icon: <NewspaperIcon className='inline-block mb-1 h-5 w-5' />,
+      icon: <NewspaperIcon className='inline-block w-5 h-5 mb-1' />,
       show: true
     },
     {
       id: 1,
       name: t.NAV.GALLERY,
       to: '/gallery',
-      icon: <PhotographIcon className='inline-block mb-1 h-5 w-5' />,
+      icon: <PhotographIcon className='inline-block w-5 h-5 mb-1' />,
       show: BLOG.pagesShow.gallery  
     },
     {
       id: 2,
       name: t.NAV.BOOKS,
       to: '/books',
-      icon: <BookOpenIcon className='inline-block mb-1 h-5 w-5' />,
+      icon: <BookOpenIcon className='inline-block w-5 h-5 mb-1' />,
       show: BLOG.pagesShow.books
     },
     {
       id: 3,
       name: t.NAV.CONTACT,
       to: '/contact',
-      icon: <MailIcon className='inline-block mb-1 h-5 w-5' />,
+      icon: <MailIcon className='inline-block w-5 h-5 mb-1' />,
       show: BLOG.pagesShow.contact
     }
   ]
@@ -64,8 +64,8 @@ const Footer = ({ fullWidth }) => {
         !fullWidth ? 'max-w-3xl md:px-8' : 'px-4 md:px-24'
       }`}
     >
-      <footer className='max-w-screen-2xl px-4 md:px-8 mx-auto  '>
-        <div className='flex flex-col md:flex-row justify-between items-center border-b dark:border-gray-600 py-1'>
+      <footer className='px-4 mx-auto max-w-screen-2xl md:px-8 '>
+        <div className='flex flex-col items-center justify-between py-1 border-b md:flex-row dark:border-gray-600'>
           <ul className='flex flex-wrap justify-center md:justify-start md:gap-1'>
             {links.map(
               (link) =>
@@ -92,7 +92,7 @@ const Footer = ({ fullWidth }) => {
           </div>
         </div>
 
-        <div className='text-gray-400 text-xs font-light py-4'>
+        <div className='py-4 text-xs font-light text-gray-400'>
           © {from === y || !from ? y : `${from} - ${y}`} | {BLOG.author}
           <p className='md:float-right'>
             {t.FOOTER.COPYRIGHT_START}
