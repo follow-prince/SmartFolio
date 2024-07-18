@@ -4,7 +4,7 @@ const BLOG = {
   email: 'contact@elavarasan.me',
   link: 'https://elavarasan.me',
   newsletter: 'Prince Weekly',
-  description: "a software developer, Proficient in JavaScript, oops concepts and ReactJs, he excel in front-end, app, and web development.",
+  description: "a FullStack developer, Proficient in JavaScript, oops concepts and NextJs/ReactJs, he excel in front-end, app, and web development.",
   lang: 'en-US', 
   timezone: 'Asia/Calcutta', 
   appearance: 'dark', 
