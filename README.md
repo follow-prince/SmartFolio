@@ -8,7 +8,7 @@
 ![GitHub Top Language](https://img.shields.io/github/languages/top/follow-prince/SmartFolio?color=7f0c7f&style=flat-square)
 ![GitHub Issues](https://img.shields.io/github/issues/follow-prince/SmartFolio?color=098f76&label=GitHub%20Issues&style=flat-square)
 ![GitHub Pull Erequests](https://img.shields.io/github/issues-pr/follow-prince/SmartFolio?color=2c324f&label=GitHub%20Pull%20Requests&style=flat-square)
-![Website Status](https://img.shields.io/website?down_message=Down%20%26%20Offline&label=Website%20Status&up_message=Up%20%26%20Online&url=https%3A%2F%2Felavarasan.me)
+![Website Status](https://img.shields.io/website?down_message=Down%20%26%20Offline&label=Website%20Status&up_message=Up%20%26%20Online&url=https%3A%2F%2Fprincey.tech)
 
 SmartFolio is like your personal dynamic diary, but on the web! It's a simple yet powerful way to share your thoughts, ideas, and creations with the world. What makes SmartFolio unique is its ability to update in real-time, syncing changes seamlessly to Notion pages without the hassle of rebuilding the entire site.
 
@@ -17,21 +17,23 @@ SmartFolio is like your personal dynamic diary, but on the web! It's a simple ye
 
 <a href="##"><img src="https://raw.githubusercontent.com/follow-prince/project-images/main/videos-gif/elavarasan.me.gif" width="100%" /></a>
 
-- [See it live here!](https://elavarasan.me)
+- [See it live here!](https://princey.tech)
 
 ## What's Cool About It
 
-- **Stay Updated**: Your content stays fresh without you having to lift a finger.
-- **Easy Navigation**: Provides a clear outline to help readers navigate through your content effortlessly.
-- **Customizable Themes**: Switch between different themes to match your mood or style.
-- **Language Flexibility**: Speak to a global audience with support for multiple languages.
-- **Engage with Readers**: Let your audience interact with native-style comments.
-- **Smooth Transitions**: Enjoy smooth loading and transition animations for a polished user experience.
-- **Rich Content Support**: Incorporate various content blocks to enrich your pages.
-- **SEO Optimization**: Boost your visibility with built-in SEO and Open Graph optimization.
-- **Newsletter Integration**: Keep your audience in the loop with newsletter support.
-- **Reachable**: Stay connected with your audience through a built-in contact form.
-- **Telegram Integration**: Engage with your community via Telegram bot integration.
+| **Feature**                 | **Description**                                                                 |
+|-----------------------------|---------------------------------------------------------------------------------|
+| **Stay Updated**            | Your content stays fresh without you having to lift a finger.                   |
+| **Easy Navigation**         | Provides a clear outline to help readers navigate through your content effortlessly. |
+| **Customizable Themes**     | Switch between different themes to match your mood or style.                    |
+| **Language Flexibility**    | Speak to a global audience with support for multiple languages.                 |
+| **Engage with Readers**     | Let your audience interact with native-style comments.                          |
+| **Smooth Transitions**      | Enjoy smooth loading and transition animations for a polished user experience.  |
+| **Rich Content Support**    | Incorporate various content blocks to enrich your pages.                        |
+| **SEO Optimization**        | Boost your visibility with built-in SEO and Open Graph optimization.            |
+| **Newsletter Integration**  | Keep your audience in the loop with newsletter support.                         |
+| **Reachable**               | Stay connected with your audience through a built-in contact form.              |
+| **Telegram Integration**    | Engage with your community via Telegram bot integration.                        |
 
 ## How to Get Started
 
