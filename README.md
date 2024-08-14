@@ -1,4 +1,4 @@
-<img src="https://princey.tech/assets/videos/Hi.gif" width="200px" />
+<img src="./public/hi.gif" width="200px" />
 
 # Welcome to SmartFolio
 ![GitHub Repo Size](https://img.shields.io/github/repo-size/follow-prince/SmartFolio?color=d62936&label=Repo%20Size&style=flat-square)
@@ -20,20 +20,19 @@ SmartFolio is like your personal dynamic diary, but on the web! It's a simple ye
 - [See it live here!](https://princey.tech)
 
 ## What's Cool About It
-
 | **Feature**                 | **Description**                                                                 |
 |-----------------------------|---------------------------------------------------------------------------------|
-| **Stay Updated**            | Your content stays fresh without you having to lift a finger.                   |
-| **Easy Navigation**         | Provides a clear outline to help readers navigate through your content effortlessly. |
-| **Customizable Themes**     | Switch between different themes to match your mood or style.                    |
-| **Language Flexibility**    | Speak to a global audience with support for multiple languages.                 |
-| **Engage with Readers**     | Let your audience interact with native-style comments.                          |
-| **Smooth Transitions**      | Enjoy smooth loading and transition animations for a polished user experience.  |
-| **Rich Content Support**    | Incorporate various content blocks to enrich your pages.                        |
-| **SEO Optimization**        | Boost your visibility with built-in SEO and Open Graph optimization.            |
-| **Newsletter Integration**  | Keep your audience in the loop with newsletter support.                         |
-| **Reachable**               | Stay connected with your audience through a built-in contact form.              |
-| **Telegram Integration**    | Engage with your community via Telegram bot integration.                        |
+| 🌟 **Stay Updated**            | Your content stays fresh without you having to lift a finger.                   |
+| 🧭 **Easy Navigation**         | Provides a clear outline to help readers navigate through your content effortlessly. |
+| 🎨 **Customizable Themes**     | Switch between different themes to match your mood or style.                    |
+| 🌍 **Language Flexibility**    | Speak to a global audience with support for multiple languages.                 |
+| 💬 **Engage with Readers**     | Let your audience interact with native-style comments.                          |
+| 🔄 **Smooth Transitions**      | Enjoy smooth loading and transition animations for a polished user experience.  |
+| 🧩 **Rich Content Support**    | Incorporate various content blocks to enrich your pages.                        |
+| 🚀 **SEO Optimization**        | Boost your visibility with built-in SEO and Open Graph optimization.            |
+| 📰 **Newsletter Integration**  | Keep your audience in the loop with newsletter support.                         |
+| 📬 **Reachable**               | Stay connected with your audience through a built-in contact form.              |
+| 🤖 **Telegram Integration**    | Engage with your community via Telegram bot integration.                        |
 
 ## How to Get Started
 
