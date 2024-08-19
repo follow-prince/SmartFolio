@@ -2,6 +2,8 @@
 import React, { useState, useEffect } from 'react'
 import { ContainerScroll } from '../ui/container-scroll-animation'
 import InfoCard from './childComponents/InfoCard'
+import { CodingActivity } from './childComponents/CodingActivity'
+
 export function HeroScrollDemo() {
  
 
@@ -33,7 +35,7 @@ const CardsInScroll = () => {
         5
       </div>
       <div className='col-span-2 col-start-1 row-span-3 row-start-3 border rounded-lg'>
-        6
+        <CodingActivity />
       </div>
     </div>
   )

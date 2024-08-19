@@ -4,7 +4,7 @@ import { HeroScrollDemo } from './components/HeroScrollDemo'
 export const HomePage = () => {
   return (
     <>
-      <div className='hidden md:flex md:flex-col'>
+      <div className='hidden md:flex md:flex-col scroll-smooth'>
         <HeroScrollDemo />
       </div>
     </>
