@@ -27,11 +27,7 @@ const initialSkills = [
     avatar: <IconBrandTypescript stroke={1.5} />
   },
  
-  {
-    name: 'Tailwind CSS',
-    color: 'default',
-    avatar: <IconBrandTailwind stroke={1.5} />
-  }
+ 
 ]
 
 export function SkillsStack() {

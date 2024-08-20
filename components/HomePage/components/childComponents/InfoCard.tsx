@@ -18,9 +18,9 @@ const InfoCard = () => {
             ELAVARASAN
           </h1>
           <div className=''>
-          <FlipWordsDemo />
+            <FlipWordsDemo />
           </div>
-          
+
           <div className='p-2 max-[900px]:hidden'>
             <SkillsStack />
           </div>
