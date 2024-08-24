@@ -13,7 +13,7 @@ import { AnimatedTooltipPreview } from './childComponents/AnimatedTooltipPreview
 
 export function HeroScrollDemo() {
   return (
-    <div className='flex flex-col overflow-hidden'>
+    <div className='flex overflow-hidden flex-col'>
       <ContainerScroll>
         <CardsInScroll />
       </ContainerScroll>
@@ -23,23 +23,26 @@ export function HeroScrollDemo() {
 
 const CardsInScroll = () => {
   return (
-    <div className='grid w-full h-full grid-cols-5 grid-rows-5 gap-4 p-2 '>
-      <div className='col-span-2 row-span-2 '>
+    <div className='grid grid-cols-5 grid-rows-5 gap-4 p-2 w-full h-full'>
+      <div className='col-span-2 row-span-2'>
         <InfoCard />
       </div>
-      <div className='col-start-3 row-span-2 border rounded-lg'>
+      <div className='col-start-3 row-span-2 rounded-lg border'>
         <TwoTapSection />
       </div>
       <div className='col-span-2 col-start-4 row-span-5 -lg'>
-        <div className='flex flex-col justify-between h-full overflow-hidden'>
-          <div className=''>fdgh</div>
-          <div className='py-2 border dark:border-gray-500 border-rose-500 rounded-xl '>
+        <div className='flex overflow-hidden flex-col justify-between h-full'>
+          <div className=''>
+          
+            sfgfdg
+          </div>
+          <div className='py-2 rounded-xl border border-rose-500 dark:border-gray-500'>
             <AnimatedTooltipPreview />
           </div>
         </div>
       </div>
 
-      <div className='col-start-3 row-span-3 row-start-3 overflow-hidden'>
+      <div className='overflow-hidden col-start-3 row-span-3 row-start-3'>
         <div className='flex flex-col gap-3'>
           <div className='h-[140px] border rounded-lg dark:border-slate-100 border-rose-700/50'>
             <GithubActivity />
@@ -50,11 +53,11 @@ const CardsInScroll = () => {
           </div>
         </div>
       </div>
-      <div className='col-span-2 col-start-1 row-span-3 row-start-3 border rounded-lg'>
+      <div className='col-span-2 col-start-1 row-span-3 row-start-3 rounded-lg border'>
         <Button
           duration={20000}
           borderRadius='0.5rem'
-          className='w-full h-full p-0 pt-0'
+          className='p-0 pt-0 w-full h-full'
         >
           <CodingActivity />
         </Button>
