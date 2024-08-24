@@ -84,7 +84,7 @@ const GithubActivity = () => {
 
   if (loading) {
     return (
-      <div className='flex justify-center w-full '>
+      <div className='flex justify-center w-full h-full '>
         <Spinner label='Loading...' color='danger' />
       </div>
     )
@@ -107,7 +107,7 @@ const GithubActivity = () => {
         })
       ]}
       orientation='vertical'
-      className='w-full p-2'
+      className='w-full p-2 '
     >
       <div className='text-[12px] text-rose-500 font-extrabold text-center'>
         GitHub Repo

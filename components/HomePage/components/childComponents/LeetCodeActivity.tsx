@@ -246,7 +246,7 @@ const LeetCodeActivity: React.FC = () => {
     )
   }, [])
 
-  if (loading) return <div className='flex justify-center w-full '><Spinner label='Loading...' color='danger' /></div>
+  if (loading) return <div className='flex justify-center w-full h-full '><Spinner label='Loading...' color='danger' /></div>
   if (error) return <div>Error: {error}</div>
   if (!data) return <div>No data available</div>
 
@@ -263,12 +263,12 @@ const LeetCodeActivity: React.FC = () => {
         })
       ]}
       orientation='vertical'
-      className='w-full'
+      className='w-full '
     >
       <div className='text-[12px] text-rose-500 font-extrabold text-center'>
         LeetCode Submission
       </div>
-      <CarouselContent className='h-[200px]'>
+      <CarouselContent className='h-[130px]'>
         {data.submission.map((item, index) => (
           <CarouselItem key={index} className='md:basis-1/5'>
             <div className='p-1'>

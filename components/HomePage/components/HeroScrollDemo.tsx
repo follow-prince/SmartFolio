@@ -32,19 +32,23 @@ const CardsInScroll = () => {
       </div>
       <div className='col-span-2 col-start-4 row-span-5 -lg'>
         <div className='flex flex-col justify-between h-full overflow-hidden'>
-          <div>
-
-          </div>
-          <div className='p-2 border dark:border-gray-500 border-rose-500 rounded-xl '>
+          <div className=''>fdgh</div>
+          <div className='py-2 border dark:border-gray-500 border-rose-500 rounded-xl '>
             <AnimatedTooltipPreview />
           </div>
         </div>
       </div>
 
-      <div className='col-start-3 row-span-3 row-start-3 overflow-hidden border rounded-lg dark:border-slate-100 border-rose-700/50'>
-        <GithubActivity />
-        <Divider className='my-1 bg-rose-500 dark:bg-slate-100' />
-        <LeetCodeActivity />
+      <div className='col-start-3 row-span-3 row-start-3 overflow-hidden'>
+        <div className='flex flex-col gap-3'>
+          <div className='h-[140px] border rounded-lg dark:border-slate-100 border-rose-700/50'>
+            <GithubActivity />
+          </div>
+
+          <div className='h-[140px] border rounded-lg dark:border-slate-100 border-rose-700/50'>
+            <LeetCodeActivity />
+          </div>
+        </div>
       </div>
       <div className='col-span-2 col-start-1 row-span-3 row-start-3 border rounded-lg'>
         <Button

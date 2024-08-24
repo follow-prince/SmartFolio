@@ -19,6 +19,15 @@ interface Person {
   image: string
 }
 
+// Helper function to shuffle an array
+function shuffleArray(array: any[]) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[array[i], array[j]] = [array[j], array[i]]
+  }
+  return array
+}
+
 export function AnimatedTooltipPreview() {
   const [people, setPeople] = useState<Person[]>([])
   const [loading, setLoading] = useState(true)
@@ -56,8 +65,16 @@ export function AnimatedTooltipPreview() {
           image: user.avatar_url
         }))
 
-        // Combine both followers and following
-        setPeople([...followers, ...following])
+        // Combine both followers and following, removing duplicates
+        const combinedPeopleMap = new Map<number, Person>()
+        
+        followers.concat(following).forEach((person) => {
+          combinedPeopleMap.set(person.id, person)
+        })
+
+        const combinedPeople = shuffleArray(Array.from(combinedPeopleMap.values()))
+
+        setPeople(combinedPeople)
         setLoading(false)
       } catch (err) {
         setError('Failed to fetch data')
@@ -69,7 +86,11 @@ export function AnimatedTooltipPreview() {
   }, [])
 
   if (loading) {
-    return <Spinner label='Loading...' color='warning' />
+    return (
+      <div className='flex justify-center w-full '>
+        <Spinner color='danger' />
+      </div>
+    )
   }
 
   if (error) {
@@ -78,24 +99,22 @@ export function AnimatedTooltipPreview() {
 
   return (
     <Carousel
-    overFlowing='overflow-visible'
+      overFlowing='overflow-visible'
       opts={{
         align: 'end',
         slidesToScroll: 1,
         loop: true
       }}
-      plugins={
-        [
-          Autoplay({
-            delay: 800
-          })
-        ]
-      }
+      plugins={[
+        Autoplay({
+          delay: 800
+        })
+      ]}
       className='w-full '
     >
       <CarouselContent className='-ml-1'>
         {people.map((person) => (
-          <CarouselItem   key={person.id} className='px-4 pl-1 basis-1/5'>
+          <CarouselItem key={person.id} className='basis-1/5'>
             <div className='p-1'>
               <div>
                 <AnimatedTooltip items={[person]} />
