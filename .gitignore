@@ -39,3 +39,7 @@ pnpm-lock.yaml
 .vercel
 public/robots.txt
 public/sitemap.xml
+package-lock.json
+yarn.lock
+.idx/dev.nix
+yarn.lock
