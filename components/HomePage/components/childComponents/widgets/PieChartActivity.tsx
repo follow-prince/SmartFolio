@@ -46,7 +46,7 @@ export function PieChartActivity() {
   return (
     <>
       <CardContent className=''>
-        <div className='p-1 text-xs font-bold text-center'>
+        <div className='p-1 text-xs font-bold text-center text-rose-600 '>
           Languages over last 1 year
         </div>
 

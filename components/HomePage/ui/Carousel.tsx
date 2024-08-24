@@ -18,6 +18,7 @@ type CarouselProps = {
   opts?: CarouselOptions
   plugins?: CarouselPlugin
   orientation?: "horizontal" | "vertical"
+  overFlowing?: string
   setApi?: (api: CarouselApi) => void
 }
 
@@ -51,6 +52,7 @@ const Carousel = React.forwardRef<
       orientation = "horizontal",
       opts,
       setApi,
+      overFlowing,
       plugins,
       className,
       children,
@@ -132,6 +134,7 @@ const Carousel = React.forwardRef<
           scrollNext,
           canScrollPrev,
           canScrollNext,
+          overFlowing
         }}
       >
         <div
@@ -154,10 +157,10 @@ const CarouselContent = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => {
-  const { carouselRef, orientation } = useCarousel()
+  const { carouselRef, orientation,overFlowing } = useCarousel()
 
   return (
-    <div ref={carouselRef} className="overflow-hidden">
+    <div ref={carouselRef} className={overFlowing ?  overFlowing: ("overflow-hidden")}>
       <div
         ref={ref}
         className={cn(
@@ -168,7 +171,7 @@ const CarouselContent = React.forwardRef<
         {...props}
       />
     </div>
-  )
+  ) 
 })
 CarouselContent.displayName = "CarouselContent"
 

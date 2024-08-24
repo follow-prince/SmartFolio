@@ -1,6 +1,7 @@
 
 
 module.exports = {
+  staticPageGenerationTimeout: 120, // Increase timeout to 120 seconds
   i18n: {
     locales: ['en', 'ta'],
     defaultLocale: 'en',
@@ -8,7 +9,7 @@ module.exports = {
   },
   transpilePackages: ['dayjs'],
   images: {
-    domains: ['api.craft.do', 'www.notion.so', 'images.unsplash.com', 's3.us-west-2.amazonaws.com','raw.githubusercontent.com','em-content.zobj.net','assets.aceternity.com','pbs.twimg.com']
+    domains: ['api.craft.do','.svgrepo.com', 'raw.githubusercontent.com','avatars.githubusercontent.com', 'www.notion.so', 'images.unsplash.com', 's3.us-west-2.amazonaws.com','raw.githubusercontent.com','em-content.zobj.net','assets.aceternity.com','pbs.twimg.com','leetcard.jacoblin.cool']
   },
   async headers() {
     return [

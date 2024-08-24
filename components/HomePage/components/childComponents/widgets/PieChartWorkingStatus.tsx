@@ -47,7 +47,7 @@ export function PieChartWorkingStatus() {
     <>
     
       <CardContent className=''>
-      <div className="p-1 text-xs font-bold text-center">Categories over last 7 days</div>
+      <div className="p-1 text-xs font-bold text-center text-rose-600">Categories over last 7 days</div>
         <ChartContainer config={{}} className='h-[100px]'>
           <PieChart>
             <ChartTooltip
