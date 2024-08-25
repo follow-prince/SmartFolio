@@ -13,7 +13,7 @@ import NProgress from 'nprogress'
 import '@/styles/nprogress.css'
 import Header from '@/components/NavBar/Header'
 import Footer from '@/components/NavBar/Footer'
-import {FloatingDockView} from '@/components/HomePage/components/FloatingDockView.tsx'
+import { FloatingDockView } from '@/components/HomePage/components/FloatingDockView.tsx'
 
 const Ackee = dynamic(() => import('@/components/Common/Ackee'), { ssr: false })
 const Gtag = dynamic(() => import('@/components/Common/Gtag'), { ssr: false })
@@ -51,10 +51,10 @@ function MyApp({ Component, pageProps }) {
       {BLOG.isProd && BLOG?.analytics?.provider === 'ga' && <Gtag />}
 
       <ThemeProvider attribute='class'>
-          <Header
-            navBarTitle={pageProps.post ? pageProps.post.title : null}
-            fullWidth={pageProps.post ? pageProps.post.fullWidth : false}
-          />
+        <Header
+          navBarTitle={pageProps.post ? pageProps.post.title : null}
+          fullWidth={pageProps.post ? pageProps.post.fullWidth : false}
+        />
         <TransitionEffect>
           <div
             className={`min-h-[calc(100vh-14rem)] md:min-h-[calc(100vh-18rem)] ${
@@ -69,9 +69,9 @@ function MyApp({ Component, pageProps }) {
             fullWidth={pageProps.post ? pageProps.post.fullWidth : false}
           />
         )}
-           <div className="fixed bottom-3 right-2 md:right-1/2 md:translate-x-1/2 z-[9999]">
-  <FloatingDockView />
-</div>
+        <div className='fixed bottom-3 right-2 md:right-1/2 md:translate-x-1/2 z-[9999]'>
+          <FloatingDockView />
+        </div>
       </ThemeProvider>
     </>
   )

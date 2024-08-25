@@ -13,7 +13,7 @@ const BLOG = {
   darkBackground: '#212936', 
   path: '',
   since: 2024, 
-  postsPerPage: 25,
+  postsPerPage: 100000,
   sortByDate: true,
   smtp_host : 'smtp.hostinger.com', 
   smtp_user : '1@princey.tech', 

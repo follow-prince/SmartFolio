@@ -42,7 +42,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-, "components/HomePage/components/childComponents/widgets/PdfViewer.js"  ],
+, "components/HomePage/components/childComponents/widgets/PdfViewer.js", "components/HomePage/components/FeedList.js"  ],
   "exclude": [
     "node_modules"
   ]
