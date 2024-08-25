@@ -1,10 +1,10 @@
 const BLOG = {
   title: 'PR!NC€ - Workfolio',
   author: 'Crafted by Prince',
-  email: 'contact@elavarasan.me',
+  email: 'elavarasa.003@gmail.com',
   link: 'https://princey.tech',
   newsletter: 'Prince Weekly',
-  description: "a FullStack developer, Proficient in JavaScript, oops concepts and NextJs/ReactJs, he excel in front-end, app, and web development.",
+  description: "a React developer, Proficient in JavaScript, oops concepts and NextJs/ReactJs",
   lang: 'en-US', 
   timezone: 'Asia/Calcutta', 
   appearance: 'dark', 
