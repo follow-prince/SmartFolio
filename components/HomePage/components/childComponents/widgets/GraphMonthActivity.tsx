@@ -8,7 +8,7 @@ import {
   ChartConfig,
   ChartContainer,
   ChartTooltip,
-  ChartTooltipContent
+  ChartTooltipContent,
 } from '@/components/HomePage/ui/chart'
 import { Chip, Tooltip, Spinner } from '@nextui-org/react'
 

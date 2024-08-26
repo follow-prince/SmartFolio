@@ -36,12 +36,11 @@ export async function getStaticProps() {
 
 const blog = ({ postsToShow, page, showNext, blockMap }) => {
 
-  console.log(postsToShow);
 
   return (
     <>
         <HomePage />
-        <div className='md:max-w-3xl mx-auto'>
+        <div className='md:max-w-5xl mx-auto'>
         {postsToShow.map((post) => (
         <BlogPost key={post.id} post={post} />
       ))}
