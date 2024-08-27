@@ -9,7 +9,7 @@ import {
   CarouselPrevious
 } from '@/components/HomePage/ui/Carousel'
 import { formatDistanceToNow } from 'date-fns'
-import { Chip,Spinner } from '@nextui-org/react'
+import { Chip, Spinner } from '@nextui-org/react'
 import {
   IconCircleDashedCheck,
   IconBrandPython,
@@ -17,7 +17,6 @@ import {
   IconCoffee,
   IconCalendarTime
 } from '@tabler/icons-react'
-
 
 interface Submission {
   title: string
@@ -186,7 +185,9 @@ const LeetCodeActivity: React.FC = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://alfa-leetcode-api.onrender.com/iam-prince/submission')
+        const response = await fetch(
+          'https://alfa-leetcode-api.onrender.com/iam-prince/submission'
+        )
 
         if (!response.ok) {
           setData(AlternativeData)
@@ -197,7 +198,6 @@ const LeetCodeActivity: React.FC = () => {
         setData(result)
       } catch (error: any) {
         setError(error.message)
-        setData(AlternativeData)
       }
     }
 
@@ -210,7 +210,6 @@ const LeetCodeActivity: React.FC = () => {
     // Cleanup timeout when component unmounts
     return () => clearTimeout(timeoutId)
   }, [])
-
 
   const renderStatusChip = useCallback(
     (status: string) => (
@@ -246,9 +245,14 @@ const LeetCodeActivity: React.FC = () => {
     )
   }, [])
 
-  if (loading) return <div className='flex justify-center w-full h-full '><Spinner label='Loading...' color='danger' /></div>
+  if (loading)
+    return (
+      <div className='flex justify-center w-full h-full '>
+        <Spinner label='Loading...' color='danger' />
+      </div>
+    )
   if (error) return <div>Error: {error}</div>
-  if (!data) return <div>No data available</div>
+  if (!data) {setData(AlternativeData)} 
 
   return (
     <Carousel
@@ -259,7 +263,7 @@ const LeetCodeActivity: React.FC = () => {
       }}
       plugins={[
         Autoplay({
-          delay: 1000
+          delay: 1500
         })
       ]}
       orientation='vertical'
@@ -268,7 +272,7 @@ const LeetCodeActivity: React.FC = () => {
       <div className='text-[12px] text-rose-500 font-extrabold text-center'>
         LeetCode Submission
       </div>
-      <CarouselContent className='h-[130px]'>
+      <CarouselContent className='h-[335px]'>
         {data.submission.map((item, index) => (
           <CarouselItem key={index} className='md:basis-1/5'>
             <div className='p-1'>

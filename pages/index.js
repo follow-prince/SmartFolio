@@ -8,7 +8,6 @@ import BLOG from '@/blog.config'
 
 export async function getStaticProps() {
   const posts = await getAllPosts({ onlyPost: true })
-
   const heros = await getAllPosts({ onlyHidden: true })
   const hero = heros.find((t) => t.slug === 'index')
 
@@ -19,6 +18,8 @@ export async function getStaticProps() {
     console.error(err)
     // return { props: { post: null, blockMap: null } }
   }
+ 
+  
 
   const postsToShow = posts.slice(0, BLOG.postsPerPage)
   const totalPosts = posts.length
@@ -36,18 +37,22 @@ export async function getStaticProps() {
 
 const blog = ({ postsToShow, page, showNext, blockMap }) => {
 
-
   return (
     <>
-        <HomePage />
-        <div className='md:max-w-5xl mx-auto'>
-        {postsToShow.map((post) => (
-        <BlogPost key={post.id} post={post} />
-      ))}
-      {showNext && <Pagination page={page} showNext={showNext} />}
-        </div>
+      <div className='flex-col hidden md:flex '>
+        <HomePage blogListShare={postsToShow}   />
+      </div>
 
-      </>
+      <div className='md:hidden'>
+        <Container title={BLOG.title} description={BLOG.description}>
+          <Hero blockMap={blockMap} />
+          {postsToShow.map((post) => (
+            <BlogPost key={post.id} post={post} />
+          ))}
+          {showNext && <Pagination page={page} showNext={showNext} />}
+        </Container>
+      </div>
+    </>
   )
 }
 

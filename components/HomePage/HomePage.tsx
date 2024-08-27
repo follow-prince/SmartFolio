@@ -1,11 +1,12 @@
 import React from 'react'
-import { HeroScrollDemo } from './components/HeroScrollDemo'
+import { HeroScrollDemo } from '@/components/HomePage/components/HeroScrollDemo'
 
-export const HomePage = () => {
+export const HomePage = ({blogListShare}) => {
+  
   return (
     <>
-      <div className='hidden md:flex md:flex-col scroll-smooth'>
-        <HeroScrollDemo />
+      <div className=' md:flex md:flex-col scroll-smooth'>
+        <HeroScrollDemo  blogListShare={blogListShare}  />
       </div>
     </>
   )

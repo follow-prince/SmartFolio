@@ -8,7 +8,7 @@ export function HeroImage() {
     <div>
 
         <Image
-          className=' border dark:border-slate-800/[0.8] border-gray-400/[0.8] rounded-[1.85rem]  max-[900px]:w-36  '
+          className=' border dark:border-slate-800/[0.8] border-gray-400/[0.8] rounded-[1.85rem]  max-[900px]:w-24   '
           src={heroImg}
           alt='Prince Elavarasan'
         />

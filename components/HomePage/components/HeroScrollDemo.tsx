@@ -1,67 +1,52 @@
 'use client'
 import React, { useState, useEffect } from 'react'
-import { ContainerScroll } from '../ui/container-scroll-animation'
-import InfoCard from './childComponents/InfoCard'
-import { CodingActivity } from './childComponents/CodingActivity'
-import { LeetCodeActivity } from './childComponents/LeetCodeActivity'
-import { Button } from '@/components/HomePage/ui/moving-border'
-import { ArrowLeft } from 'lucide-react'
-import { GithubActivity } from './childComponents/GithubActivity'
-import { Divider } from '@nextui-org/react'
-import { TwoTapSection } from './childComponents/TwoTapSection'
-import { AnimatedTooltipPreview } from './childComponents/AnimatedTooltipPreview'
+import { ContainerScroll } from '@/components/HomePage/ui/container-scroll-animation'
+import InfoCard from '@/components/HomePage/components/childComponents/InfoCard'
+import { CodingActivity } from '@/components/HomePage/components/childComponents/CodingActivity'
+import { LeetCodeActivity } from '@/components/HomePage/components/childComponents/LeetCodeActivity'
+import { TwoTapSection } from '@/components/HomePage/components/childComponents/TwoTapSection'
+import { AnimatedTooltipPreview } from '@/components/HomePage/components/childComponents/AnimatedTooltipPreview'
+import { ResizableCard } from '@/components/HomePage/components/childComponents/ResizableCard'
 
-export function HeroScrollDemo() {
+export function HeroScrollDemo({ blogListShare }) {
   return (
-    <div className='flex overflow-hidden flex-col'>
+    <div className='flex flex-col overflow-hidden'>
       <ContainerScroll>
-        <CardsInScroll />
+        <div className='grid w-full h-full grid-cols-5 grid-rows-5 gap-4 p-2'>
+          <div className='col-span-2 row-span-2'>
+            <InfoCard />
+          </div>
+          <div className='col-start-3 row-span-2 border rounded-lg'>
+            <TwoTapSection />
+          </div>
+          <div className='col-span-2 col-start-4 row-span-5 -lg'>
+            <div className='flex flex-col justify-between h-full overflow-hidden'>
+              <div className=''>
+                <ResizableCard blogListShare={blogListShare} />
+              </div>
+              <div className='py-2 border rounded-xl border-rose-500 dark:border-gray-500'>
+                <AnimatedTooltipPreview />
+              </div>
+            </div>
+          </div>
+
+          <div className='col-start-3 row-span-3 row-start-3 overflow-hidden'>
+            <div className='flex flex-col gap-3'>
+              <div className='h-[340px] border rounded-lg dark:border-slate-100 border-rose-700/50'>
+                <LeetCodeActivity />
+              </div>
+            </div>
+          </div>
+          <div className='col-span-2 col-start-1 row-span-3 row-start-3 border rounded-lg border-rose-500 dark:border-white'>
+            <div
+              style={{ borderRadius: '0.5rem' }}
+              className='w-full h-full p-0 pt-0'
+            >
+              <CodingActivity />
+            </div>
+          </div>
+        </div>
       </ContainerScroll>
-    </div>
-  )
-}
-
-const CardsInScroll = () => {
-  return (
-    <div className='grid grid-cols-5 grid-rows-5 gap-4 p-2 w-full h-full'>
-      <div className='col-span-2 row-span-2'>
-        <InfoCard />
-      </div>
-      <div className='col-start-3 row-span-2 rounded-lg border'>
-        <TwoTapSection />
-      </div>
-      <div className='col-span-2 col-start-4 row-span-5 -lg'>
-        <div className='flex overflow-hidden flex-col justify-between h-full'>
-          <div className=''>
-          
-            sfgfdg
-          </div>
-          <div className='py-2 rounded-xl border border-rose-500 dark:border-gray-500'>
-            <AnimatedTooltipPreview />
-          </div>
-        </div>
-      </div>
-
-      <div className='overflow-hidden col-start-3 row-span-3 row-start-3'>
-        <div className='flex flex-col gap-3'>
-          <div className='h-[140px] border rounded-lg dark:border-slate-100 border-rose-700/50'>
-            <GithubActivity />
-          </div>
-
-          <div className='h-[140px] border rounded-lg dark:border-slate-100 border-rose-700/50'>
-            <LeetCodeActivity />
-          </div>
-        </div>
-      </div>
-      <div className='col-span-2 col-start-1 row-span-3 row-start-3 rounded-lg border'>
-        <Button
-          duration={20000}
-          borderRadius='0.5rem'
-          className='p-0 pt-0 w-full h-full'
-        >
-          <CodingActivity />
-        </Button>
-      </div>
     </div>
   )
 }

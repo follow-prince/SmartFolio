@@ -67,12 +67,14 @@ export function AnimatedTooltipPreview() {
 
         // Combine both followers and following, removing duplicates
         const combinedPeopleMap = new Map<number, Person>()
-        
+
         followers.concat(following).forEach((person) => {
           combinedPeopleMap.set(person.id, person)
         })
 
-        const combinedPeople = shuffleArray(Array.from(combinedPeopleMap.values()))
+        const combinedPeople = shuffleArray(
+          Array.from(combinedPeopleMap.values())
+        )
 
         setPeople(combinedPeople)
         setLoading(false)
@@ -107,7 +109,7 @@ export function AnimatedTooltipPreview() {
       }}
       plugins={[
         Autoplay({
-          delay: 800
+          delay: 1000
         })
       ]}
       className='w-full '

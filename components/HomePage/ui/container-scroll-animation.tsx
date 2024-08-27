@@ -25,7 +25,7 @@ export const ContainerScroll = ({
   }, [])
 
   const scaleDimensions = () => {
-    return isMobile ? [0.7, 0.9] : [0.8, 1]
+    return isMobile ? [0.7, 1] : [0.8, 1]
   }
 
   const rotate = useTransform(scrollYProgress, [0, 1], [0, 0])
@@ -34,11 +34,11 @@ export const ContainerScroll = ({
 
   return (
     <div
-      className='flex relative flex-col justify-start items-center p-6 h-full'
+      className='relative flex flex-col items-center justify-start w-full h-full'
       ref={containerRef}
     >
       <div
-        className='relative py-10 w-full md:py-10'
+        className='relative w-full '
         style={{
           perspective: '1000px'
         }}
@@ -57,7 +57,7 @@ export const Header = ({ translate, titleComponent }: any) => {
       style={{
         translateY: translate
       }}
-      className='mx-auto max-w-6xl text-center div'
+      className='max-w-6xl mx-auto text-center div'
     >
       {titleComponent}
     </motion.div>
@@ -82,9 +82,9 @@ export const Card = ({
         boxShadow:
           '0 0 #0000004d, 0 9px 20px #0000004a, 0 37px 37px #00000042, 0 84px 50px #00000026, 0 149px 60px #0000000a, 0 233px 65px #00000003'
       }}
-      className='max-w-6xl -mt-12 mx-auto md:h-[40rem] w-full border-4 border-[#6C6C6C] p-2 md:p-4 bg-[#222222] rounded-[30px] shadow-lg'
+      className='max-w-6xl mx-auto md:h-[40rem] w-full border-4 border-[#6C6C6C] p-2 md:p-4 bg-[#222222] rounded-[30px] shadow-lg'
     >
-      <div className='overflow-hidden w-full h-full bg-gray-100 rounded-2xl dark:bg-zinc-900 md:rounded-2xl'>
+      <div className='w-full h-full overflow-hidden bg-gray-100 rounded-2xl dark:bg-zinc-900 md:rounded-2xl'>
         {children}
       </div>
     </motion.div>

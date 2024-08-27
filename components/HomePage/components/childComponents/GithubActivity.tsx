@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Card, Link, Divider, Spinner } from '@nextui-org/react'
+import { Card, Link, Divider, Spinner, Image } from '@nextui-org/react';
 import {
   IconFolderOpen,
   IconDeviceSdCard,
@@ -112,21 +112,25 @@ const GithubActivity = () => {
       <div className='text-[12px] text-rose-500 font-extrabold text-center'>
         GitHub Repo
       </div>
-      <div className='w-full h-[110px] overflow-hidden '>
-        <CarouselContent className='h-[200px]'>
+      <div className='w-full h-full overflow-hidden '>
+        <CarouselContent className='h-[470px]'>
           {repos.map((repo) => (
-            <CarouselItem key={repo.id} className='md:basis-1/2'>
-              <Card className='w-full h-[80px] p-1 border rounded-lg border-rose-500 dark:border-slate-100'>
+            <CarouselItem key={repo.id} className='md:basis-1/6'>
+              <Card className='w-full h-[100px] p-1    border rounded-lg border-rose-500 dark:border-slate-100'>
+
                 <Link
-                  disableAnimation={false}
+                  disableAnimation={true}
                   isExternal
                   showAnchorIcon
                   href={repo.html_url}
-                  className='flex items-center gap-1 text-xs font-extrabold text-rose-500 '
+                  className='flex items-center gap-1 font-extrabold text-md text-rose-500 '
                 >
-                  <IconFolderOpen className='w-4' stroke={2} />{' '}
-                  <span>{repo.name}</span>
+                  <IconFolderOpen className='w-5' stroke={1.5} />{' '}
+                  <span >{repo.name}</span>
                 </Link>
+              <div className='flex flex-row'>
+
+            
                 <div className='flex items-center gap-1 px-1 dark:text-slate-50'>
                   <IconDeviceSdCard className='w-3' stroke={1.4} />
                   <span className='text-[10px]'>{formatSize(repo.size)}</span>
@@ -137,6 +141,7 @@ const GithubActivity = () => {
                   {languageIcon(repo.language)}
                   <span className='text-[10px]'>{repo.language}</span>
                 </div>
+
                 <div className='flex items-center gap-1 px-1 dark:text-slate-50'>
                   <IconCalendarTime className='w-3' stroke={2} />
                   <span className='text-[10px]'>
@@ -148,6 +153,17 @@ const GithubActivity = () => {
                   />
                   <IconWorld className='w-3' stroke={2} />
                   <span className='text-[10px]'>{repo.visibility}</span>
+                </div>
+                </div>
+                <div className='flex flex-row items-center gap-2 pl-3'>
+                  <Link href={repo.owner.html_url}
+                  disableAnimation={true}
+                  isExternal
+                  >
+                  <Image src={repo.owner.avatar_url} width={30} height={30} className='border-1 border-rose-500' alt='avatar' />
+                  </Link>
+                  <span className='text-xs font-bold'>{repo.owner.login}</span>
+
                 </div>
               </Card>
             </CarouselItem>

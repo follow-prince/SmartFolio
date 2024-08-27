@@ -13,7 +13,7 @@ import NProgress from 'nprogress'
 import '@/styles/nprogress.css'
 import Header from '@/components/NavBar/Header'
 import Footer from '@/components/NavBar/Footer'
-import { FloatingDockView } from '@/components/HomePage/components/FloatingDockView.tsx'
+// import { FloatingDockView } from '@/components/HomePage/components/FloatingDockView.tsx'
 
 const Ackee = dynamic(() => import('@/components/Common/Ackee'), { ssr: false })
 const Gtag = dynamic(() => import('@/components/Common/Gtag'), { ssr: false })
@@ -64,13 +64,12 @@ function MyApp({ Component, pageProps }) {
             <Component {...pageProps} />
           </div>
         </TransitionEffect>
-        {!isRootPath && (
           <Footer
             fullWidth={pageProps.post ? pageProps.post.fullWidth : false}
           />
-        )}
+      
         <div className='fixed bottom-3 right-2 md:right-1/2 md:translate-x-1/2 z-[9999]'>
-          <FloatingDockView />
+          {/* <FloatingDockView /> */}
         </div>
       </ThemeProvider>
     </>

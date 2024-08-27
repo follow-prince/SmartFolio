@@ -57,7 +57,7 @@ export function SocialMediaInfo() {
       }}
       plugins={[
         Autoplay({
-          delay: 800,
+          delay: 1000,
         }),
       ]}
       className='max-w-[11rem] max-h-[11rem]'
