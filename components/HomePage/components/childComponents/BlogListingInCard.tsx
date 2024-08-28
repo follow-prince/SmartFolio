@@ -64,48 +64,46 @@ const BlogListingInCard: FC<BlogListingInCardProps> = memo(
         orientation='vertical'
         className='w-full p-2 '
       >
-       
         <div className='w-full h-full overflow-hidden '>
-        <div className='text-[12px] text-rose-500 font-extrabold text-center'>
-          Blog Posts
-        </div>
+          <div className='text-[12px] text-rose-500 font-extrabold text-center'>
+            Blog Posts
+          </div>
           <CarouselContent className='h-[470px]'>
             {sortedBlogList.map((post) => (
               <CarouselItem key={post.id} className='md:basis-1/5'>
-                              <Card className='w-full h-[100px] p-1    border rounded-lg border-rose-500 dark:border-slate-100'>
-
-                <motion.div>
-                  <Link
-                    passHref
-                    href={`${BLOG.path}/${post.slug}`}
-                    scroll={true}
-                  >
-                    <article className='relative flex flex-col items-start p-1 overflow-hidden rounded-lg cursor-pointer group min-h-20'>
-                      <Image
-                        fill
-                        alt={post.title}
-                        src={post.page_cover}
-                        className='absolute inset-0 object-cover object-center w-full h-full transition duration-200 group-hover:scale-110'
-                      />
-                      <div className='absolute inset-0 hidden md:block md-cover'></div>
-                      <div className='absolute inset-0 cover'></div>
-                      <div className='relative'>
-                        <header className='flex flex-row'>
-                          <h2 className='px-2 text-sm font-extrabold text-black dark:text-gray-100'>
-                            {post.title}
-                          </h2>
-                          <span className='flex-shrink-0 font-bold text-gray-600 text-color-fix dark:text-gray-400'>
-                            <FormattedDate date={post.date} />
-                          </span>
-                        </header>
-                        <p className='px-2 text-xs font-light text-gray-700 leading-2 md:block dark:text-gray-300'>
-                          {post.summary}
-                        </p>
-                      </div>
-                    </article>
-                  </Link>
-                </motion.div>
-              </Card>
+                <Card className='w-full border rounded-lg border-rose-500 dark:border-slate-100'>
+                  <motion.div>
+                    <Link
+                      passHref
+                      href={`${BLOG.path}/${post.slug}`}
+                      scroll={true}
+                    >
+                      <article className='relative flex flex-col items-start p-1 overflow-hidden rounded-lg cursor-pointer group min-h-20'>
+                        <Image
+                          fill
+                          alt={post.title}
+                          src={post.page_cover}
+                          className='absolute inset-0 object-cover object-center w-full h-full transition duration-200 group-hover:scale-110'
+                        />
+                        <div className='absolute inset-0 hidden md:block md-cover'></div>
+                        <div className='absolute inset-0 cover'></div>
+                        <div className='relative'>
+                          <header className='flex flex-row'>
+                            <h2 className='px-2 text-sm font-extrabold text-black dark:text-gray-100'>
+                              {post.title}
+                            </h2>
+                            <span className='flex-shrink-0 font-bold text-gray-600 text-color-fix dark:text-gray-400'>
+                              <FormattedDate date={post.date} />
+                            </span>
+                          </header>
+                          <p className='px-2 text-xs font-light text-gray-700 leading-2 md:block dark:text-gray-300'>
+                            {post.summary}
+                          </p>
+                        </div>
+                      </article>
+                    </Link>
+                  </motion.div>
+                </Card>
               </CarouselItem>
             ))}
           </CarouselContent>
