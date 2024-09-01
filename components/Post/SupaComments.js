@@ -22,8 +22,8 @@ const SupaComments = () => {
       <div className='flex-1 hidden w-20 h-2 grid-cols-3 col-span-2 gap-4 space-x-4 rounded animate-pulse' />
       <div
         id='comments'
-        data-url={'https://princey.tech'}
-        supabase-url={BLOG.comment.supaCommentsConfig.supabaseUrl}
+        data-url={BLOG.link.split('/').slice(4) || 'localhost:3000'}
+  supabase-url={BLOG.comment.supaCommentsConfig.supabaseUrl}
         anon-key={BLOG.comment.supaCommentsConfig.supabaseAnonKey}
       ></div>
     </>
