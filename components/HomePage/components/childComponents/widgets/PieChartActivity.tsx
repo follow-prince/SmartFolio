@@ -2,6 +2,7 @@
 
 import * as React from 'react'
 import { Label, Pie, PieChart } from 'recharts'
+import { Spinner } from '@nextui-org/react'
 import { CardContent } from '@/components/HomePage/ui/card'
 import {
   ChartConfig,
@@ -17,40 +18,52 @@ interface ChartData {
   color: string
 }
 
-export function PieChartActivity() {
+const PieChartActivity: React.FC = React.memo(() => {
   const [chartData, setChartData] = React.useState<ChartData[]>([])
   const [totalPercent, setTotalPercent] = React.useState<number>(0)
+  const [isLoading, setIsLoading] = React.useState<boolean>(true)
 
-  // Fetch data from Wakatime API
-  React.useEffect(() => {
-    fetch(
-      'https://wakatime.com/share/@follow_prince/9a3e9631-78b7-4c54-9ac4-7227b592c9e0.json'
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        const fetchedData = data.data.map((item: ChartData) => ({
-          name: item.name,
-          percent: item.percent,
-          fill: item.color // Setting the fill color here
-        }))
+  // Function to fetch data from the Wakatime API
+  const fetchChartData = React.useCallback(async () => {
+    try {
+      const response = await fetch(
+        'https://wakatime.com/share/@follow_prince/9a3e9631-78b7-4c54-9ac4-7227b592c9e0.json'
+      )
+      const data = await response.json()
+      const fetchedData = data.data.map((item: ChartData) => ({
+        name: item.name,
+        percent: item.percent,
+        fill: item.color // Setting the fill color here
+      }))
 
-        setChartData(fetchedData)
+      setChartData(fetchedData)
 
-        // Calculate total percentage (in this case, it's always 100%)
-        const total = fetchedData.reduce((acc, curr) => acc + curr.percent, 0)
-        setTotalPercent(total)
-      })
-      .catch((error) => console.error('Error fetching data:', error))
+      // Calculate total percentage (in this case, it's always 100%)
+      const total = fetchedData.reduce((acc, curr) => acc + curr.percent, 0)
+      setTotalPercent(total)
+    } catch (error) {
+      console.error('Error fetching data:', error)
+    } finally {
+      setIsLoading(false) // Stop loading after data is fetched
+    }
   }, [])
 
-  return (
-    <>
-      <CardContent className=''>
-        <div className='p-1 text-xs font-bold text-center text-rose-600 '>
-          Languages over last 1 year
-        </div>
+  React.useEffect(() => {
+    fetchChartData()
+  }, [fetchChartData])
 
-        <ChartContainer config={{}} className='h-[100px]'>
+  return (
+    <CardContent>
+      <div className='p-1 text-xs font-bold text-center text-rose-600'>
+        Languages over last 1 year
+      </div>
+
+      <ChartContainer config={{}} className='h-[100px]'>
+        {isLoading ? (
+          <div className='flex items-center justify-center h-full'>
+            <Spinner label='Loading...' color='danger' aria-live='polite' />
+          </div>
+        ) : (
           <PieChart>
             <ChartTooltip cursor={true} content={<ChartTooltipContent />} />
             <Pie
@@ -60,7 +73,6 @@ export function PieChartActivity() {
               innerRadius={35}
               outerRadius={50}
               strokeWidth={10}
-              // No need for a fill here, as it is handled in the data
             >
               <Label
                 content={({ viewBox }) => {
@@ -82,12 +94,17 @@ export function PieChartActivity() {
                       </text>
                     )
                   }
+                  return null
                 }}
               />
             </Pie>
           </PieChart>
-        </ChartContainer>
-      </CardContent>
-    </>
+        )}
+      </ChartContainer>
+    </CardContent>
   )
-}
+})
+
+PieChartActivity.displayName = 'PieChartActivity'
+
+export { PieChartActivity }

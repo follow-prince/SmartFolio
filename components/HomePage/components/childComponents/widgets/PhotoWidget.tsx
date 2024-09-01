@@ -44,8 +44,8 @@ export function PhotoWidget() {
           <CarouselContent>
             {Array.from({ length: 5 }).map((_, index) => (
               <CarouselItem key={index + 1}>
-                <div className='p-2'>
-                  <Card className='relative w-full h-32 overflow-hidden'>
+                <div className=''>
+                  <Card className='relative w-[10.9rem] h-40 overflow-hidden rounded-2xl'>
                     <Image
                       
                       src={`https://raw.githubusercontent.com/follow-prince/project-images/main/achievements/${index + 1}.jpg`}

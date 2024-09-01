@@ -57,17 +57,17 @@ export function SocialMediaInfo() {
       }}
       plugins={[
         Autoplay({
-          delay: 1000,
+          delay: 1500,
         }),
       ]}
-      className='max-w-[11rem] max-h-[11rem]'
+      className='max-w-[12rem] h-[11.5rem]'
     >
       <CarouselContent>
         {data.map((item, index) => (
           <CarouselItem key={index}>
-            <div className='p-2'>
-              <Card className='relative w-full h-32 overflow-hidden'>
-                <div className='flex flex-col items-center'>
+            <div className=''>
+              <Card className='relative w-full overflow-hidden border-none rounded-2xl h-44'>
+                <div className='flex flex-col items-center pt-4'>
                   <div className="p-1 mt-1 rounded-md dark:bg-slate-50">
 
                   <Image

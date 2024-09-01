@@ -1,8 +1,9 @@
-import React, { useState, useEffect, useCallback, FC } from 'react'
-import { GraphMonthActivity } from './widgets/GraphMonthActivity'
-import { PieChartActivity } from './widgets/PieChartActivity'
-import { PieChartWorkingStatus } from './widgets/PieChartWorkingStatus'
-import { Spinner, Divider } from '@nextui-org/react'
+import { Spinner } from '@nextui-org/react';
+import React, { FC, useCallback, useEffect, useState } from 'react';
+
+import { GraphMonthActivity } from './widgets/GraphMonthActivity';
+import { PieChartActivity } from './widgets/PieChartActivity';
+import { PieChartWorkingStatus } from './widgets/PieChartWorkingStatus';
 
 const CodingActivity: FC = React.memo(() => {
   const [isLoading, setIsLoading] = useState<boolean>(true)
@@ -26,26 +27,22 @@ const CodingActivity: FC = React.memo(() => {
   }, [loadData])
 
   if (isLoading) {
-    return <Spinner label='Loading...' color='danger' aria-live='polite' />
+    return <Spinner className='flex items-center justify-center w-full h-full' label="Loading..." color="danger" aria-live="polite" />
   }
 
   if (error) {
-    return <div>{error}</div>
+    return <div className="text-center text-red-500">{error}</div>
   }
 
   return (
-    <div>
+    < >
       <GraphMonthActivity />
 
-      <div className='grid grid-flow-col'>
+      <div className="grid grid-cols-1 gap-4 mt-4 md:grid-cols-2">
         <PieChartActivity />
-        <Divider
-          orientation='vertical'
-          className='mt-2 h-28 bg-rose-500/50 dark:bg-slate-100/50'
-        />
         <PieChartWorkingStatus />
       </div>
-    </div>
+    </>
   )
 })
 

@@ -109,7 +109,7 @@ export function AnimatedTooltipPreview() {
       }}
       plugins={[
         Autoplay({
-          delay: 1000
+          delay: 800
         })
       ]}
       className='w-full '

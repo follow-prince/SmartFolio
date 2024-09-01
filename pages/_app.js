@@ -55,9 +55,9 @@ function MyApp({ Component, pageProps }) {
           navBarTitle={pageProps.post ? pageProps.post.title : null}
           fullWidth={pageProps.post ? pageProps.post.fullWidth : false}
         />
-        <TransitionEffect>
+        <TransitionEffect >
           <div
-            className={`min-h-[calc(100vh-14rem)] md:min-h-[calc(100vh-18rem)] ${
+            className={`min-h-[calc(100vh-14rem)] md:min-h-[calc(100vh-18rem)]  ${
               BLOG.font === 'serif' ? 'font-serif' : 'font-sans'
             }`}
           >
@@ -67,10 +67,6 @@ function MyApp({ Component, pageProps }) {
           <Footer
             fullWidth={pageProps.post ? pageProps.post.fullWidth : false}
           />
-      
-        <div className='fixed bottom-3 right-2 md:right-1/2 md:translate-x-1/2 z-[9999]'>
-          {/* <FloatingDockView /> */}
-        </div>
       </ThemeProvider>
     </>
   )

@@ -25,7 +25,7 @@ export const ContainerScroll = ({
   }, [])
 
   const scaleDimensions = () => {
-    return isMobile ? [0.7, 1] : [0.8, 1]
+    return isMobile ? [1, 1] : [1, 1]
   }
 
   const rotate = useTransform(scrollYProgress, [0, 1], [0, 0])
@@ -40,7 +40,6 @@ export const ContainerScroll = ({
       <div
         className='relative w-full '
         style={{
-          perspective: '1000px'
         }}
       >
         <Card rotate={rotate} translate={translate} scale={scale}>
@@ -79,10 +78,8 @@ export const Card = ({
       style={{
         rotateX: rotate,
         scale,
-        boxShadow:
-          '0 0 #0000004d, 0 9px 20px #0000004a, 0 37px 37px #00000042, 0 84px 50px #00000026, 0 149px 60px #0000000a, 0 233px 65px #00000003'
       }}
-      className='max-w-6xl mx-auto md:h-[40rem] w-full border-4 border-[#6C6C6C] p-2 md:p-4 bg-[#222222] rounded-[30px] shadow-lg'
+      className='max-w-6xl mx-auto md:h-[42rem] w-full border-4 border-[#6C6C6C] p-2 md:p-4 bg-[#222222] rounded-[30px] shadow-lg'
     >
       <div className='w-full h-full overflow-hidden bg-gray-100 rounded-2xl dark:bg-zinc-900 md:rounded-2xl'>
         {children}

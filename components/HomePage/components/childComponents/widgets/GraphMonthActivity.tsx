@@ -52,7 +52,9 @@ export function GraphMonthActivity() {
     fetchData()
   }, [])
 
-  if (loading) return <Spinner label='Loading...' color='danger' />
+  if (loading) return    <div className='flex justify-center w-full h-full '>
+  <Spinner label='Loading...' color='danger' />
+</div>
 
   if (error) return <p>Error: {error}</p>
 
@@ -82,7 +84,7 @@ export function GraphMonthActivity() {
       <CardContent className=''>
         <ChartContainer
           config={chartConfig}
-          className='aspect-auto h-[100px] w-full'
+          className='aspect-auto h-[160px] w-full'
         >
           <BarChart
             data={chartData}
@@ -109,7 +111,7 @@ export function GraphMonthActivity() {
             <ChartTooltip
               content={
                 <ChartTooltipContent
-                  className='w-[150px] '
+                  className='w-[100px] '
                   nameKey='hours'
                   labelFormatter={(value) => {
                     return new Date(value).toLocaleDateString('en-US', {

@@ -1,26 +1,22 @@
-import React, { useEffect, useState } from 'react'
-import { Card, Link, Divider, Spinner, Image } from '@nextui-org/react';
-import {
-  IconFolderOpen,
-  IconDeviceSdCard,
-  IconBrandTypescript,
-  IconBrandJavascript,
-  IconBrandPython,
-  IconCoffee,
-  IconCode,
-  IconStar,
-  IconCalendarTime,
-  IconWorld
-} from '@tabler/icons-react'
 import {
   Carousel,
   CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious
+  CarouselItem
 } from '@/components/HomePage/ui/Carousel'
-import { ScrollShadow } from '@nextui-org/react'
+import { Card, Divider, Link, Spinner } from '@nextui-org/react'
+import {
+  IconBrandJavascript,
+  IconBrandPython,
+  IconBrandTypescript,
+  IconCalendarTime,
+  IconCode,
+  IconCoffee,
+  IconDeviceSdCard,
+  IconFolderOpen,
+  IconWorld
+} from '@tabler/icons-react'
 import Autoplay from 'embla-carousel-autoplay'
+import React, { useEffect, useState } from 'react'
 
 const GithubActivity = () => {
   const [repos, setRepos] = useState<any[]>([])
@@ -103,7 +99,7 @@ const GithubActivity = () => {
       }}
       plugins={[
         Autoplay({
-          delay: 2000
+          delay: 1400
         })
       ]}
       orientation='vertical'
@@ -117,7 +113,6 @@ const GithubActivity = () => {
           {repos.map((repo) => (
             <CarouselItem key={repo.id} className='md:basis-1/6'>
               <Card className='w-full h-[100px] p-1    border rounded-lg border-rose-500 dark:border-slate-100'>
-
                 <Link
                   disableAnimation={true}
                   isExternal
@@ -126,44 +121,32 @@ const GithubActivity = () => {
                   className='flex items-center gap-1 font-extrabold text-md text-rose-500 '
                 >
                   <IconFolderOpen className='w-5' stroke={1.5} />{' '}
-                  <span >{repo.name}</span>
+                  <span>{repo.name}</span>
                 </Link>
-              <div className='flex flex-row'>
+                <div className='flex flex-wrap'>
+                  <div className='flex items-center justify-start gap-1 px-1 dark:text-slate-50'>
+                    <IconDeviceSdCard className='w-3' stroke={1.4} />
+                    <span className='text-[10px]'>{formatSize(repo.size)}</span>
+                    <Divider
+                      className='h-3 dark:bg-slate-100'
+                      orientation='vertical'
+                    />
+                    {languageIcon(repo.language)}
+                    <span className='text-[10px]'>{repo.language}</span>
+                  </div>
 
-            
-                <div className='flex items-center gap-1 px-1 dark:text-slate-50'>
-                  <IconDeviceSdCard className='w-3' stroke={1.4} />
-                  <span className='text-[10px]'>{formatSize(repo.size)}</span>
-                  <Divider
-                    className='h-3 dark:bg-slate-100'
-                    orientation='vertical'
-                  />
-                  {languageIcon(repo.language)}
-                  <span className='text-[10px]'>{repo.language}</span>
-                </div>
-
-                <div className='flex items-center gap-1 px-1 dark:text-slate-50'>
-                  <IconCalendarTime className='w-3' stroke={2} />
-                  <span className='text-[10px]'>
-                    {new Date(repo.created_at).toLocaleDateString()}
-                  </span>
-                  <Divider
-                    className='h-3 dark:bg-slate-100'
-                    orientation='vertical'
-                  />
-                  <IconWorld className='w-3' stroke={2} />
-                  <span className='text-[10px]'>{repo.visibility}</span>
-                </div>
-                </div>
-                <div className='flex flex-row items-center gap-2 pl-3'>
-                  <Link href={repo.owner.html_url}
-                  disableAnimation={true}
-                  isExternal
-                  >
-                  <Image src={repo.owner.avatar_url} width={30} height={30} className='border-1 border-rose-500' alt='avatar' />
-                  </Link>
-                  <span className='text-xs font-bold'>{repo.owner.login}</span>
-
+                  <div className='flex flex-wrap items-center gap-1 px-1 dark:text-slate-50'>
+                    <IconCalendarTime className='w-3' stroke={2} />
+                    <span className='text-[10px]'>
+                      {new Date(repo.created_at).toLocaleDateString()}
+                    </span>
+                    <Divider
+                      className='h-3 dark:bg-slate-100'
+                      orientation='vertical'
+                    />
+                    <IconWorld className='w-3' stroke={2} />
+                    <span className='text-[10px]'>{repo.visibility}</span>
+                  </div>
                 </div>
               </Card>
             </CarouselItem>

@@ -4,7 +4,7 @@
 @import './prism.css';
 
 html {
-  --scrollbarBG: #ffffff00;
+  --scrollbarBG: #eb000000;
   --thumbBG: #b8b8b8;
   overflow-y: scroll;
   overflow-x: auto;

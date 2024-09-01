@@ -1,13 +1,13 @@
-import BLOG from '@/blog.config'
-import Link from 'next/link'
-import Avatar from './NotionAvatar.js'
-import Social from '../Common/Social.js'
-import { lang } from '@/lib/lang'
-import { useRouter } from 'next/router'
-import { useState } from 'react'
-import { MailIcon, RssIcon, ClipboardCheckIcon } from '@heroicons/react/outline'
-import NotionRenderer from '@/components/Post/NotionRenderer'
-import { MobilePage } from '../MobileHome/MobilePage'
+import BLOG from '@/blog.config';
+import NotionRenderer from '@/components/Post/NotionRenderer';
+import { lang } from '@/lib/lang';
+import { ClipboardCheckIcon, MailIcon, RssIcon } from '@heroicons/react/outline';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { useState } from 'react';
+
+import Social from '../Common/Social.js';
+import Avatar from './NotionAvatar.js';
 
 const Hero = ({ blockMap }) => {
   const [showCopied, setShowCopied] = useState(false)
@@ -24,26 +24,15 @@ const Hero = ({ blockMap }) => {
 
   return (
     <>
-     <div className="w-full">
-          <MobilePage />
-          
-        </div>
-      <div className='container flex flex-col items-center py-2 mx-auto mb-2 md:flex-row'>
-        <div className='flex flex-col mb-5 text-left md:w-3/5 md:items-start '>
-          {/* <NotionRenderer
+      <div className='container flex flex-col items-center px-5 py-2 mx-auto mb-2 md:flex-row'>
+        <div className='flex flex-col mb-5 text-left md:w-3/5 md:items-start md:mb-10'>
+          <NotionRenderer
             className='md:ml-8'
             blockMap={blockMap}
             frontMatter={{}}
             subPageTitle={null}
           />
-         */}
-
-       
-
-
           <Social />
-
-          {/* 
           <div className='flex flex-row gap-4 mt-5 sm:flex-row sm:justify-center'>
             <Link passHref href='/contact' scroll={false}>
               <button className='inline-flex items-center w-full px-5 py-3 bg-gray-100 rounded-lg dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600'>
@@ -52,7 +41,9 @@ const Hero = ({ blockMap }) => {
                   <span className='mb-1 text-xs text-gray-600 dark:text-day'>
                     {t.HERO.HOME.CONTACT_BUTTON_DES}
                   </span>
-                  <span className='font-medium'>{t.HERO.HOME.CONTACT_BUTTON}</span>
+                  <span className='font-medium'>
+                    {t.HERO.HOME.CONTACT_BUTTON}
+                  </span>
                 </span>
               </button>
             </Link>
@@ -85,7 +76,10 @@ const Hero = ({ blockMap }) => {
                 </span>
               </button>
             )}
-          </div> */}
+          </div>
+        </div>
+        <div className='content-center mx-10 mt-3 mb-5 '>
+          <Avatar className='text-gray-600 dark:text-gray-300' />
         </div>
       </div>
     </>

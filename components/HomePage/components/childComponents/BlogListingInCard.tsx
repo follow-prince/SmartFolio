@@ -46,7 +46,9 @@ const BlogListingInCard: FC<BlogListingInCardProps> = memo(
     )
 
     if (isLoading) {
-      return <Spinner label='Loading...' color='danger' />
+      return     <div className='flex justify-center w-full h-full '>
+      <Spinner label='Loading...' color='danger' />
+    </div>
     }
 
     return (
@@ -68,7 +70,7 @@ const BlogListingInCard: FC<BlogListingInCardProps> = memo(
           <div className='text-[12px] text-rose-500 font-extrabold text-center'>
             Blog Posts
           </div>
-          <CarouselContent className='h-[470px]'>
+          <CarouselContent className='h-[490px]'>
             {sortedBlogList.map((post) => (
               <CarouselItem key={post.id} className='md:basis-1/5'>
                 <Card className='w-full border rounded-lg border-rose-500 dark:border-slate-100'>
@@ -83,16 +85,16 @@ const BlogListingInCard: FC<BlogListingInCardProps> = memo(
                           fill
                           alt={post.title}
                           src={post.page_cover}
-                          className='absolute inset-0 object-cover object-center w-full h-full transition duration-200 group-hover:scale-110'
+                          className='absolute inset-0 object-cover object-center w-full h-full transition duration-200 group-hover:scale-110 opacity-40'
                         />
-                        <div className='absolute inset-0 hidden md:block md-cover'></div>
+                        <div className='absolute inset-0 hidden md:block bg-gradient-to-r to-transparent from-red-100 via-gray-200 dark:to-transparent dark:from-gray-900 dark:via-gray-600'></div>
                         <div className='absolute inset-0 cover'></div>
                         <div className='relative'>
                           <header className='flex flex-row'>
                             <h2 className='px-2 text-sm font-extrabold text-black dark:text-gray-100'>
                               {post.title}
                             </h2>
-                            <span className='flex-shrink-0 font-bold text-gray-600 text-color-fix dark:text-gray-400'>
+                            <span className='flex-shrink-0 font-bold text-slate-700 text-color-fix dark:text-blue-100'>
                               <FormattedDate date={post.date} />
                             </span>
                           </header>

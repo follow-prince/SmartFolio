@@ -19,7 +19,8 @@ module.exports = {
       'em-content.zobj.net',
       'assets.aceternity.com',
       'pbs.twimg.com',
-      'leetcard.jacoblin.cool'
+      'leetcard.jacoblin.cool',
+      'workos.imgix.net'
     ]
   },
   async headers() {
