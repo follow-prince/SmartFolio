@@ -1,0 +1,89 @@
+'use client'
+import React, { useRef } from 'react'
+import { useScroll, useTransform, motion, MotionValue } from 'framer-motion'
+
+export const ContainerScroll = ({
+  children
+}: {
+  children: React.ReactNode
+}) => {
+  const containerRef = useRef<any>(null)
+  const { scrollYProgress } = useScroll({
+    target: containerRef
+  })
+  const [isMobile, setIsMobile] = React.useState(false)
+
+  React.useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768)
+    }
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => {
+      window.removeEventListener('resize', checkMobile)
+    }
+  }, [])
+
+  const scaleDimensions = () => {
+    return isMobile ? [1, 1] : [1, 1]
+  }
+
+  const rotate = useTransform(scrollYProgress, [0, 1], [0, 0])
+  const scale = useTransform(scrollYProgress, [0, 1], scaleDimensions())
+  const translate = useTransform(scrollYProgress, [0, 1], [0, -20])
+
+  return (
+    <div
+      className='relative flex flex-col items-center justify-start w-full h-full'
+      ref={containerRef}
+    >
+      <div
+        className='relative w-full '
+        style={{
+        }}
+      >
+        <Card rotate={rotate} translate={translate} scale={scale}>
+          {children}
+        </Card>
+      </div>
+    </div>
+  )
+}
+
+export const Header = ({ translate, titleComponent }: any) => {
+  return (
+    <motion.div
+      style={{
+        translateY: translate
+      }}
+      className='max-w-6xl mx-auto text-center div'
+    >
+      {titleComponent}
+    </motion.div>
+  )
+}
+
+export const Card = ({
+  rotate,
+  scale,
+  children
+}: {
+  rotate: MotionValue<number>
+  scale: MotionValue<number>
+  translate: MotionValue<number>
+  children: React.ReactNode
+}) => {
+  return (
+    <motion.div
+      style={{
+        rotateX: rotate,
+        scale,
+      }}
+      className='max-w-6xl mx-auto md:h-[42rem] w-full border-4 border-[#6C6C6C] p-2 md:p-4 bg-[#222222] rounded-[30px] shadow-lg'
+    >
+      <div className='w-full h-full overflow-hidden bg-gray-100 rounded-2xl dark:bg-zinc-900 md:rounded-2xl'>
+        {children}
+      </div>
+    </motion.div>
+  )
+}

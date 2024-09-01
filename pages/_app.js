@@ -1,13 +1,3 @@
-// import 'prismjs'
-// import 'prismjs/components/prism-bash'
-// import 'prismjs/components/prism-diff'
-// import 'prismjs/components/prism-go'
-// import 'prismjs/components/prism-yaml'
-// import 'prismjs/components/prism-rust'
-// import 'prismjs/components/prism-javascript'
-// import 'prismjs/components/prism-markup'
-// import 'prismjs/components/prism-typescript'
-// import 'prismjs/themes/prism-tomorrow.min.css' // prism-okaidia.min.css
 import 'react-notion-x/src/styles.css'
 import 'katex/dist/katex.min.css'
 import '@/styles/globals.css'
@@ -23,22 +13,17 @@ import NProgress from 'nprogress'
 import '@/styles/nprogress.css'
 import Header from '@/components/NavBar/Header'
 import Footer from '@/components/NavBar/Footer'
+// import { FloatingDockView } from '@/components/HomePage/components/FloatingDockView.tsx'
 
 const Ackee = dynamic(() => import('@/components/Common/Ackee'), { ssr: false })
 const Gtag = dynamic(() => import('@/components/Common/Gtag'), { ssr: false })
 
 function MyApp({ Component, pageProps }) {
-  // https://github.com/vercel/next.js/blob/canary/examples/with-loading/pages/_app.js
   const router = useRouter()
 
   useEffect(() => {
-    const handleStart = (url) => {
-      // console.log(`Loading: ${url}`)
-      NProgress.start()
-    }
-    const handleStop = () => {
-      NProgress.done()
-    }
+    const handleStart = (url) => NProgress.start()
+    const handleStop = () => NProgress.done()
 
     router.events.on('routeChangeStart', handleStart)
     router.events.on('routeChangeComplete', handleStop)
@@ -51,6 +36,9 @@ function MyApp({ Component, pageProps }) {
     }
   }, [router])
 
+  // Check if current path is root
+  const isRootPath = router.pathname === '/'
+
   return (
     <>
       <Scripts />
@@ -61,21 +49,24 @@ function MyApp({ Component, pageProps }) {
         />
       )}
       {BLOG.isProd && BLOG?.analytics?.provider === 'ga' && <Gtag />}
+
       <ThemeProvider attribute='class'>
         <Header
           navBarTitle={pageProps.post ? pageProps.post.title : null}
           fullWidth={pageProps.post ? pageProps.post.fullWidth : false}
         />
-        <TransitionEffect>
-            <div
-              className={`min-h-[calc(100vh-14rem)] md:min-h-[calc(100vh-18rem)] ${
-                BLOG.font === 'serif' ? 'font-serif' : 'font-sans'
-              }`}
-            >
-              <Component {...pageProps} />
-            </div>
+        <TransitionEffect >
+          <div
+            className={`min-h-[calc(100vh-14rem)] md:min-h-[calc(100vh-18rem)]  ${
+              BLOG.font === 'serif' ? 'font-serif' : 'font-sans'
+            }`}
+          >
+            <Component {...pageProps} />
+          </div>
         </TransitionEffect>
-        <Footer fullWidth={pageProps.post ? pageProps.post.fullWidth : false} />
+          <Footer
+            fullWidth={pageProps.post ? pageProps.post.fullWidth : false}
+          />
       </ThemeProvider>
     </>
   )

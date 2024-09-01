@@ -1,10 +1,10 @@
 const BLOG = {
   title: 'PR!NC€ - Workfolio',
   author: 'Crafted by Prince',
-  email: 'contact@elavarasan.me',
+  email: 'elavarasa.003@gmail.com',
   link: 'https://princey.tech',
   newsletter: 'Prince Weekly',
-  description: "a FullStack developer, Proficient in JavaScript, oops concepts and NextJs/ReactJs, he excel in front-end, app, and web development.",
+  description: "a React developer, Proficient in JavaScript, oops concepts and NextJs/ReactJs",
   lang: 'en-US', 
   timezone: 'Asia/Calcutta', 
   appearance: 'dark', 
@@ -13,9 +13,9 @@ const BLOG = {
   darkBackground: '#212936', 
   path: '',
   since: 2024, 
-  postsPerPage: 25,
+  postsPerPage: 100000,
   sortByDate: true,
-  smtp_host : 'smtp.hostinger.com', 
+  smtp_host : '`smtp.hostinger.com`', 
   smtp_user : '1@princey.tech', 
   smtp_passwd : process.env.SMTP_PASSWD,
   pagesShow: {
@@ -63,7 +63,7 @@ const BLOG = {
       token: '' 
     },
     gaConfig: {
-      measurementId: 'G-5W1H07XLKR'
+      measurementId: 'G-2XVWX63YBC'
     },
     umamiConfig: {
       scriptUrl: '',
