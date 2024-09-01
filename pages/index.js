@@ -44,16 +44,13 @@ const Blog = React.memo(({ postsToShow, page, showNext, blockMap }) => {
 
       {/* Visible on screens smaller than 768px */}
       <div className="md:hidden">
-
-        
-        
-        {/* <Container title={BLOG.title} description={BLOG.description}>
+        <Container title={BLOG.title} description={BLOG.description}>
           <Hero blockMap={blockMap} />
           {postsToShow.map((post) => (
             <BlogPost key={post.id} post={post} />
           ))}
           {showNext && <Pagination page={page} showNext={showNext} />}
-        </Container> */}
+        </Container>
       </div>
     </>
   )
