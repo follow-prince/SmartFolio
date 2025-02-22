@@ -17,7 +17,7 @@ SmartFolio is like your personal dynamic diary, but on the web! It's a simple ye
 
 <a href="##"><img src="https://raw.githubusercontent.com/follow-prince/project-images/main/videos-gif/elavarasan.me.gif" width="100%" /></a>
 
-- [See it live here!](https://princey.tech)
+- [See it live here!]([https://princey.tech](https://princey.vercel.app))
 
 ## What's Cool About It
 | **Feature**                 | **Description**                                                                 |
