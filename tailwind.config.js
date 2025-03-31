@@ -65,5 +65,5 @@ module.exports = {
   },
   plugins: [addVariablesForColors,nextui({
     prefix: "nxt",
-  })], // Now addVariablesForColors is defined
+  })], 
 };
