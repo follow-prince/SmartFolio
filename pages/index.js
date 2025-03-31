@@ -5,6 +5,8 @@ import Hero from '@/components/Hero/Home';
 import Pagination from '@/components/Pagination';
 import { getAllPosts, getPostBlocks } from '@/lib/notion';
 import React from 'react';
+import { Switch } from 'antd';
+
 
 export async function getStaticProps() {
   const posts = await getAllPosts({ onlyPost: true })
@@ -34,10 +36,14 @@ export async function getStaticProps() {
 }
 
 const Blog = React.memo(({ postsToShow, page, showNext, blockMap }) => {
+
+ 
   return (
       <div >
         <Container title={BLOG.title} description={BLOG.description}>
           <Hero blockMap={blockMap} />
+
+
           {postsToShow.map((post) => (
             <BlogPost key={post.id} post={post} />
           ))}
