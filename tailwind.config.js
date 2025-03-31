@@ -50,6 +50,7 @@ module.exports = {
       fontFamily: {
         sans: [...fontFamily.sans, ...fontSansCJK],
         serif: [...fontFamily.serif, ...fontSerifCJK],
+        AppleFont: ["appleFont"],
         noEmoji: [
           'ui-sans-serif',
           'system-ui',

@@ -6,6 +6,7 @@ import { motion } from 'framer-motion'
 import FormattedDate from '@/components/Common/FormattedDate'
 
 const BlogPost = ({ post }) => {
+  console.log('post', post)
   return (
     <motion.div>
       <Link passHref href={`${BLOG.path}/${post.slug}`} scroll={false}>
