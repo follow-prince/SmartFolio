@@ -5,7 +5,18 @@ module.exports = {
     defaultLocale: 'en',
     localeDetection: false
   },
-  transpilePackages: ['dayjs'],
+  transpilePackages: [
+    'dayjs',
+    'antd',
+    '@ant-design',
+    'rc-util',
+    'rc-pagination',
+    'rc-picker',
+    'rc-notification',
+    'rc-tooltip',
+    'rc-tree',
+    'rc-table'
+  ],
   images: {
     domains: [
       'api.craft.do',

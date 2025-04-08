@@ -37,6 +37,7 @@ export async function getStaticProps() {
 
 const Blog = React.memo(({ postsToShow, page, showNext, blockMap }) => {
 
+  
  
   return (
       <div >
