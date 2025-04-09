@@ -2,7 +2,7 @@ const BLOG = {
   title: 'PR!NC€ - Workfolio',
   author: 'Crafted by Prince',
   email: 'elavarasa.003@gmail.com',
-  link: 'https://princey.vercel.app',
+  link: 'https://princey.me',
   newsletter: 'Prince Weekly',
   description: "a React developer, Proficient in JavaScript, oops concepts and NextJs/ReactJs",
   lang: 'en-US', 
