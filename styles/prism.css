@@ -2,10 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
 
   
-@font-face { 
-  font-family: "appleFont"; 
-  src: url("../public/font/SF-Pro.ttf"); 
-} 
 
 :root {
   --prism-font-family: monospace;
@@ -51,3 +47,5 @@ html.dark {
   --prism-property: #ce9178;
   --prism-regex: #ad502b;
 }
+
+

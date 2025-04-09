@@ -10,11 +10,8 @@ html {
   overflow-x: auto;
 }
 
-  
-@font-face { 
-  font-family: "appleFont"; 
-  src: url("../public/font/SF-Pro.ttf"); 
-} 
+
+
 
 @layer base {
   :root {
@@ -106,7 +103,8 @@ html::-webkit-scrollbar-thumb {
 .ant-image .ant-image-mask .ant-image-mask-info {
   color: white;
   background: rgba(0, 0, 0, 0.5);
-  border-radius: 1rem ;
+  border-radius: 0.5rem ;
+  font-size: 10px;
 }
 .ant-image .ant-image-mask:hover {
   background: rgba(0, 0, 0, 0);
@@ -136,12 +134,8 @@ html::-webkit-scrollbar-thumb {
 
 .frontSide,
 .frontSide::before {
-  background: linear-gradient(
-    43deg,
-    rgb(65, 88, 208) 0%,
-    rgb(200, 80, 192) 46%,
-    rgb(255, 204, 112) 100%
-  );
+  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+
 }
 
 .backSide,

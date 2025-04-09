@@ -1,7 +1,7 @@
 {
   "name": "prince",
   "version": "3.0.0",
-  "homepage": "https://princey.tech",
+  "homepage": "https://princey.me",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -10,7 +10,7 @@
   "author": {
     "name": "ELAVARASAN S",
     "email": "elavarasa.003@gmail.com",
-    "url": "https://princey.tech"
+    "url": "https://princey.me"
   },
   "scripts": {
     "dev": "next dev",

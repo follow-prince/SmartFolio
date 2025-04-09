@@ -12,11 +12,10 @@ const ThemeSwitcher = () => {
   return (
     <>
       <button
-        title={`Toggle theme - current ${theme}`}
-        // aria-label='ThemeSwitcher'
+        title={`${theme}`}
         onClick={() =>
           setTheme(
-            theme === 'system' ? 'dark' :  theme === 'light' ? 'dark' :'light' 
+            theme === 'light' ? 'dark' :'light' 
           )
         }
         className='p-2 ml-1 rounded-lg cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700 dark:text-gray-100'

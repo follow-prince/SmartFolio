@@ -13,7 +13,6 @@ import {
 } from '@heroicons/react/outline'
 import Social from '../Common/Social.js'
 import ThemeSwitcher from './ThemeSwitcher.js'
-import LangSwitcher from './LangSwitcher.js'
 import Logo from '@/components/Common/Logo'
 import { motion } from 'framer-motion'
 import CalCall from '../CalCall.js'
@@ -96,7 +95,6 @@ const NavBar = () => {
       <div className='block nav-func-btn'>
       <CalCall />
         <ThemeSwitcher />
-        <LangSwitcher />
       
       </div>
 
@@ -110,7 +108,7 @@ const NavBar = () => {
           <MenuIcon className='inline-block w-5 h-5 mb-1' />
         </button>
         {showMenu && (
-          <div className='absolute right-0 mt-2 mr-4 bg-white divide-y divide-gray-200 shadow-lg outline-none w-50 dark:bg-gray-700 dark:divide-gray-600 rounded-3xl'>
+          <div className='absolute right-0 mt-2 mr-4 bg-white divide-y divide-gray-200 shadow-lg outline-none w-50 dark:bg-gray-700 dark:divide-gray-600 rounded-lg'>
             <div className='py-1'>
               {links.map(
                 (link) =>
@@ -118,7 +116,7 @@ const NavBar = () => {
                     <Link passHref key={link.id} href={link.to} scroll={false}>
                       <button
                         onClick={() => setShowMenu((showMenu) => !showMenu)}
-                        className='justify-between block w-full px-4 py-2 font-light leading-5 text-left hover:bg-gray-100 dark:hover:bg-gray-600'
+                        className='justify-between block w-full px-4 py-2 font-bold leading-5 text-left hover:bg-gray-100 dark:hover:bg-gray-600 '
                       >
                         {link.icon}
                         <span className='m-1'>{link.name}</span>

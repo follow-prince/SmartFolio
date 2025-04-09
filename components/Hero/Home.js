@@ -24,10 +24,10 @@ const Hero = ({ blockMap }) => {
 
   return (
     <>
-      <div className='container flex flex-col items-center px-5 py-2 mx-auto mb-2 md:flex-row'>
+      <div className='container flex flex-col items-center  py-2 mx-auto mb-2 md:flex-row'>
         <div className='flex flex-col mb-5 text-left md:w-3/5 md:items-start md:mb-10'>
           <NotionRenderer
-            className='md:ml-8'
+            className='md:ml-0'
             blockMap={blockMap}
             frontMatter={{}}
             subPageTitle={null}
