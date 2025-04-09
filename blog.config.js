@@ -2,13 +2,13 @@ const BLOG = {
   title: 'PR!NC€ - Workfolio',
   author: 'Crafted by Prince',
   email: 'elavarasa.003@gmail.com',
-  link: 'https://smart-folio-git-development-elavarasan.vercel.app',
+  link: 'https://princey.vercel.app',
   newsletter: 'Prince Weekly',
   description: "a React developer, Proficient in JavaScript, oops concepts and NextJs/ReactJs",
   lang: 'en-US', 
   timezone: 'Asia/Calcutta', 
   appearance: 'dark', 
-  font: 'sans-serif', 
+  font: 'appleFont', 
   lightBackground: '#F6F8FA',
   darkBackground: '#212936', 
   path: '',
@@ -39,7 +39,7 @@ const BLOG = {
     leetcode: 'https://leetcode.com/iam-prince/',
   },
   seo: {
-    keywords: ['Elavarasan', 'Prince', 'Blog', 'Developer', 'Portfolio', 'Workfolio', 'Next.js', 'Notion', 'Vercel', 'Tailwind CSS', 'SEO', 'Web Development', 'Frontend', 'Backend', 'Fullstack', 'React', 'Node.js', 'JavaScript', 'TypeScript', 'HTML', 'CSS', 'SASS', 'SCSS', 'Markdown', 'API', 'GraphQL', 'REST', 'Database', 'MongoDB', 'PostgreSQL', 'MySQL', 'Firebase', 'Supabase', 'Serverless', 'Cloud', 'AWS', 'GCP', 'Azure', 'Netlify', 'Heroku', 'DigitalOcean', 'Vercel', 'GitHub', 'GitLab', 'Bitbucket', 'JAMstack', 'PWA', 'SPA', 'SSR', 'CSR', 'SEO', 'Sitemap', 'RSS', 'Web Vitals', 'Lighthouse', 'Performance', 'Accessibility', 'Best Practices', 'SEO', 'PWA', 'Web Development', 'Frontend', 'Backend', 'Fullstack', 'React', 'Node.js', 'JavaScript', 'TypeScript', 'HTML', 'CSS', 'SASS', 'SCSS', 'Markdown', 'API', 'GraphQL', 'REST', 'Database', 'MongoDB', 'PostgreSQL', 'MySQL', 'Firebase', 'Supabase', 'Serverless', 'Cloud', 'AWS', 'GCP', 'Azure', 'Netlify', 'Heroku', 'DigitalOcean', 'Vercel', 'GitHub', 'GitLab', 'Bitbucket', 'JAMstack', 'PWA', 'SPA', 'SSR', 'CSR', 'SEO', 'Sitemap', 'RSS', 'Web Vitals', 'Lighthouse', 'Performance', 'Accessibility', 'Best Practices', 'SEO', 'PWA', 'Web Development', 'Frontend', 'Backend', 'Fullstack', 'React', 'Node.js', 'JavaScript', 'TypeScript', 'HTML', 'CSS', 'SASS', 'SCSS', 'Markdown', 'API', 'GraphQL', 'REST', 'Database', 'MongoDB', 'PostgreSQL', 'MySQL', 'Firebase', 'Supabase', 'Serverless', 'Cloud', 'AWS', 'GCP', 'Azure', 'Netlify', 'Heroku', 'DigitalOcean', 'Vercel', 'GitHub', 'GitLab', 'Bitbucket', 'JAMstack', 'PWA', 'SPA', 'SSR', 'CSR', 'SEO'],
+    keywords: ['Elavarasan', 'Prince', 'Blog', 'Developer', 'Portfolio', 'React', 'NextJs'],
     googleSiteVerification: '' 
   },
   notionPageId: process.env.NOTION_PAGE_ID, 
@@ -63,7 +63,7 @@ const BLOG = {
       token: '' 
     },
     gaConfig: {
-      measurementId: 'G-2XVWX63YBC'
+      measurementId: process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID,
     },
     umamiConfig: {
       scriptUrl: '',
@@ -73,8 +73,8 @@ const BLOG = {
   comment: {
     provider: 'supacomments', 
     supaCommentsConfig: {
-      supabaseUrl: 'https://wyoojspfzyvsotutatbi.supabase.co', 
-      supabaseAnonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Ind5b29qc3Bmenl2c290dXRhdGJpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTIzNzg3MjksImV4cCI6MjAyNzk1NDcyOX0.CQzwlfKMAgmUC3PtEbhzziwB01Cpstwevz2iKe-WAjE'
+      supabaseUrl: process.env.NEXT_PUBLIC_SUPABASE_URL, 
+      supabaseAnonKey: process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
     },
     utterancesConfig: {
       repo: 'follow-prince/follow-prince'

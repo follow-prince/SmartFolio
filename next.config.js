@@ -31,8 +31,18 @@ module.exports = {
       'assets.aceternity.com',
       'pbs.twimg.com',
       'leetcard.jacoblin.cool',
-      'workos.imgix.net'
-    ]
+      'workos.imgix.net',
+      'drive.usercontent.google.com',
+      'drive.google.com',
+      'lh3.googleusercontent.com',
+    ],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "drive.google.com",
+        pathname: "/uc**",
+      },
+    ],
   },
   async headers() {
     return [

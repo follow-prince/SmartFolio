@@ -10,6 +10,12 @@ html {
   overflow-x: auto;
 }
 
+  
+@font-face { 
+  font-family: "appleFont"; 
+  src: url("../public/font/SF-Pro.ttf"); 
+} 
+
 @layer base {
   :root {
     --chart-1: 350 76% 61%;
@@ -90,10 +96,20 @@ html::-webkit-scrollbar-thumb {
   cursor: pointer;
 }
 
-:where(.css-dev-only-do-not-override-1jg35ys).ant-image .ant-image-mask:hover {
-background: transparent;
-transition:none;
+.ant-image .ant-image-mask {
+  border-radius: 1rem;
+  justify-content: center;
+  align-items: end;
+  background: rgba(0, 0, 0, 0);
+}
 
+.ant-image .ant-image-mask .ant-image-mask-info {
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 1rem ;
+}
+.ant-image .ant-image-mask:hover {
+  background: rgba(0, 0, 0, 0);
 }
 
 .myCard:hover .innerCard {
