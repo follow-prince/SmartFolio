@@ -5,7 +5,18 @@ module.exports = {
     defaultLocale: 'en',
     localeDetection: false
   },
-  transpilePackages: ['dayjs'],
+  transpilePackages: [
+    'dayjs',
+    'antd',
+    '@ant-design',
+    'rc-util',
+    'rc-pagination',
+    'rc-picker',
+    'rc-notification',
+    'rc-tooltip',
+    'rc-tree',
+    'rc-table'
+  ],
   images: {
     domains: [
       'api.craft.do',
@@ -20,8 +31,18 @@ module.exports = {
       'assets.aceternity.com',
       'pbs.twimg.com',
       'leetcard.jacoblin.cool',
-      'workos.imgix.net'
-    ]
+      'workos.imgix.net',
+      'drive.usercontent.google.com',
+      'drive.google.com',
+      'lh3.googleusercontent.com',
+    ],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "drive.google.com",
+        pathname: "/uc**",
+      },
+    ],
   },
   async headers() {
     return [

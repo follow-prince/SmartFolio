@@ -1,7 +1,6 @@
 const BLOG = require('./blog.config');
 const { fontFamily } = require('tailwindcss/defaultTheme');
 const CJK = require('./lib/cjk');
-const {nextui} = require("@nextui-org/react");
 
 
 const fontSansCJK = !CJK() ? [] : [`"Noto Sans CJK ${CJK()}"`, `"Noto Sans ${CJK()}"`];
@@ -29,7 +28,6 @@ module.exports = {
     './pages/**/*.{js,jsx,ts,tsx}',
     './components/**/*.{js,jsx,ts,tsx}',
     './layouts/**/*.{js,jsx,ts,tsx}',
-    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
 
   ],
   // darkMode: BLOG.appearance === 'auto' ? 'media' : 'class',
@@ -50,6 +48,7 @@ module.exports = {
       fontFamily: {
         sans: [...fontFamily.sans, ...fontSansCJK],
         serif: [...fontFamily.serif, ...fontSerifCJK],
+        AppleFont: ["appleFont"],
         noEmoji: [
           'ui-sans-serif',
           'system-ui',
@@ -63,7 +62,5 @@ module.exports = {
   variants: {
     extend: {}
   },
-  plugins: [addVariablesForColors,nextui({
-    prefix: "nxt",
-  })], // Now addVariablesForColors is defined
+  plugins: [addVariablesForColors], 
 };

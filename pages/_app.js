@@ -37,7 +37,6 @@ function MyApp({ Component, pageProps }) {
   }, [router])
 
   // Check if current path is root
-  const isRootPath = router.pathname === '/'
 
   return (
     <>

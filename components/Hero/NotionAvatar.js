@@ -1,25 +1,53 @@
-// https://react-svgr.com/playground/
-import * as React from 'react'
-import Image from 'next/image'
+import React, { useEffect, useState } from 'react'
+import { Image } from 'antd'
 
-const NotionAvatar = () => (
-  <div
-    style={{
-      justifyContent: 'center',
-      alignSelf: 'center',
-      alignItems: 'center'
-    }}
-    className='myCard'
-  >
-    <div className='innerCard'>
-      <div className='frontSide'>
-        <Image className='portfolio-img' width={180} height={200}  alt='ELAVARASAN Front Photo' src='/portrait.png' />
-      </div>
-      <div className='backSide'>
-        <Image className='portfolio-img1' width={180} height={200}  alt='ELAVARASAN Back Photo' src='/portrait1.png' />
+const NotionAvatar = () => {
+  const [images, setImages] = useState([])
+
+  useEffect(() => {
+    const fetchImages = async () => {
+      try {
+        const response = await fetch('/api/drive-images')
+        if (!response.ok) throw new Error('Network response was not ok')
+
+        const data = await response.json()
+
+        const filtered = data.filter((img) => img.fileType.startsWith('image/'))
+
+        setImages(filtered.map((img) => img.url))
+      } catch (error) {
+        console.error('Error fetching images:', error)
+      }
+    }
+
+    fetchImages()
+  }, [])
+
+  console.log('Fetched images:', images)
+  return (
+    <div
+      style={{
+        justifyContent: 'center',
+        alignSelf: 'center',
+        alignItems: 'center'
+      }}
+      className='myCard'
+    >
+    <div className='frontSide  '>
+      <Image.PreviewGroup
+        items={images || []}
+      >
+          <Image
+            className='portfolio-img object-cover'
+            width={180}
+            height={250}
+            alt='ELAVARASAN S ;Image'
+            src='/portrait.png'
+          />
+        </Image.PreviewGroup>
       </div>
     </div>
-  </div>
-)
+  )
+}
 
 export default NotionAvatar

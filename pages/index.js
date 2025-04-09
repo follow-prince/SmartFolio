@@ -2,10 +2,11 @@ import BLOG from '@/blog.config';
 import BlogPost from '@/components/BlogPost';
 import Container from '@/components/Container';
 import Hero from '@/components/Hero/Home';
-import { HomePage } from '@/components/HomePage/HomePage';
 import Pagination from '@/components/Pagination';
 import { getAllPosts, getPostBlocks } from '@/lib/notion';
 import React from 'react';
+import { Switch } from 'antd';
+
 
 export async function getStaticProps() {
   const posts = await getAllPosts({ onlyPost: true })
@@ -35,24 +36,21 @@ export async function getStaticProps() {
 }
 
 const Blog = React.memo(({ postsToShow, page, showNext, blockMap }) => {
-  return (
-    <>
-      {/* Hidden on screens smaller than 768px */}
-      <div className="flex-col hidden md:flex">
-        <HomePage blogListShare={postsToShow} />
-      </div>
 
-      {/* Visible on screens smaller than 768px */}
-      <div className="md:hidden">
+  
+ 
+  return (
+      <div >
         <Container title={BLOG.title} description={BLOG.description}>
           <Hero blockMap={blockMap} />
+
+
           {postsToShow.map((post) => (
             <BlogPost key={post.id} post={post} />
           ))}
           {showNext && <Pagination page={page} showNext={showNext} />}
         </Container>
       </div>
-    </>
   )
 })
 
