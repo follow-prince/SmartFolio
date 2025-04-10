@@ -7,6 +7,7 @@ import { lang } from '@/lib/lang'
 import { useRouter } from 'next/router'
 import { Collapse } from 'antd'
 
+
 const SearchLayout = ({ tags, posts, currentTag }) => {
   const [searchValue, setSearchValue] = useState('')
   const { locale } = useRouter()
@@ -53,13 +54,24 @@ const SearchLayout = ({ tags, posts, currentTag }) => {
       <div className=' mt-2'>
         <Collapse
           size='small'
+          className='dark:bg-gray-600 custom-collapse'
+          bordered={true}
           style={{ background: 'transparent' }}
-
           items={[
             {
               key: '1',
-              label: <div className='font-black text-base'> Categories or Tags</div>,
-              children: <Tags tags={tags} currentTag={currentTag} />
+              label: (
+                <div className='font-black text-base dark:text-gray-300 '>
+                  {' '}
+                  Categories or Tags
+                </div>
+              ),
+              children: <Tags tags={tags} currentTag={currentTag} />,
+              styles: {
+                body: {
+                  backgroundColor: 'red !important'
+                }
+              }
             }
           ]}
         />
