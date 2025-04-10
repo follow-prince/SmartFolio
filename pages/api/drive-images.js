@@ -26,12 +26,19 @@ export default async function handler(req, res) {
       fields: 'files(id, name, mimeType)'
     })
 
-    const files = (response.data.files || []).map((file) => ({
-      id: file.id,
-      fileName: file.name.replace(/\s/g, ''),
-      fileType: file.mimeType,
-      url: `https://lh3.googleusercontent.com/d/${file.id}`
-    }))
+    const files = (response.data.files || [])
+      .map((file) => ({
+        id: file.id,
+        fileName: file.name.replace(/\s/g, ''),
+        fileType: file.mimeType,
+        url: `https://lh3.googleusercontent.com/d/${file.id}`
+      }))
+      .sort((a, b) =>
+        a.fileName.localeCompare(b.fileName, undefined, {
+          numeric: true,
+          sensitivity: 'base'
+        })
+      )
 
     res.status(200).json(files)
   } catch (error) {

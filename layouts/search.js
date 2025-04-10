@@ -5,6 +5,7 @@ import Tags from '@/components/Common/Tags'
 import PropTypes from 'prop-types'
 import { lang } from '@/lib/lang'
 import { useRouter } from 'next/router'
+import { Collapse } from 'antd'
 
 const SearchLayout = ({ tags, posts, currentTag }) => {
   const [searchValue, setSearchValue] = useState('')
@@ -48,7 +49,22 @@ const SearchLayout = ({ tags, posts, currentTag }) => {
           ></path>
         </svg>
       </div>
-      <Tags tags={tags} currentTag={currentTag} />
+
+      <div className=' mt-2'>
+        <Collapse
+          size='small'
+          style={{ background: 'transparent' }}
+
+          items={[
+            {
+              key: '1',
+              label: <div className='font-black text-base'> Categories or Tags</div>,
+              children: <Tags tags={tags} currentTag={currentTag} />
+            }
+          ]}
+        />
+      </div>
+
       <div className='my-8 article-container'>
         {!filteredBlogPosts.length && (
           <p className='text-gray-500 dark:text-gray-300'>
