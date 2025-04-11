@@ -14,7 +14,7 @@ const BlogPost = ({ post }) => {
         <Link passHref href={`${BLOG.path}/${post.slug}`} scroll={false}>
           <article  
             key={post.id}
-            className='relative  flex flex-col p-5 mb-5 overflow-hidden cursor-pointer group md:mb-8 rounded-xl '
+            className='relative  flex flex-col p-5 mb-5 overflow-hidden cursor-pointer group md:mb-8 rounded-xl border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-[#212936] shadow-sm hover:shadow-lg transition-shadow duration-200 ease-in-out'
           >
             <Image
               fill

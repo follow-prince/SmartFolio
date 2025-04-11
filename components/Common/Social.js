@@ -9,7 +9,7 @@ const Social = () => {
         scroll={false}
         target='_blank'
         aria-label='Telegram'
-        className='text-gray-400  active:text-gray-600 transition duration-100 hover:scale-125 hover:text-blue-500'
+        className='text-gray-800 dark:text-gray-200 active:text-gray-600 transition duration-100 hover:scale-125 hover:text-blue-500'
       >
         <svg
           className='w-5 h-5'
@@ -29,7 +29,7 @@ const Social = () => {
         scroll={false}
         target='_blank'
         aria-label='Linkedin'
-        className='text-gray-400 hover:scale-125 hover:text-blue-500 active:text-gray-600 transition duration-100'
+        className='text-gray-800 dark:text-gray-200 hover:scale-125 hover:text-blue-500 active:text-gray-600 transition duration-100'
       >
         <svg
           className='w-5 h-5'
@@ -49,7 +49,7 @@ const Social = () => {
         scroll={false}
         target='_blank'
         aria-label='Github'
-        className='text-gray-400 hover:scale-125 hover:text-blue-500 active:text-gray-600 transition duration-100'
+        className='text-gray-800 dark:text-gray-200 hover:scale-125 hover:text-blue-500 active:text-gray-600 transition duration-100'
       >
         <svg
           className='w-5 h-5'
@@ -69,7 +69,7 @@ const Social = () => {
         scroll={false}
         target='_blank'
         aria-label='EMail'
-        className='text-gray-400 hover:scale-125 hover:text-blue-500 active:text-gray-600 transition duration-100'
+        className='text-gray-800 dark:text-gray-200 hover:scale-125 hover:text-blue-500 active:text-gray-600 transition duration-100'
       >
         <svg
           className='w-5 h-5'
@@ -88,7 +88,7 @@ const Social = () => {
         scroll={false}
         target='_blank'
         aria-label='LeetCode'
-        className='text-gray-400 hover:scale-125 hover:text-blue-500 active:text-gray-600 transition duration-100'
+        className='text-gray-800 dark:text-gray-200 hover:scale-125 hover:text-blue-500 active:text-gray-600 transition duration-100'
       >
         <svg
           className='w-5 h-5'
