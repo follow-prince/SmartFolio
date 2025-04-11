@@ -6,7 +6,6 @@ import { motion } from 'framer-motion'
 import FormattedDate from '@/components/Common/FormattedDate'
 
 const BlogPost = ({ post }) => {
-  console.log('post', post)
   return (
     <motion.div className=''>
       <div className='relative group  '>

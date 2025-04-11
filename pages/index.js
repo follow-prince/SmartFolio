@@ -1,11 +1,12 @@
-import BLOG from '@/blog.config';
-import BlogPost from '@/components/BlogPost';
-import Container from '@/components/Container';
-import Hero from '@/components/Hero/Home';
-import Pagination from '@/components/Pagination';
-import { getAllPosts, getPostBlocks } from '@/lib/notion';
-import React from 'react';
-
+import BLOG from '@/blog.config'
+import BlogPost from '@/components/BlogPost'
+import Container from '@/components/Container'
+import Hero from '@/components/Hero/Home'
+import Pagination from '@/components/Pagination'
+import { getAllPosts, getPostBlocks } from '@/lib/notion'
+import React from 'react'
+import { Switch } from 'antd'
+import { Timeline } from 'antd'
 
 export async function getStaticProps() {
   const posts = await getAllPosts({ onlyPost: true })
@@ -35,21 +36,18 @@ export async function getStaticProps() {
 }
 
 const Blog = React.memo(({ postsToShow, page, showNext, blockMap }) => {
-
-  
- 
   return (
-      <div >
-        <Container title={BLOG.title} description={BLOG.description}>
-          <Hero blockMap={blockMap} />
+      <Container title={BLOG.title} description={BLOG.description}>
+        <Hero blockMap={blockMap} />
 
+        {postsToShow.map((post) => (
+          <BlogPost key={post.id} post={post} />
+        ))}
 
-          {postsToShow.map((post) => (
-            <BlogPost key={post.id} post={post} />
-          ))}
-          {showNext && <Pagination page={page} showNext={showNext} />}
-        </Container>
-      </div>
+        <Timeline items={[]} />
+
+        {showNext && <Pagination page={page} showNext={showNext} />}
+      </Container>
   )
 })
 

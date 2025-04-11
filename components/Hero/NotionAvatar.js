@@ -23,7 +23,6 @@ const NotionAvatar = () => {
     fetchImages()
   }, [])
 
-  console.log('Fetched images:', images)
   return (
     <div
       style={{

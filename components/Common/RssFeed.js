@@ -52,11 +52,13 @@ const RssFeed = () => {
           addonAfter={
             <Button
             size='small'
-              type='text'
+              shape='round '
+              type='link'
+              style={{ fontWeight: '900', marginLeft: '0px' }}
               icon={<SendOutlined />}
               loading={loading}
               htmlType='submit'
-            />
+            >Send</Button>
           }
           placeholder='Enter your email'
         />

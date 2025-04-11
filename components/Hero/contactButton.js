@@ -8,20 +8,18 @@ import {
   message,
   Divider
 } from 'antd'
-import { SendOutlined } from '@ant-design/icons'
+import { SendOutlined , UserOutlined} from '@ant-design/icons'
 import { useState } from 'react'
 import { useTheme } from 'next-themes'
 import Social from '@/components/Common/Social'
 const lightTheme = {
   components: {
     Modal: {
-      contentBg: 'rgba(223, 223, 223, 0.65)',
+      contentBg: '#f3f4f6',
       headerBg: 'transparent'
     }
   },
-  token: {
-    colorBgContainer: 'rgba(225, 223, 223, 0.85)'
-  }
+  
 }
 
 const darkTheme = {
@@ -95,7 +93,6 @@ const ContactButton = () => {
   }
 
   const onFinishFailed = (errorInfo) => {
-    console.log('Failed:', errorInfo)
     messageApi.error('Please check the form and try again.', 2.5)
   }
 
@@ -108,7 +105,8 @@ const ContactButton = () => {
       {contextHolder}
       <Button
       size='small'
-      
+      icon={<UserOutlined />}
+      type='default'
         style={{
             fontWeight: '900',
           boxShadow: '0px 0px 0px rgba(0, 0, 0, 0.6)'

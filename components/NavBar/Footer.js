@@ -49,13 +49,7 @@ const Footer = ({ fullWidth }) => {
       icon: <BookOpenIcon className='inline-block w-5 h-5 mb-1' />,
       show: BLOG.pagesShow.books
     },
-    {
-      id: 3,
-      name: t.NAV.CONTACT,
-      to: '/contact',
-      icon: <MailIcon className='inline-block w-5 h-5 mb-1' />,
-      show: BLOG.pagesShow.contact
-    }
+
   ]
 
   return (
