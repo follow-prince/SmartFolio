@@ -5,7 +5,6 @@ import Hero from '@/components/Hero/Home'
 import Pagination from '@/components/Pagination'
 import { getAllPosts, getPostBlocks } from '@/lib/notion'
 import React from 'react'
-import { Switch } from 'antd'
 import { Timeline } from 'antd'
 
 export async function getStaticProps() {
