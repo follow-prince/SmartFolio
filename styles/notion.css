@@ -154,3 +154,25 @@ svg + .notion-page-title-text {
 .notion-collection-row {
   @apply hidden;
 }
+
+
+.level {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  
+}
+
+
+.first-quartile {
+  background-color: #9be9a8;
+}
+.second-quartile {
+  background-color: #40c463;
+}
+.third-quartile {
+  background-color: #30a14e;
+}
+.fourth-quartile {
+  background-color: #216e39;
+}

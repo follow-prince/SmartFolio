@@ -72,7 +72,7 @@ const SubscribeButton = () => {
 
 const ActionButtons = () => {
   return (
-    <div className='flex flex-row gap-4 mt-5 sm:flex-row sm:justify-center'>
+    <div className='flex flex-row gap-4  sm:flex-row sm:justify-center'>
       <ContactButton />
       <SubscribeButton />
     </div>

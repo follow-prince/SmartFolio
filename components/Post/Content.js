@@ -9,7 +9,8 @@ import NotionRenderer from '@/components/Post/NotionRenderer'
 import { ChevronLeftIcon } from '@heroicons/react/outline'
 
 export default function Content (props) {
-  const { frontMatter, blockMap, pageTitle } = props
+  const { frontMatter, blockMap, pageTitle} = props
+
 
   return (
     <article className='flex-none md:overflow-x-visible overflow-x-scroll w-full'>
@@ -24,7 +25,7 @@ export default function Content (props) {
           <span className='m-1'>{frontMatter.title}</span>
         </Link>
       )}
-      <h1 className='font-bold text-3xl text-black dark:text-white'>
+      <h1 className='font-bold text-2xl text-black dark:text-white'>
         {pageTitle ? pageTitle : frontMatter.title}
       </h1>
       {frontMatter.type[0] !== 'Page' && (
@@ -41,7 +42,7 @@ export default function Content (props) {
           )}
         </nav>
       )}
-      <div className="-mt-4 relative">
+      <div className="-mt-4 relative ">
         <NotionRenderer
           blockMap={blockMap}
           previewImages={BLOG.previewImagesEnabled}

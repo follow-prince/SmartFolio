@@ -27,6 +27,6 @@
     "**/*.ts",
     "**/*.tsx",
     "components/ui/glowing-effect.tsx"
-  ],
+, "components/Hero/ProfileLayout/index.js"  ],
   "exclude": ["node_modules"]
 }

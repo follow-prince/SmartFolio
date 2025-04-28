@@ -1,8 +1,7 @@
 import NotionRenderer from '@/components/Post/NotionRenderer'
-import { useRouter } from 'next/router'
 
 import Social from '../Common/Social.js'
-import Avatar from './NotionAvatar.js'
+import Avatar from './ProfilePhoto/NotionAvatar.js'
 import ActionButtons from './actionButtons.js'
 
 const Hero = ({ blockMap }) => {
@@ -10,7 +9,7 @@ const Hero = ({ blockMap }) => {
   return (
     <>
       <div className='container flex flex-col items-center  py-0 mx-auto mb-2 md:flex-row'>
-        <div className='flex flex-col mb-5 text-left md:w-3/5 md:items-start md:mb-10'>
+        <div className='flex flex-col mb-5 text-left md:w-3/5 md:items-start md:mb-10 '>
        
 
           <NotionRenderer
