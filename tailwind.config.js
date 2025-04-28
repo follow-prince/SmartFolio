@@ -62,5 +62,8 @@ module.exports = {
   variants: {
     extend: {}
   },
-  plugins: [addVariablesForColors], 
+  plugins: [addVariablesForColors,
+    require('tailwind-scrollbar'), 
+
+  ], 
 };

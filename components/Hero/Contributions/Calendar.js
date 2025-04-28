@@ -1,37 +1,46 @@
 import { useEffect, useState, useMemo } from 'react'
-import { Tooltip, Spin } from 'antd'
+import { Tooltip, Spin, Button } from 'antd'
+import Link from 'next/link'
+import BLOG from '@/blog.config'
+
 
 const Calendar = ({ username = 'follow-prince' }) => {
   const [contributions, setContributions] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
+  const [selectedYear, setSelectedYear] = useState(new Date().getFullYear())
+
+  const currentYear = new Date().getFullYear()
+  const years = useMemo(() => {
+    return [currentYear, currentYear - 1, currentYear - 2, currentYear - 3]
+  }, [])
 
   useEffect(() => {
     const fetchContributions = async () => {
+      setLoading(true)
+      setError(null)
+
       try {
-        setLoading(true)
         const res = await fetch(
-          `/api/github/contributions?username=${username}`
+          `/api/github/contributions?username=${username}&year=${selectedYear}`
         )
-        if (!res.ok) {
-          throw new Error(`Error ${res.status}: ${res.statusText}`)
-        }
-        const data = await res.json()
-        setContributions(data.contributions || [])
-      } catch (error) {
-        console.error(error)
-        setError(error.message || 'Something went wrong.')
+        if (!res.ok) throw new Error(`Error ${res.status}: ${res.statusText}`)
+
+        const { contributions } = await res.json()
+        setContributions(contributions || [])
+      } catch (err) {
+        console.error(err)
+        setError(err.message || 'Something went wrong.')
       } finally {
         setLoading(false)
       }
     }
 
     fetchContributions()
-  }, [username])
+  }, [username, selectedYear])
 
   const formatLevelClass = (level) => level.toLowerCase().replace('_', '-')
 
-  // Calculate stats
   const { totalContributedDays, totalContributions, highestStreak } =
     useMemo(() => {
       let totalContributedDays = 0
@@ -39,14 +48,12 @@ const Calendar = ({ username = 'follow-prince' }) => {
       let highestStreak = 0
       let currentStreak = 0
 
-      contributions.forEach((contribution) => {
-        if (contribution.contributionCount > 0) {
+      contributions.forEach(({ contributionCount }) => {
+        if (contributionCount > 0) {
           totalContributedDays += 1
-          totalContributions += contribution.contributionCount
+          totalContributions += contributionCount
           currentStreak += 1
-          if (currentStreak > highestStreak) {
-            highestStreak = currentStreak
-          }
+          highestStreak = Math.max(highestStreak, currentStreak)
         } else {
           currentStreak = 0
         }
@@ -58,12 +65,39 @@ const Calendar = ({ username = 'follow-prince' }) => {
   return (
     <div className='flex flex-col justify-center h-full w-full relative mx-auto border-2 border-[#6C6C6C] p-1 bg-[#222222] rounded-[10px] shadow-2xl'>
       <div className='h-full w-full bg-day dark:bg-night rounded-lg flex flex-col overflow-hidden'>
-        <div>
-            2024 to 2025 
+        {/* Year Tabs */}
+        <div className='flex justify-end gap-x-4 mx-3 mt-1 '>
+          <Link
+            href={`${BLOG.socialLink.github}`}
+            scroll={false}
+            target='_blank'
+            aria-label='Github'
+            className='text-xs font-semibold dark:text-slate-50 text-slate-900 flex items-centers justify-center gap-x-2 hover:scale-110  active:text-gray-600 transition duration-700'
+          >
+            {' '}
+        
+            @follow-prince
+          </Link>
+          {years.map((year) => (
+            <div
+              key={year}
+              onClick={() => setSelectedYear(year)}
+              className={`font-bold text-xs p-[2px] hover:font-extrabold  ${
+                selectedYear === year
+                  ? ' text-blue-600 dark:text-blue-400 font-extrabold underline underline-offset-2 decoration-2'
+                  : ' text-black dark:text-white'
+              }`}
+            >
+              {year === currentYear ? 'Current' : year}
+            </div>
+          ))}
         </div>
-        <div className='flex  justify-evenly text-sm font-extrabold dark:text-white text-black mt-2'>
+
+        {/* Contribution Stats */}
+        <div className='flex justify-between text-sm font-extrabold dark:text-white text-black mx-3 '>
           <div className='text-xs font-normal dark:text-white text-slate-700 mx-2'>
-            Contributions made in the last 365 days.
+            Contributions made in{' '}
+            {selectedYear === currentYear ? 'last 365 days' : selectedYear}.
           </div>
           <div className='flex flex-wrap gap-x-4 text-xs font-normal dark:text-white text-slate-700'>
             <div>
@@ -78,39 +112,46 @@ const Calendar = ({ username = 'follow-prince' }) => {
           </div>
         </div>
 
-        <div className='block overflow-x-auto  mx-2 pb-2'>
-          <div className='grid w-full grid-flow-col grid-rows-7 gap-[1px] gap-x-[1px] md:w-auto lg:gap-[4px] lg:gap-x-[2px] px-2'>
-            {contributions.map((contribution, i) => (
-              <Tooltip
-                key={i}
-                title={
-                  <div className='text-sm'>
-                    <strong>{contribution.contributionCount}</strong>{' '}
-                    contributions on{' '}
-                    <strong>
-                      {new Date(contribution.date).toLocaleDateString(
-                        undefined,
-                        {
-                          month: 'long',
-                          day: 'numeric',
-                          year: 'numeric'
-                        }
-                      )}
-                    </strong>
-                  </div>
-                }
-                color='#ffffff'
-                overlayInnerStyle={{ color: '#000', fontWeight: 500 }}
-              >
-                <div
-                  className={`level shadow-inner border-[1px] border-gray-400 dark:border-gray-600 ${formatLevelClass(
-                    contribution.contributionLevel
-                  )} cursor-pointer`}
-                />
-              </Tooltip>
-            ))}
+        {/* Loading or Calendar */}
+        {loading ? (
+          <div className='flex justify-center items-center h-64'>
+            <Spin percent='auto' size='default' />
           </div>
-        </div>
+        ) : (
+          <div className='block overflow-x-auto mx-2 pb-2  scrollbar-thin   scroll-smooth '>
+            <div className='grid w-full grid-flow-col grid-rows-7 gap-[1px] md:w-auto lg:gap-[4px] px-2'>
+              {contributions.map((contribution, idx) => (
+                <Tooltip
+                  key={idx}
+                  title={
+                    <div className='text-xs'>
+                      <strong>{contribution.contributionCount}</strong>{' '}
+                      contributions on{' '}
+                      <strong>
+                        {new Date(contribution.date).toLocaleDateString(
+                          undefined,
+                          {
+                            month: 'long',
+                            day: 'numeric',
+                            year: 'numeric'
+                          }
+                        )}
+                      </strong>
+                    </div>
+                  }
+                  color='white'
+                  overlayInnerStyle={{ color: '#000', fontWeight: 500 }}
+                >
+                  <div
+                    className={`level shadow-inner border-[1px] border-gray-400 dark:border-gray-600 ${formatLevelClass(
+                      contribution.contributionLevel
+                    )} cursor-pointer`}
+                  />
+                </Tooltip>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </div>
   )
