@@ -1,17 +1,19 @@
-// https://react-svgr.com/playground/
-import * as React from 'react'
-import Image from 'next/image'
+import React from 'react'
+import dynamic from 'next/dynamic';
+
+const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
+
+import crownAnimation from '@/public/crown.json';
+
+
 
 const Logo = (props) => (
-    <h1 className='items-center space-x-2 home-page-title'>
-      <Image
-        src='https://raw.githubusercontent.com/Tarikul-Islam-Anik/Telegram-Animated-Emojis/main/Objects/Crown.webp'
-        alt='Crown'
-        width={20}
-        height={20}
-      />
-      Prince
-    </h1>
+    <div className=' home-page-title relative pt-5'>
+     <div className='w-8 h-8 absolute -top-1 -left-2 -rotate-6'>
+     <Lottie  animationData={crownAnimation}   />
+      </div>
+    <div>Prince</div>  
+    </div>
 )
 
 export default Logo

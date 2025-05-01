@@ -67,17 +67,7 @@ const Calendar = ({ username = 'follow-prince' }) => {
       <div className='h-full w-full bg-day dark:bg-night rounded-lg flex flex-col overflow-hidden'>
         {/* Year Tabs */}
         <div className='flex justify-end gap-x-4 mx-3 mt-1 '>
-          <Link
-            href={`${BLOG.socialLink.github}`}
-            scroll={false}
-            target='_blank'
-            aria-label='Github'
-            className='text-xs font-semibold dark:text-slate-50 text-slate-900 flex items-centers justify-center gap-x-2 hover:scale-110  active:text-gray-600 transition duration-700'
-          >
-            {' '}
-        
-            @follow-prince
-          </Link>
+         
           {years.map((year) => (
             <div
               key={year}
@@ -118,7 +108,7 @@ const Calendar = ({ username = 'follow-prince' }) => {
             <Spin percent='auto' size='default' />
           </div>
         ) : (
-          <div className='block overflow-x-auto mx-2 pb-2  scrollbar-thin   scroll-smooth '>
+          <div className='block overflow-x-auto mx-2 pb-2  scrollbar-thin   scroll-smooth  overflow-y-auto scrollbar-thin selection:bg-gray-500 scrollbar-thumb-gray-400/40 scrollbar-track-gray-200/30 dark:scrollbar-track-transparent dark:scrollbar-thumb-gray-500/40'>
             <div className='grid w-full grid-flow-col grid-rows-7 gap-[1px] md:w-auto lg:gap-[4px] px-2'>
               {contributions.map((contribution, idx) => (
                 <Tooltip

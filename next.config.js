@@ -35,7 +35,8 @@ module.exports = {
       'drive.usercontent.google.com',
       'drive.google.com',
       'lh3.googleusercontent.com',
-      'prod-files-secure.s3.us-west-2.amazonaws.com'
+      'prod-files-secure.s3.us-west-2.amazonaws.com',
+      'assets.leetcode.com'
     ],
     remotePatterns: [
       {

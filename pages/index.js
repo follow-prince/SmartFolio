@@ -1,7 +1,6 @@
 import BLOG from '@/blog.config'
 import BlogPost from '@/components/BlogPost'
 import Container from '@/components/Container'
-import Hero from '@/components/Hero/Home'
 import HomeLayout from '@/components/Hero'
 import Pagination from '@/components/Pagination'
 import { getAllPosts, getPostBlocks } from '@/lib/notion'
@@ -39,7 +38,6 @@ const Blog = React.memo(({ postsToShow, page, showNext, blockMap }) => {
     <>
       <div className=' h-full w-full  '>
         <HomeLayout blockMap={blockMap} />
-        {/* <Hero blockMap={blockMap} /> */}
       </div>
       <Container title={BLOG.title} description={BLOG.description}>
         {postsToShow.map((post) => (

@@ -1,7 +1,7 @@
 import { lang } from '@/lib/lang'
 import { useRouter } from 'next/router'
 import Social from '../Common/Social.js'
-import Avatar from './NotionAvatar.js'
+import Avatar from './ProfilePhoto/NotionAvatar.js'
 import NotionRenderer from '@/components/Post/NotionRenderer'
 
 const NoteHero = ({ blockMap }) => {
