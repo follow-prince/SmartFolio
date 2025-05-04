@@ -1,3 +1,5 @@
+// pages/_document.tsx
+
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 import BLOG from '@/blog.config'
 
@@ -13,17 +15,27 @@ class MyDocument extends Document {
         <Head>
           <link rel='icon' href='/favicon.ico' />
           <link rel='icon' href='/favicon.svg' type='image/svg+xml' />
+          <link rel='apple-touch-icon' sizes='192x192' href='/favicon.png' />
+          <link rel='alternate' type='application/rss+xml' title='RSS 2.0' href='/feed' />
+
+          {/* ✅ Preload and async-load Google Fonts to prevent render-blocking */}
           <link
-            rel='apple-touch-icon'
-            sizes='192x192'
-            href='/favicon.png'
-          ></link>
+            rel='preload'
+            as='style'
+            href='https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap'
+          />
           <link
-            rel='alternate'
-            type='application/rss+xml'
-            title='RSS 2.0'
-            href='/feed'
-          ></link>
+            rel='stylesheet'
+            href='https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap'
+            media='all'
+          />
+          <noscript>
+            <link
+              rel='stylesheet'
+              href='https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap'
+            />
+          </noscript>
+
           {BLOG.appearance === 'auto' ? (
             <>
               <meta

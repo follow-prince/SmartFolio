@@ -7,7 +7,7 @@ const BLOG = {
   description: "a React developer, Proficient in JavaScript, oops concepts and NextJs/ReactJs",
   lang: 'en-US', 
   timezone: 'Asia/Calcutta', 
-  appearance: 'dark', 
+  appearance: 'light', 
   font: 'sans-serif', 
   lightBackground: '#e8e8e8',
   darkBackground: '#212936', 

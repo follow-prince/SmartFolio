@@ -8,17 +8,17 @@ module.exports = {
     'dayjs',
     'antd',
     '@ant-design',
-    'rc-util',
-    'rc-pagination',
-    'rc-picker',
-    'rc-notification',
-    'rc-tooltip',
-    'rc-tree',
-    'rc-table'
-  ],
+    'rc-*'
+  ],  
   images: {
-    domains: ['api.craft.do', 'www.notion.so', 'images.unsplash.com', 's3.us-west-2.amazonaws.com']
+    remotePatterns: [
+      { protocol: 'https', hostname: 'api.craft.do' },
+      { protocol: 'https', hostname: 'www.notion.so' },
+      { protocol: 'https', hostname: 'images.unsplash.com' },
+      { protocol: 'https', hostname: 's3.us-west-2.amazonaws.com' }
+    ]
   },
+  
   async headers() {
     return [
       {
