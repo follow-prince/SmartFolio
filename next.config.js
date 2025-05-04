@@ -8,8 +8,14 @@ module.exports = {
     'dayjs',
     'antd',
     '@ant-design',
-    'rc-*'
-  ],  
+    'rc-util',
+    'rc-pagination',
+    'rc-picker',
+    'rc-notification',
+    'rc-tooltip',
+    'rc-tree',
+    'rc-table'
+  ],
   images: {
     remotePatterns: [
       { protocol: 'https', hostname: 'api.craft.do' },
@@ -18,7 +24,6 @@ module.exports = {
       { protocol: 'https', hostname: 's3.us-west-2.amazonaws.com' }
     ]
   },
-  
   async headers() {
     return [
       {
