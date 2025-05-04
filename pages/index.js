@@ -1,7 +1,7 @@
 import BLOG from '@/blog.config'
 import BlogPost from '@/components/BlogPost'
 import Container from '@/components/Container'
-import HomeLayout from '@/components/Hero'
+import Hero from '@/components/Hero/Home'
 import Pagination from '@/components/Pagination'
 import { getAllPosts, getPostBlocks } from '@/lib/notion'
 import React from 'react'
@@ -36,10 +36,8 @@ export async function getStaticProps() {
 const Blog = React.memo(({ postsToShow, page, showNext, blockMap }) => {
   return (
     <>
-      <div className=' h-full w-full  '>
-        <HomeLayout blockMap={blockMap} />
-      </div>
       <Container title={BLOG.title} description={BLOG.description}>
+        <Hero blockMap={blockMap} />
         {postsToShow.map((post) => (
           <BlogPost key={post.id} post={post} />
         ))}

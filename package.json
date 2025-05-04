@@ -1,6 +1,6 @@
 {
   "name": "prince",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "homepage": "https://princey.me",
   "license": "MIT",
   "repository": {
@@ -18,9 +18,11 @@
     "start": "next start",
     "format": "prettier --write .",
     "lint": "next lint",
-    "postbuild": "next-sitemap --config next-sitemap.config.js",
-    "prepare": "husky",
-    "test": "echo \"No tests defined yet\" && exit 0"
+    "postbuild": "next-sitemap",
+    "prepare": "husky install",
+    "test": "echo \"No tests defined yet\" && exit 0",
+    "type-check": "tsc --noEmit",
+    "analyze": "ANALYZE=true next build"
   },
   "dependencies": {
     "@ant-design/cssinjs": "^1.23.0",
@@ -50,15 +52,11 @@
     "p-memoize": "^7.1.1",
     "prism-theme-vars": "^0.2.5",
     "react": "^18.3.1",
-    "react-chartjs-2": "^5.3.0",
     "react-dom": "^18.2.0",
-    "react-grid-layout": "^1.5.1",
-    "react-icons": "^5.5.0",
     "react-notion-x": "^6.16.0",
     "sharp": "^0.30.7",
     "tailwind-scrollbar": "^4.0.2",
     "use-ackee": "^3.1.0",
-    "zod": "^3.24.3",
     "zustand": "^5.0.3"
   },
   "devDependencies": {

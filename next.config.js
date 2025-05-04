@@ -1,5 +1,4 @@
 module.exports = {
-  staticPageGenerationTimeout: 120, // Increase timeout to 120 seconds
   i18n: {
     locales: ['en', 'ta'],
     defaultLocale: 'en',
@@ -18,33 +17,7 @@ module.exports = {
     'rc-table'
   ],
   images: {
-    domains: [
-      'api.craft.do',
-      '.svgrepo.com',
-      'raw.githubusercontent.com',
-      'avatars.githubusercontent.com',
-      'www.notion.so',
-      'images.unsplash.com',
-      's3.us-west-2.amazonaws.com',
-      'raw.githubusercontent.com',
-      'em-content.zobj.net',
-      'assets.aceternity.com',
-      'pbs.twimg.com',
-      'leetcard.jacoblin.cool',
-      'workos.imgix.net',
-      'drive.usercontent.google.com',
-      'drive.google.com',
-      'lh3.googleusercontent.com',
-      'prod-files-secure.s3.us-west-2.amazonaws.com',
-      'assets.leetcode.com'
-    ],
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "drive.google.com",
-        pathname: "/uc**",
-      },
-    ],
+    domains: ['api.craft.do', 'www.notion.so', 'images.unsplash.com', 's3.us-west-2.amazonaws.com']
   },
   async headers() {
     return [

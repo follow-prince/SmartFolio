@@ -3,7 +3,11 @@
 # dependencies
 /node_modules
 /.pnp
-.pnp.js
+/.pnp.js
+/.github
+/.husky
+/.idea
+bun.lock
 
 # testing
 /coverage
