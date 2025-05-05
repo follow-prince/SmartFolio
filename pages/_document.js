@@ -1,5 +1,3 @@
-// pages/_document.tsx
-
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 import BLOG from '@/blog.config'
 
@@ -18,7 +16,6 @@ class MyDocument extends Document {
           <link rel='apple-touch-icon' sizes='192x192' href='/favicon.png' />
           <link rel='alternate' type='application/rss+xml' title='RSS 2.0' href='/feed' />
 
-          {/* ✅ Preload and async-load Google Fonts to prevent render-blocking */}
           <link
             rel='preload'
             as='style'
