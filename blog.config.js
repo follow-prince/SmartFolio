@@ -4,7 +4,7 @@ const BLOG = {
   email: 'elavarasa.003@gmail.com',
   link: 'https://princey.me',
   newsletter: 'Prince Weekly',
-  description: "a React developer, Proficient in JavaScript, oops concepts and NextJs/ReactJs",
+  description: "a Software Engineer, Proficient in JavaScript, oops concepts and NextJs/ReactJs",
   lang: 'en-US', 
   timezone: 'Asia/Calcutta', 
   appearance: 'light', 
@@ -37,9 +37,10 @@ const BLOG = {
     telegram: 'https://t.me/follow_prince',
     gmail: 'mailto:elavarasa.003@gmail.com',
     leetcode: 'https://leetcode.com/iam-prince',
+    blueSky:'https://bsky.app/profile/princey.me'
   },
   seo: {
-    keywords: ['Elavarasan', 'Prince', 'Blog', 'Developer', 'Portfolio', 'React', 'NextJs'],
+    keywords: ['Elavarasan', 'Prince', 'Blog', 'Software Engineer', 'Portfolio'],
     googleSiteVerification: '' 
   },
   notionPageId: process.env.NOTION_PAGE_ID, 

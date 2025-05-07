@@ -78,30 +78,29 @@ const NavBar = () => {
               <Link passHref href={link.to} key={link.id} scroll={false}>
                 <li
                   className={`${
-                    activeMenu === link.to ? 'bg-gray-200 dark:bg-gray-700' : ''
-                  } hover:bg-gray-200 dark:hover:bg-gray-700 cursor-pointer rounded-lg block py-1 px-2 nav`}
+                    activeMenu === link.to ? ' dark:bg-gray-700 bg-gray-100 shadow shadow-gray-500/50 dark:shadow-gray-600/50' : ''
+                  } hover:bg-white dark:hover:bg-gray-700 cursor-pointer rounded-lg block py-1 px-2 nav`}
                 >
                   <div className='font-light'>
                     {link.icon}
-                    <span className='inline-block m-1'>{link.name}</span>
+                    <span className='inline-block m-1 font-bold'>{link.name}</span>
                   </div>
                 </li>
               </Link>
-
             )
         )}
       </ul>
 
       <div className='block nav-func-btn'>
-      <CalCall />
+        <CalCall />
         <ThemeSwitcher />
-      
       </div>
 
       {/* Mobile Phone Menu */}
       <div className='block mr-2 md:hidden '>
         <button
-          type='button' aria-label='Menu'
+          type='button'
+          aria-label='Menu'
           onClick={() => setShowMenu((showMenu) => !showMenu)}
           className='block p-2 -mr-3 rounded-lg cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700 md:pb-3'
         >
@@ -140,13 +139,19 @@ const Header = ({ navBarTitle, fullWidth }) => {
   const useSticky = !BLOG.autoCollapsedNavBar
   const navRef = useRef(/** @type {HTMLDivElement} */ undefined)
   const sentinelRef = useRef(/** @type {HTMLDivElement} */ undefined)
-  const handler = useCallback(([entry]) => {
-    if (useSticky && navRef.current) {
-      navRef.current?.classList.toggle('sticky-nav-full', !entry.isIntersecting)
-    } else {
-      navRef.current?.classList.add('remove-sticky')
-    }
-  }, [useSticky])
+  const handler = useCallback(
+    ([entry]) => {
+      if (useSticky && navRef.current) {
+        navRef.current?.classList.toggle(
+          'sticky-nav-full',
+          !entry.isIntersecting
+        )
+      } else {
+        navRef.current?.classList.add('remove-sticky')
+      }
+    },
+    [useSticky]
+  )
 
   useEffect(() => {
     const sentinelEl = sentinelRef.current
@@ -175,7 +180,13 @@ const Header = ({ navBarTitle, fullWidth }) => {
         ref={navRef}
       >
         <div className='flex items-center'>
-          <Link className='pb-3'  passHref href='/' scroll={false} aria-label={BLOG.title}>
+          <Link
+            className='pb-3'
+            passHref
+            href='/'
+            scroll={false}
+            aria-label={BLOG.title}
+          >
             <motion.div>
               <Logo className='h-6 fill-current hover:text-blue-500 dark:hover:text-blue-500' />
             </motion.div>

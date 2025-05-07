@@ -12,8 +12,7 @@ const TagItem = ({ tag }) => {
   return (
     <Link href={`/tag/${encodeURIComponent(tag)}`} scroll={false}>
       <p
-        className='mr-2 rounded-full px-2 py-1 leading-none text-sm hover:brightness-90 transition'
-        style={{ backgroundColor: bgColor }}
+        className='mr-2 rounded-sm px-2 py-1 leading-none text-sm hover:brightness-90 transition bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600'
       >
         {tag}
       </p>

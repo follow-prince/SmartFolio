@@ -4,32 +4,13 @@ import BLOG from '@/blog.config'
 const Social = () => {
   return (
     <div className='flex gap-4'>
-      <Link
-        href={`${BLOG.socialLink.telegram}`}
-        scroll={false}
-        target='_blank'
-        aria-label='Telegram'
-        className='text-gray-800 dark:text-gray-200 active:text-gray-600 transition duration-100 hover:scale-125 hover:text-blue-500'
-      >
-        <svg
-          className='w-5 h-5'
-          width='24'
-          height='24'
-          viewBox='0 0 24 24'
-          fill='currentColor'
-          xmlns='http://www.w3.org/2000/svg'
-        >
-          <path fill='none' d='M0 0h24v24H0z' />
-          <path d='M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm0 2C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-3.11-8.83l-2.498-.779c-.54-.165-.543-.537.121-.804l9.733-3.76c.565-.23.885.061.702.79l-1.657 7.82c-.116.557-.451.69-.916.433l-2.551-1.888-1.189 1.148c-.122.118-.221.219-.409.244-.187.026-.341-.03-.454-.34l-.87-2.871-.012.008z' />
-        </svg>
-      </Link>
 
       <Link
         href={`${BLOG.socialLink.linkedin}`}
         scroll={false}
         target='_blank'
         aria-label='Linkedin'
-        className='text-gray-800 dark:text-gray-200 hover:scale-125 hover:text-blue-500 active:text-gray-600 transition duration-100'
+        className='text-gray-800 dark:text-gray-200 dark:hover:text-blue-500 hover:scale-125 hover:text-blue-500 active:text-gray-600 transition duration-100'
       >
         <svg
           className='w-5 h-5'
@@ -49,7 +30,7 @@ const Social = () => {
         scroll={false}
         target='_blank'
         aria-label='Github'
-        className='text-gray-800 dark:text-gray-200 hover:scale-125 hover:text-blue-500 active:text-gray-600 transition duration-100'
+        className='text-gray-800 dark:text-gray-200 dark:hover:text-blue-500  hover:scale-125 hover:text-blue-500 active:text-gray-600 transition duration-100'
       >
         <svg
           className='w-5 h-5'
@@ -69,7 +50,7 @@ const Social = () => {
         scroll={false}
         target='_blank'
         aria-label='EMail'
-        className='text-gray-800 dark:text-gray-200 hover:scale-125 hover:text-blue-500 active:text-gray-600 transition duration-100'
+        className='text-gray-800 dark:hover:text-blue-500 dark:text-gray-200 hover:scale-125 hover:text-blue-500 active:text-gray-600 transition duration-100'
       >
         <svg
           className='w-5 h-5'
@@ -88,7 +69,7 @@ const Social = () => {
         scroll={false}
         target='_blank'
         aria-label='LeetCode'
-        className='text-gray-800 dark:text-gray-200 hover:scale-125 hover:text-blue-500 active:text-gray-600 transition duration-100'
+        className='text-gray-800 dark:hover:text-blue-500 dark:text-gray-200 hover:scale-125 hover:text-blue-500 active:text-gray-600 transition duration-100'
       >
         <svg
           className='w-5 h-5'
@@ -100,6 +81,26 @@ const Social = () => {
         >
           <path fill='none' d='M0 0h24v24H0z' />
           <path d='M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z' />
+        </svg>
+      </Link>
+      <Link
+        href={`${BLOG.socialLink.blueSky}`}
+        scroll={false}
+        target='_blank'
+        aria-label='LeetCode'
+        className='text-gray-800 dark:hover:text-blue-500 dark:text-gray-200 hover:scale-125 hover:text-blue-500 active:text-gray-600 transition duration-100'
+      >
+        <svg
+          viewBox='0 0 64 57'
+          className='w-5 h-5'
+          width='22'
+          height='22'
+          fill='currentColor'
+
+        >
+          <path
+            d='M13.873 3.805C21.21 9.332 29.103 20.537 32 26.55v15.882c0-.338-.13.044-.41.867-1.512 4.456-7.418 21.847-20.923 7.944-7.111-7.32-3.819-14.64 9.125-16.85-7.405 1.264-15.73-.825-18.014-9.015C1.12 23.022 0 8.51 0 6.55 0-3.268 8.579-.182 13.873 3.805m36.254 0C42.79 9.332 34.897 20.537 32 26.55v15.882c0-.338.13.044.41.867 1.512 4.456 7.418 21.847 20.923 7.944 7.111-7.32 3.819-14.64-9.125-16.85 7.405 1.264 15.73-.825 18.014-9.015C62.88 23.022 64 8.51 64 6.55c0-9.818-8.578-6.732-13.873-2.745'
+          />
         </svg>
       </Link>
     </div>

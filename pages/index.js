@@ -24,7 +24,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      page: 1, // current page is 1
+      page: 1, 
       postsToShow,
       showNext,
       blockMap
