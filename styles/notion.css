@@ -1,178 +1,216 @@
-/* NOTION CSS OVERRIDE */
-
-.notion {
-  @apply text-gray-600 dark:text-gray-300;
-  overflow-wrap: break-word;
-}
-.notion,
-.notion-text,
-.notion-quote,
-.notion-h-title {
-  @apply leading-8;
-  @apply p-0;
-  @apply my-3;
-}
-
-.notion-page-link {
-  color: inherit;
-}
-
-.notion-list {
-  @apply w-full;
-}
-
-.notion-list li {
-  padding: 0;
-}
-
-.notion-list ol {
-  padding: 0;
-}
-
-.notion-toggle {
-  @apply w-full;
-}
-
-.notion-simple-table {
-  @apply self-center;
-}
-
-svg.notion-page-icon {
-  @apply hidden;
-}
-
-svg + .notion-page-title-text {
-  @apply border-b-0;
-}
-
-.notion-full-width {
-  @apply px-0;
-}
-
-.notion-page {
-  @apply w-auto px-0;
-}
-
-.notion-quote {
-  padding: 0.2em 0.9em;
-  font-size: 1em;
-  line-height: 1.5rem;
-}
-
-.notion-hr {
-  @apply border-b-2 border-b-gray-200 dark:border-b-gray-600;
-}
-
-.notion-link {
-  @apply relative border-b-2 bg-origin-border bg-no-repeat text-blue-600 border-b-gray-200 dark:text-blue-300 dark:border-b-gray-600;
-  background-position: 50% 100%;
-  background-size: 0 0.1rem;
-}
-.notion-link:focus,
-.notion-link:hover {
-  @apply border-transparent bg-no-repeat;
-  background-image: linear-gradient(90.68deg, #b439df 0.26%, #a28181 102.37%);
-  background-position: 0 100%;
-  background-size: 100% 0.1rem;
-  transition-property: background-position, background-size;
-  transition-duration: 200ms;
-}
-
-@keyframes toc-fade-in-animation {
-  from {
-    opacity: 0;
+/* ===============================
+   NOTION BASE STYLES
+   =============================== */
+   .notion {
+    @apply text-gray-600 dark:text-gray-300;
+    overflow-wrap: break-word;
   }
-  to {
-    opacity: 1;
+  .notion,
+  .notion-text,
+  .notion-quote,
+  .notion-h-title {
+    @apply leading-8;
+    @apply p-0;
+    @apply my-3;
   }
-}
-.toc-fade-in {
-  animation: toc-fade-in-animation 0.5s ease-in;
-}
-.notion-table-of-contents {
-  /* @apply 2xl:max-w-xs 2xl:fixed 2xl:z-10 2xl:top-40 2xl:inset-x-3/4; */
-  @apply bg-day dark:bg-night;
-}
-.notion-table-of-contents-item {
-  @apply rounded-lg px-2 dark:text-gray-200;
-}
-
-.notion-bookmark {
-  @apply border border-gray-200 dark:border-gray-600;
-  color: inherit;
-}
-.notion-bookmark .notion-bookmark-title,
-.notion-bookmark .notion-bookmark-link div {
-  @apply text-gray-900 dark:text-gray-200;
-}
-.notion-bookmark .notion-bookmark-description {
-  @apply text-gray-600 dark:text-gray-300;
-}
-.notion-bookmark:hover {
-  @apply border-gray-400;
-}
-
-.notion-code {
-  @apply border border-gray-200 dark:border-none;
-  font-size: var(--prism-font-size);
-  line-height: var(--prism-line-height);
-}
-.notion-code-copy-button {
-  @apply text-gray-600 dark:text-gray-400 bg-day dark:bg-night;
-  padding: 0.4em;
-  font-size: 1em;
-  border: none;
-  box-shadow: none;
-}
-.notion-code-copy-tooltip {
-  display: none;
-}
-
-.notion-viewport {
-  z-index: -10;
-}
-.notion-asset-caption {
-  @apply text-center;
-  @apply text-gray-500 dark:text-gray-400;
-}
-
-.notion-collection {
-  @apply max-w-full;
-}
-.notion-collection > .notion-collection-header {
-  @apply px-0 !important;
-}
-.notion-collection > .notion-table {
-  @apply max-w-full !important;
-}
-.notion-collection > .notion-table > .notion-table-view {
-  @apply px-0 !important;
-}
-.notion-collection-view-type {
-  @apply hidden;
-}
-.notion-collection-row {
-  @apply hidden;
-}
-
-/* ===================== */
-.level {
-  width: 10px;
-  height: 10px;
-  border-radius: 2px;
+  .notion-full-width {
+    @apply px-0;
+  }
+  .notion-page {
+    @apply w-auto px-0;
+  }
   
-}
+  /* ===============================
+     LISTS & TOGGLES
+     =============================== */
+  .notion-list {
+    @apply w-full;
+  }
+  .notion-list li,
+  .notion-list ol {
+    padding: 0;
+  }
+  .notion-toggle {
+    @apply w-full;
+  }
+  
 
-.first-quartile {
-  background-color: #9be9a8;
-}
-.second-quartile {
-  background-color: #40c463;
-}
-.third-quartile {
-  background-color: #30a14e;
-}
-.fourth-quartile {
-  background-color: #216e39;
-}
+/* ===============================
+   Glowing iOS-like Themed Table
+   =============================== */
 
+   .notion-simple-table {
+    @apply w-full self-center border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden backdrop-blur-md shadow-lg transition-all;
+  
+    /* Gradient background */
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.8) 0%,
+      rgba(240, 240, 240, 0.6) 100%
+    );
+  
+    /* Dark mode variant */
+    @apply dark:bg-gradient-to-br dark:from-[#2a2e3d]/80 dark:to-[#1c1f2b]/70;
+  }
+  
+  .notion-simple-table-row {
+    @apply border-b border-gray-300 dark:border-gray-600;
+  }
+  
+  .notion-simple-table-row:hover {
+    @apply bg-black/10 dark:bg-slate-700/50;
+  }
+  
+  /* Cell base styling */
+  .notion-simple-table-cell {
+    @apply px-2 py-2  transition-colors;
+    color: #111827;
+    @apply dark:text-gray-100;
+  }
+  
+  /* 🎨 Column 1 glowing accent */
+  .notion-simple-table tr td:nth-child(1) .notion-simple-table-cell {
+    @apply dark:bg-slate-900/20 text-center;
+    box-shadow: 0 0 6px rgba(17, 17, 17, 0.3);
+  }
+  
+  /* 🎨 Column 2 glowing accent */
+  .notion-simple-table tr td:nth-child(2) .notion-simple-table-cell {
+    @apply dark:bg-blue-900/10 ;
+    box-shadow: 0 0 6px rgba(70, 69, 69, 0.3);
+  }
+  
+  
+  
+  /* ===============================
+     QUOTES & HR
+     =============================== */
+  .notion-quote {
+    padding: 0.2em 0.9em;
+    font-size: 1em;
+    line-height: 1.5rem;
+  }
+  .notion-hr {
+    @apply border-b-2 border-b-gray-200 dark:border-b-gray-600;
+  }
+  
+  /* ===============================
+     LINKS
+     =============================== */
+  .notion-page-link {
+    color: inherit;
+  }
+  .notion-link {
+    @apply relative border-b-2 bg-origin-border bg-no-repeat text-blue-600 border-b-gray-200 dark:text-blue-300 dark:border-b-gray-600;
+    background-position: 50% 100%;
+    background-size: 0 0.1rem;
+  }
+  .notion-link:focus,
+  .notion-link:hover {
+    @apply border-transparent bg-no-repeat;
+    background-image: linear-gradient(90.68deg, #b439df 0.26%, #a28181 102.37%);
+    background-position: 0 100%;
+    background-size: 100% 0.1rem;
+    transition-property: background-position, background-size;
+    transition-duration: 700ms;
+  }
+  
+  /* ===============================
+     ICONS & TITLES
+     =============================== */
+  svg.notion-page-icon {
+    @apply hidden;
+  }
+  svg + .notion-page-title-text {
+    @apply border-b-0;
+  }
+  
+  /* ===============================
+     TABLE OF CONTENTS
+     =============================== */
+  .notion-table-of-contents {
+    @apply bg-day dark:bg-night;
+    /* @apply 2xl:max-w-xs 2xl:fixed 2xl:z-10 2xl:top-40 2xl:inset-x-3/4; */
+  }
+  .notion-table-of-contents-item {
+    @apply rounded-lg px-2 dark:text-gray-200;
+  }
+  @keyframes toc-fade-in-animation {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .toc-fade-in {
+    animation: toc-fade-in-animation 0.5s ease-in;
+  }
+  
+  /* ===============================
+     BOOKMARKS
+     =============================== */
+  .notion-bookmark {
+    @apply border border-gray-200 dark:border-gray-600;
+    color: inherit;
+  }
+  .notion-bookmark .notion-bookmark-title,
+  .notion-bookmark .notion-bookmark-link div {
+    @apply text-gray-900 dark:text-gray-200;
+  }
+  .notion-bookmark .notion-bookmark-description {
+    @apply text-gray-600 dark:text-gray-300;
+  }
+  .notion-bookmark:hover {
+    @apply border-gray-400;
+  }
+  
+  /* ===============================
+     CODE BLOCKS
+     =============================== */
+  .notion-code {
+    @apply border border-gray-200 dark:border-none;
+    font-size: var(--prism-font-size);
+    line-height: var(--prism-line-height);
+  }
+  .notion-code-copy-button {
+    @apply text-gray-600 dark:text-gray-400 bg-day dark:bg-night;
+    padding: 0.4em;
+    font-size: 1em;
+    border: none;
+    box-shadow: none;
+  }
+  .notion-code-copy-tooltip {
+    display: none;
+  }
+  
+  /* ===============================
+     ASSETS & MISC
+     =============================== */
+  .notion-viewport {
+    z-index: -10;
+  }
+  .notion-asset-caption {
+    @apply text-center text-gray-500 dark:text-gray-400;
+  }
+  
+  /* ===============================
+     COLLECTIONS
+     =============================== */
+  .notion-collection {
+    @apply max-w-full;
+  }
+  .notion-collection > .notion-collection-header {
+    @apply px-0 !important;
+  }
+  .notion-collection > .notion-table {
+    @apply max-w-full !important;
+  }
+  .notion-collection > .notion-table > .notion-table-view {
+    @apply px-0 !important;
+  }
+  .notion-collection-view-type,
+  .notion-collection-row {
+    @apply hidden;
+  }
+  

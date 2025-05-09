@@ -36,8 +36,6 @@ export default function TableOfContents({ blockMap, frontMatter, pageTitle }) {
       behavior: 'smooth'
     })
   }
-
-  console.log('TableOfContents', { collectionId, page, nodes })
   return (
     <div className=' xl:block xl:fixed ml-4 text-sm text-gray-500 dark:text-gray-400 whitespace h-[70dvh] overflow-y-auto hidden scrollbar-none  '>
       {pageTitle && (
