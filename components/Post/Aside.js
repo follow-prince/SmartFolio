@@ -12,7 +12,7 @@ const Aside = ({ pageTitle, blockMap, frontMatter }) => {
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
-      if (window.pageYOffset > 400) {
+      if (window.pageYOffset > 100) {
         setShowScrollElement(true)
       } else {
         setShowScrollElement(false)

@@ -41,8 +41,19 @@ const components = {
   // Equation block & inline variant
   Equation: dynamic(() => {
     return import('react-notion-x/build/third-party/equation').then(module => module.Equation)
-  })
+  }),
+ 
+
+   Modal :dynamic(
+    () => import('react-notion-x/build/third-party/modal').then((m) => m.Modal),
+    {
+      ssr: false
+    }
+  )
 }
+
+  // pdf viewer
+
 
 /**
  * Notion page renderer
