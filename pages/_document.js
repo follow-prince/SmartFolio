@@ -15,7 +15,7 @@ class MyDocument extends Document {
           <link rel='icon' href='/favicon.svg' type='image/svg+xml' />
           <link rel='apple-touch-icon' sizes='192x192' href='/favicon.png' />
           <link rel='alternate' type='application/rss+xml' title='RSS 2.0' href='/feed' />
-
+          
           <link
             rel='preload'
             as='style'
@@ -32,6 +32,7 @@ class MyDocument extends Document {
               href='https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap'
             />
           </noscript>
+          <script defer src="https://info.princey.me/script.js" data-website-id="293c1cac-e0ed-4d83-be38-c8e1c2bcda8d"></script>
 
           {BLOG.appearance === 'auto' ? (
             <>
