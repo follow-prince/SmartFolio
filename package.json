@@ -54,6 +54,7 @@
     "react": "^18.3.1",
     "react-dom": "^18.2.0",
     "react-notion-x": "^6.16.0",
+    "react-responsive-carousel": "^3.2.23",
     "sharp": "^0.30.7",
     "tailwind-scrollbar": "^4.0.2",
     "use-ackee": "^3.1.0",

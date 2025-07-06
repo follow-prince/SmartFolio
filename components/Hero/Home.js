@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import Avatar from './NotionAvatar.js'
+import {ResponsiveCarousel} from './NotionAvatar.js'
 import Social from '../Common/Social.js'
 import { lang } from '@/lib/lang'
 import { useRouter } from 'next/router'
@@ -17,8 +17,8 @@ const Hero = ({ blockMap }) => {
 
   return (
     <>
-      <div className='container mx-auto flex px-5 py-2 mb-10 md:flex-row flex-col items-center'>
-        <div className='flex flex-col md:w-3/5 md:items-start mb-6 md:mb-0 text-left'>
+      <div className='container mx-auto flex px-5 py-2 mb-10 md:flex-row flex-col items-start gap-8'>
+        <div className='flex flex-col md:w-3/5 md:items-start   md:mb-0 text-left '>
           <NotionRenderer
             className='md:ml-0'
             blockMap={blockMap}
@@ -53,8 +53,8 @@ const Hero = ({ blockMap }) => {
 
           </div>
         </div>
-        <div className='md:w-2/5 w-full flex justify-center items-center'>
-          <Avatar className='text-gray-600 dark:text-gray-300' />
+        <div className='md:w-2/5 w-full flex justify-center items-center '>
+          <ResponsiveCarousel className='text-gray-600 dark:text-gray-300' />
         </div>
       </div>
     </>

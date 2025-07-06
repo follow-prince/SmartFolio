@@ -10,6 +10,7 @@ import {
 } from '@heroicons/react/outline'
 import Social from '../Common/Social.js'
 import { motion } from 'framer-motion'
+import Image from 'next/image.js'
 
 const Footer = ({ fullWidth }) => {
   const router = useRouter()
@@ -40,7 +41,7 @@ const Footer = ({ fullWidth }) => {
       name: t.NAV.GALLERY,
       to: '/gallery',
       icon: <PhotographIcon className='inline-block w-5 h-5 mb-1' />,
-      show: BLOG.pagesShow.gallery  
+      show: BLOG.pagesShow.gallery
     },
     {
       id: 2,
@@ -48,8 +49,7 @@ const Footer = ({ fullWidth }) => {
       to: '/books',
       icon: <BookOpenIcon className='inline-block w-5 h-5 mb-1' />,
       show: BLOG.pagesShow.books
-    },
-
+    }
   ]
 
   return (
@@ -65,7 +65,8 @@ const Footer = ({ fullWidth }) => {
               (link) =>
                 link.show && (
                   <Link passHref key={link.id} href={link.to} scroll={false}>
-                    <li key={link.id}
+                    <li
+                      key={link.id}
                       className={`${
                         activeMenu === link.to
                           ? 'bg-gray-200 dark:bg-gray-700'
@@ -88,13 +89,16 @@ const Footer = ({ fullWidth }) => {
 
         <div className='py-4 text-xs font-light text-gray-400'>
           © {from === y || !from ? y : `${from} - ${y}`} | {BLOG.author}
-          <p className='md:float-right'>
+          <p className='md:float-right flex flex-col'>
+           
             {t.FOOTER.COPYRIGHT_START}
             <a className='underline' href={`${t.FOOTER.COPYRIGHT_LINK}`}>
               {t.FOOTER.COPYRIGHT_NAME}
             </a>
             {t.FOOTER.COPYRIGHT_END}
           </p>
+
+
         </div>
       </footer>
     </motion.div>

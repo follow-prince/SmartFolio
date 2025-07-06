@@ -30,7 +30,6 @@ module.exports = {
     './layouts/**/*.{js,jsx,ts,tsx}',
 
   ],
-  // darkMode: BLOG.appearance === 'auto' ? 'media' : 'class',
   darkMode: 'class', // or 'media' or 'class'
   future: {
     hoverOnlyWhenSupported: true
