@@ -6,11 +6,9 @@ import {
   NewspaperIcon,
   PhotographIcon,
   BookOpenIcon,
-  MailIcon
 } from '@heroicons/react/outline'
 import Social from '../Common/Social.js'
 import { motion } from 'framer-motion'
-import Image from 'next/image.js'
 
 const Footer = ({ fullWidth }) => {
   const router = useRouter()
@@ -89,7 +87,7 @@ const Footer = ({ fullWidth }) => {
 
         <div className='py-4 text-xs font-light text-gray-400'>
           © {from === y || !from ? y : `${from} - ${y}`} | {BLOG.author}
-          <p className='md:float-right flex flex-col'>
+          <p className='md:float-right '>
            
             {t.FOOTER.COPYRIGHT_START}
             <a className='underline' href={`${t.FOOTER.COPYRIGHT_LINK}`}>
