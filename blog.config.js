@@ -20,7 +20,7 @@ const BLOG = {
   smtp_passwd : process.env.SMTP_PASSWD,
   pagesShow: {
     about: true,
-    notes: true,
+    notes: false,
     projects: true,
     contact: true,
     books: true,
@@ -51,7 +51,6 @@ const BLOG = {
   telegramChatId: '7069540511', 
   telegramChannelUrl: 'https://t.me/follow_prince_channel', 
   telegramChannelName: 'follow_prince_channel', 
-  craftConfigShareUrl: 'https://follow-prince.craft.me/Y5LSHEHieO7inL', 
   analytics: {
     provider: 'ga', 
     ackeeConfig: {

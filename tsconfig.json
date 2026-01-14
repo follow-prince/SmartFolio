@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
+    "target": "ES2022",
     "paths": {
       "@/*": ["./*"],
       "@/components/*": ["components/*"],
@@ -17,7 +18,7 @@
     "incremental": true,
     "esModuleInterop": true,
     "module": "esnext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve"
@@ -26,7 +27,8 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "components/ui/glowing-effect.tsx"
-, "components/Hero/ProfileLayout/index.js"  ],
+    "components/ui/glowing-effect.tsx",
+    "components/Hero/ProfileLayout/index.js"
+  ],
   "exclude": ["node_modules"]
 }
