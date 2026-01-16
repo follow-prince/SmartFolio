@@ -31,21 +31,21 @@ const Footer = ({ fullWidth }) => {
       id: 0,
       name: t.NAV.NEWSLETTER,
       to: BLOG.path || '/newsletter',
-      icon: <NewspaperIcon className='inline-block w-5 h-5 mb-1' />,
+      icon: <NewspaperIcon className='inline-block w-4 h-4 mb-1' />,
       show: true
     },
     {
       id: 1,
       name: t.NAV.GALLERY,
       to: '/gallery',
-      icon: <PhotographIcon className='inline-block w-5 h-5 mb-1' />,
+      icon: <PhotographIcon className='inline-block w-4 h-4 mb-1' />,
       show: BLOG.pagesShow.gallery
     },
     {
       id: 2,
       name: t.NAV.BOOKS,
       to: '/books',
-      icon: <BookOpenIcon className='inline-block w-5 h-5 mb-1' />,
+      icon: <BookOpenIcon className='inline-block w-4 h-4 mb-1' />,
       show: BLOG.pagesShow.books
     }
   ]
@@ -73,7 +73,7 @@ const Footer = ({ fullWidth }) => {
                     >
                       <div className='font-light'>
                         {link.icon}
-                        <span className='inline-block m-1'>{link.name}</span>
+                        <span className='inline-block m-1 text-xs'>{link.name}</span>
                       </div>
                     </li>
                   </Link>

@@ -35,14 +35,14 @@ const NavBar = () => {
       id: 0,
       name: t.NAV.INDEX,
       to: BLOG.path || '/',
-      icon: <HomeIcon className='inline-block w-5 h-5 mb-1' />,
+      icon: <HomeIcon className='inline-block w-4 h-4 mb-1' />,
       show: true
     },
     {
       id: 1,
       name: t.NAV.ABOUT,
       to: '/about',
-      icon: <UserIcon className='inline-block w-5 h-5 mb-1' />,
+      icon: <UserIcon className='inline-block w-4 h-4 mb-1' />,
       show: BLOG.pagesShow.about
     },
 
@@ -50,21 +50,21 @@ const NavBar = () => {
       id: 2,
       name: t.NAV.NOTES,
       to: '/notes',
-      icon: <CollectionIcon className='inline-block w-5 h-5 mb-1' />,
+      icon: <CollectionIcon className='inline-block w-4 h-4 mb-1' />,
       show: BLOG.pagesShow.notes
     },
     {
       id: 3,
       name: t.NAV.PROJECTS,
       to: '/projects',
-      icon: <SparklesIcon className='inline-block w-5 h-5 mb-1' />,
+      icon: <SparklesIcon className='inline-block w-4 h-4 mb-1' />,
       show: BLOG.pagesShow.projects
     },
     {
       id: 4,
       name: t.NAV.SEARCH,
       to: '/search',
-      icon: <SearchIcon className='inline-block w-5 h-5 mb-1' />,
+      icon: <SearchIcon className='inline-block w-4 h-4 mb-1' />,
       show: true
     }
   ]
@@ -78,8 +78,8 @@ const NavBar = () => {
               <Link passHref href={link.to} key={link.id} scroll={false}>
                 <li
                   className={`${
-                    activeMenu === link.to ? ' dark:bg-gray-700 bg-gray-100 shadow shadow-gray-500/50 dark:shadow-gray-600/50' : ''
-                  } hover:bg-white dark:hover:bg-gray-700 cursor-pointer rounded-lg block py-1 px-2 nav`}
+                    activeMenu === link.to ? ' dark:bg-gray-600 bg-gray-100 border border-gray-200 ' : ''
+                  } hover:bg-white dark:hover:bg-gray-700 cursor-pointer rounded-lg block py-0 px-2 nav`}
                 >
                   <div className='font-light'>
                     {link.icon}
@@ -201,7 +201,7 @@ const Header = ({ navBarTitle, fullWidth }) => {
             </p>
           ) : (
             <p
-              className={`ml-2 font-medium ${
+              className={`ml-2 font-bold text-xs  ${
                 !showTitle ? 'hidden' : 'hidden xl:block'
               }`}
             >

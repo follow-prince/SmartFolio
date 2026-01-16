@@ -37,13 +37,13 @@ export default function TableOfContents({ blockMap, frontMatter, pageTitle }) {
     })
   }
   return (
-    <div className=' xl:block xl:fixed ml-4 text-sm text-gray-500 dark:text-gray-400 whitespace h-[70dvh] overflow-y-auto hidden scrollbar-none  '>
+    <div className=' xl:block xl:fixed ml-4 text-sm text-gray-500 dark:text-gray-400  whitespace h-[70dvh] overflow-y-auto hidden scrollbar-none  '>
       {pageTitle && (
         <Link
           passHref
           href={`${BLOG.path}/${frontMatter.slug}`}
           scroll={false}
-          className='block -ml-6 mb-2 p-2 hover:bg-gray-200 hover:dark:bg-gray-700 rounded-lg'
+          className='block -ml-6 mb-2 p-2 hover:bg-gray-200 hover:dark:bg-gray-700 rounded-lg text-xs'
         >
           <ChevronLeftIcon className='inline-block mb-1 h-5 w-5' />
           <span className='ml-1'>{frontMatter.title}</span>
@@ -53,7 +53,7 @@ export default function TableOfContents({ blockMap, frontMatter, pageTitle }) {
         <div
           key={node.id}
           style={{ marginLeft: `${node.indentLevel * 1.25}rem` }} // 1.25rem = 20px per level
-          className='py-1 px-2 text-xs hover:text-base rounded-lg hover:bg-gray-300 hover:dark:bg-gray-700 hover:text-blue-500 dark:hover:text-gray-100 font-medium cursor-pointer'
+          className='py-1 px-2 text-xs hover:text-xs rounded-lg hover:bg-gray-300 hover:font-bold hover:dark:bg-gray-700 hover:text-blue-500 dark:hover:text-gray-100 font-medium cursor-pointer w-fit'
           onClick={() => scrollTo(node.id)}
         >
           {node.text}

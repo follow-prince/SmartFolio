@@ -42,43 +42,40 @@
    .notion-simple-table {
     @apply w-full self-center border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden backdrop-blur-md shadow-lg transition-all;
   
-    /* Gradient background */
     background: linear-gradient(
       135deg,
       rgba(255, 255, 255, 0.8) 0%,
       rgba(240, 240, 240, 0.6) 100%
     );
   
-    /* Dark mode variant */
     @apply dark:bg-gradient-to-br dark:from-[#2a2e3d]/80 dark:to-[#1c1f2b]/70;
   }
   
-  .notion-simple-table-row {
+  /* .notion-simple-table-row {
     @apply border-b border-gray-300 dark:border-gray-600;
-  }
+  } */
   
-  .notion-simple-table-row:hover {
+  /* .notion-simple-table-row:hover {
     @apply bg-black/10 dark:bg-slate-700/50;
-  }
+  } */
   
-  /* Cell base styling */
-  .notion-simple-table-cell {
+  /* .notion-simple-table-cell {
     @apply px-2 py-2  transition-colors;
     color: #111827;
     @apply dark:text-gray-100;
-  }
+  } */
   
   /* 🎨 Column 1 glowing accent */
-  .notion-simple-table tr td:nth-child(1) .notion-simple-table-cell {
+  /* .notion-simple-table tr td:nth-child(1) .notion-simple-table-cell {
     @apply dark:bg-slate-900/20 text-center;
     box-shadow: 0 0 6px rgba(17, 17, 17, 0.3);
-  }
+  } */
   
   /* 🎨 Column 2 glowing accent */
-  .notion-simple-table tr td:nth-child(2) .notion-simple-table-cell {
+  /* .notion-simple-table tr td:nth-child(2) .notion-simple-table-cell {
     @apply dark:bg-blue-900/10 ;
     box-shadow: 0 0 6px rgba(70, 69, 69, 0.3);
-  }
+  } */
   
   
   

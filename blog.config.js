@@ -34,7 +34,7 @@ const BLOG = {
   socialLink: {
     linkedin: 'https://linkedin.com/in/elavarasa003',
     github: 'https://github.com/follow-prince',
-    telegram: 'https://t.me/follow_prince',
+    telegram: 'https://t.me/the_princey',
     gmail: 'mailto:elavarasa.003@gmail.com',
     leetcode: 'https://leetcode.com/iam-prince',
     blueSky:'https://bsky.app/profile/princey.me'
@@ -49,8 +49,8 @@ const BLOG = {
   notionDomain: 'follow-prince.notion.site',
   telegramToken: process.env.TELEGRAM_TOKEN, 
   telegramChatId: '7069540511', 
-  telegramChannelUrl: 'https://t.me/follow_prince_channel', 
-  telegramChannelName: 'follow_prince_channel', 
+  telegramChannelUrl: 'https://t.me/the_princey', 
+  telegramChannelName: 'they_princey', 
   analytics: {
     provider: 'ga', 
     ackeeConfig: {
@@ -71,11 +71,7 @@ const BLOG = {
     }
   },
   comment: {
-    provider: 'supacomments', 
-    supaCommentsConfig: {
-      supabaseUrl: process.env.NEXT_PUBLIC_SUPABASE_URL, 
-      supabaseAnonKey: process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
-    },
+    provider: 'utterances', 
     utterancesConfig: {
       repo: 'follow-prince/follow-prince'
     }

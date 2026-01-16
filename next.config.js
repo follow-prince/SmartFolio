@@ -6,8 +6,6 @@ module.exports = {
   },
   transpilePackages: [
     'dayjs',
-    'antd',
-    '@ant-design',
     'rc-util',
     'rc-pagination',
     'rc-picker',

@@ -9,7 +9,7 @@ const Tags = ({ tags, currentTag }) => {
           return (
             <div
               key={key}
-              className={`text-xs mt-1 mr-1 font-extrabold rounded-sm whitespace-nowrap hover:text-gray-100 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600 ${
+              className={`text-xs mt-1 mr-1 font-extrabold rounded-sm whitespace-nowrap hover:text-gray-100 dark:hover:text-gray-100  dark:text-gray-200 hover:bg-gray-600 dark:hover:bg-gray-900 ${
                 selected
                   ? 'text-gray-100 bg-gray-400 dark:bg-gray-600'
                   : 'text-gray-600 bg-gray-200 dark:bg-gray-700'

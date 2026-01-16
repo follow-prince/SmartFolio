@@ -7,21 +7,12 @@ const UtterancesComponent = dynamic(
   },
   { ssr: false }
 )
-const SupaCommentsComponent = dynamic(
-  () => {
-    return import('@/components/Post/SupaComments')
-  },
-  { ssr: false }
-)
 
 const Comments = ({ frontMatter }) => {
   return (
     <div>
       {BLOG.comment && BLOG.comment.provider === 'utterances' && (
         <UtterancesComponent issueTerm={frontMatter.id} />
-      )}
-      {BLOG.comment && BLOG.comment.provider === 'supacomments' && (
-        <SupaCommentsComponent />
       )}
     </div>
   )

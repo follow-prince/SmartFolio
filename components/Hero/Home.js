@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import {ResponsiveCarousel} from './NotionAvatar.js'
+import {NotionAvatar} from './NotionAvatar.js'
 import Social from '../Common/Social.js'
 import { lang } from '@/lib/lang'
 import { useRouter } from 'next/router'
@@ -54,7 +54,7 @@ const Hero = ({ blockMap }) => {
           </div>
         </div>
         <div className='md:w-2/5 w-full flex justify-center items-center '>
-          <ResponsiveCarousel className='text-gray-600 dark:text-gray-300' />
+          <NotionAvatar className='text-gray-600 dark:text-gray-300' />
         </div>
       </div>
     </>
