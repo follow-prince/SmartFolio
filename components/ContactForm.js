@@ -205,6 +205,7 @@ function Contact() {
               className='block w-full bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 rounded-lg py-3 px-4 leading-tight focus:outline-none'
             />
           </div>
+          
 
           <div className='sm:col-span-2'>
             <textarea
